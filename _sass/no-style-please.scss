@@ -1,24 +1,4 @@
-// -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
-
-    &.ioda { filter: invert(0); }
-  }
-  .emoji { filter: invert(1); }
-  iframe {
-    filter: invert(1);
-  }
-}
-
-body[a="dark"] { @include dark-appearance; }
-
-
-@media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
-}
-// -------------------------------------------- //
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 // bg color is also needed in html in order to
 // block body's background propagation
@@ -27,9 +7,10 @@ html, body { background: white; }
 
 html { height: 100%; scroll-behavior: smooth; }
 
+
 body {
   color: black;
-  font-family: monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;

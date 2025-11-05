@@ -2,12 +2,15 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: about
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: offensive security manager by day, bug bounty hunter by night.
+      - title: obsessed with appsec and web pentesting.  
+      - title: See more...
+        url: about.html
+
+  - title: now
+    url: now.html
 
   - title: all posts
     post_list:
@@ -16,23 +19,12 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: posts by category
-    post_list:
-      category: example2
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
-
   - title: rss
     url: feed.xml
   
-  - title: another list
+  - title: contact
     entries:
-      - title: with subitems
-        entries:
-          - title: with subsubitems
-          - title: example page
-            url: about
-  - title: PRO TIP
-    entries:
-      - title: to edit this menu, edit _data/menu.yml file
+      - title: mllamazares@protonmail.com
+        url: mailto:mllamazares@protonmail.com
+      - title: linkedin
+        url: https://www.linkedin.com/in/mllamazares/
