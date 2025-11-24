@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code&display=swap');
 
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
-html, body { background: white; }
+html,
+body {
+  background: white;
+}
 
-html { height: 100%; scroll-behavior: smooth; }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 
 
 body {
   color: black;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Google Sans Code', monospace;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -18,17 +24,33 @@ body {
   overflow-wrap: break-word;
 }
 
-.post-meta { text-align: right; }
+.post-meta {
+  text-align: right;
+}
 
-h2, h3, h4, h5, h6 { margin-top: 3rem; }
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+}
 
-hr { margin: 2rem 0; }
+hr {
+  margin: 2rem 0;
+}
 
-p { margin: 1rem 0; }
+p {
+  margin: 1rem 0;
+}
 
-li { margin: 0.4rem 0; }
+li {
+  margin: 0.4rem 0;
+}
 
-*:target { background: yellow; }
+*:target {
+  background: yellow;
+}
 
 .w {
   max-width: 640px;
@@ -40,13 +62,22 @@ hr {
   text-align: center;
   border: 0;
 
-  &:before { content: '/////' }
-  &:after { content: attr(data-content) '/////' }
+  &:before {
+    content: '/////'
+  }
+
+  &:after {
+    content: attr(data-content) '/////'
+  }
 }
 
-table { width: 100%; }
+table {
+  width: 100%;
+}
 
-table, th, td {
+table,
+th,
+td {
   border: thin solid black;
   border-collapse: collapse;
   padding: 0.4rem;
@@ -69,7 +100,9 @@ blockquote {
   border: thin solid black;
   padding: 1rem;
 
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 }
 
 img {

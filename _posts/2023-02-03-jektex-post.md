@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "This post is here to test jektex, a lightweight jekyll plugin for LaTeX rendering LaTeX."
 ---
 
 This post is here to test [$$\jektex$$](https://github.com/yagarea/jektex),

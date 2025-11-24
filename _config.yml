@@ -23,6 +23,10 @@ theme_config:
 sass:
   style: compressed
 
+
+exclude:
+  - .jektex-cache
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
