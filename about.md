@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares _/miˈɣel ʎamaˈθaɾes/_, Offensive Security Manager living in northern Spain. Here are some of my career highlights. 
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_), Offensive Security Manager working remotely from northern Spain. 
 
 ### stuff I broke
 
@@ -37,17 +37,20 @@ Recognized for reporting vulnerabilities to:
   - Certified Threat Modeling Professional (CTMP) - Practical DevSecOps
   - Certified Digital Leader (CDL) - Practical DevSecOps
 
-### ctf 
-  - CTF Honorable Mention SANS Holiday Hack Challenge 2023
-  - Created appsec CTFs for +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/)
+### projects
+  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM.
+  - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
+  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): STRIDE vs. ASVS equivalence table.
+  - [see more...](https://github.com/mllamazares)
 
  ---
 
- Here's some random stuff about me so you can create the ultimate wordlist and crack all my passwords:
+### r4nd0m
+ Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
  - entp 
  - debian user
  - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
- - solar-punk fanboy
+ - solarpunk fanboy
  - privacy maxi
 
  Here's what I'm doing [now](now.html)
