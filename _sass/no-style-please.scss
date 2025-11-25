@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
 
 // bg color is also needed in html in order to
 // block body's background propagation
@@ -13,10 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   color: black;
-  font-family: 'Google Sans Code', monospace;
+  font-family: 'Cascadia Code', monospace;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;

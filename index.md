@@ -2,22 +2,13 @@
 layout: home
 ---
 
-- about
-  - offensive security manager by day, bug bounty hunter by night.
-  - obsessed with appsec and web pentesting.
-  - [see more...](about.html)
+Offensive Security Manager by day, bug bounty hunter by night. 
 
-- blog posts
-  {% include post_list.html limit=5 show_more=true show_more_text="see archive..." show_more_url="archive.html" %}
+If you are oddly enough interested, [here's more about me](about.html).
 
-- contact
-  - mllamazares[at]protonmail.com
+Feel free to drop me a line at [mllamazares@pm.me](mailto:mllamazares@protonmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/mllamazares/).
 
-- social
-  - [linkedin](https://www.linkedin.com/in/mllamazares/)
-  - [github](https://github.com/mllamazares)
-  - [tryhackme](https://tryhackme.com/p/mllamazares)
-  - [stackoverflow](https://stackoverflow.com/users/1709738/mllamazares)
+---
+{: data-content="posts"}
 
-- [rss](feed.xml)
-
+{% include post_list.html limit=5 show_more=true show_more_text="see archive..." show_more_url="archive.html" %}
