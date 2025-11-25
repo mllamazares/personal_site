@@ -26,6 +26,7 @@ sass:
 
 exclude:
   - .jektex-cache
+  - vendor
 
 plugins:
   - jekyll-feed
