@@ -12,12 +12,12 @@ A while back, I spent some time sorting through ASVS controls to make them actio
 
 Here's what I looked at:
 
-  - **DOs vs DON'Ts**. Some controls are proactive, some are preventative. A DO: _"Show a password strength meter to help users pick stronger passwords" (V2.1.8)_. A DON'T: _"Don't limit allowed characters in passwords" (V2.1.9)_. Simple distinction, but it changes how you communicate priorities.
-  - **Who does it**. Devs? Infra? Design? Operations? Knowing who owns the work saves a lot of finger-pointing.
-  - **How you verify it**. SAST, DAST, SCA, code review, pentest, your grandma, etc. 
-  - **Who verifies it**. QA, offensive team, devs, etc. Avoid assumptions.
-  - **Implementation complexity**. Not all controls are equal. Checking password length is trivial; comparing it against a breached passwords list is a bigger lift. Labeling like "hours", "days" or "weeks" is enough.
-  - **Verification complexity**. Same deal. 
+  1. **DOs vs DON'Ts**. Some controls are proactive, some are preventative. A DO: _"Show a password strength meter to help users pick stronger passwords" (V2.1.8)_. A DON'T: _"Don't limit allowed characters in passwords" (V2.1.9)_. Simple distinction, but it changes how you communicate priorities.
+  2. **Who does it**. Devs? Infra? Design? Operations? Knowing who owns the work saves a lot of finger-pointing.
+  3. **How you verify it**. SAST, DAST, SCA, code review, pentest, your grandma, etc. 
+  4. **Who verifies it**. QA, offensive team, devs, etc. Avoid assumptions.
+  5. **Implementation complexity**. Not all controls are equal. Checking password length is trivial; comparing it against a breached passwords list is a bigger lift. Labeling like "hours", "days" or "weeks" is enough.
+  6. **Verification complexity**. Same deal. 
 
 It's perfect? No. But it's better than trying to apply them as-is [^1].
 
@@ -27,11 +27,15 @@ Most ASVS controls are technical, which is OK for developers. But if you want re
 
 They need to be digestible by business people, QA, devs, pentesters, etc. Otherwise, your requirements are just _words_ [^2].
 
-That said, most L1 controls require minimal context and should be enforced and treated as _basic hygiene_. For instance, _TLS for all client connections (V9.1.1)_. If your threat model comes back with _"hey guys, use HTTPS instead of HTTP"_ people will (understandably) roll their eyes. Duh. Note that precisely this set of controls are the most easy to automate.
+That said, most L1 controls require minimal context and should be enforced and treated as _basic hygiene_. For instance, _TLS for all client connections (V9.1.1)_. If your threat model comes back with _"hey guys, use HTTPS instead of HTTP"_ people will (understandably) roll their eyes [^3]. Duh. 
 
 ### be flexible
 
-You need to create your **own** categorization. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. In other words, this categorization must be _\*alive\*_.
+You need to create your **own** categorization. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. 
+
+Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. 
+
+In other words, this categorization must be _\*alive\*_.
 
 ### tooling
 
@@ -51,3 +55,4 @@ I pitched this approach in the OWASP Slack ASVS channel. They weren't convinced;
 
 [^1]: aka _nirvana fallacy_, the informal fallacy of comparing actual things with unrealistic, idealized alternatives.
 [^2]: I'm quite bullish about the use of LLMs for this use case.
+[^3]: Note that precisely this set of controls are the most easy to automate.

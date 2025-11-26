@@ -5,7 +5,7 @@ description: "This post is here to test jektex, a lightweight jekyll plugin for 
 
 Hey there. Welcome.
 
-This is my little island on the internet. 🏝️
+My name's [Miguel](/about.html). This is my little island on the internet. 🏝️
 
 You'll notice there're already some posts here. I stole them from my own linkedin account because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 

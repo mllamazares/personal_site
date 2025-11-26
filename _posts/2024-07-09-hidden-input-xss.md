@@ -10,7 +10,7 @@ I found an injection point within a hidden input type. This is difficult to expl
 
 While researching, I stumbled upon [a great article from PortSwigger](https://portswigger.net/research/xss-in-hidden-input-fields) by Gareth Heyes that uses the `accesskey` attribute (activated by `Alt+Shift+[Key]`) to trigger the `onclick` event on the hidden input.
 
-In this case, I ended up using the following payload, which also displays `Press Alt+Shift+X to continue` to maximize the chances of success 😈. Here is a sample payload:
+In this case, I ended up using the following payload, which also displays `Press Alt+Shift+X to continue` to maximize the chances of success 😈:
 
 ```
 https://REDACTED/subscribe?source=mllamazares%22%20accesskey=%22X%22%20onclick=%22alert(document.domain)%22/%3EPress%20Alt%2BShift%2BX%20to%20continue%20
@@ -25,6 +25,8 @@ Although this method involves user interaction, requires less social engineering
 ```
 https://REDACTED/subscribe?source=mllamazares%22%20oncontentvisibilityautostatechange%3Dalert%281%29%20style%3Dcontent-visibility%3Aauto%3E%20
 ```
+
+<br>
 
 [^1]: also by Gareth Heyes
 [^2]: just works in chrome

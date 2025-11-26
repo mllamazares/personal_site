@@ -10,4 +10,6 @@ After some fuzzing and rebuilding the requests I found in the JS files, I report
 
 ![simple sqli poc](/assets/img/simple-sqli-poc.png)
 
-[^1]: plain curl, because you don't always need burp
+<br>
+
+[^1]: yep, plain curl, because you don't always need burp :)
