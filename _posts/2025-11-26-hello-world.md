@@ -17,7 +17,7 @@ I also want to force myself to write about what I find interesting. Too often id
 
 ### content
 
-Expect something short, with a spartan tone. I hate buzzwordy consulting nonsense, and you will not find it here.
+Expect something short and straight to the point. I hate buzzwordy consulting nonsense, and you will not find it here.
 
 Everything I write is my view. It doesn't represent my employer or anyone else.
 
