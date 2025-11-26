@@ -7,7 +7,7 @@ Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Secur
 
 I'm obsessed with appsec, web pentesting and the growing role of AI in hacking.
 
-Here's are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
+Here are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
 ### stuff I broke
 
