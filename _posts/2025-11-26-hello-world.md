@@ -3,11 +3,11 @@ layout: post
 description: "This post is here to test jektex, a lightweight jekyll plugin for LaTeX rendering LaTeX."
 ---
 
-Hey. Welcome.
+Hey there. Welcome.
 
 This is my little island on the internet. 🏝️
 
-You'll notice there're already some posts here. I copied them from my linkedin account because I want them somewhere that actually makes sense [^1]. 
+You'll notice there're already some posts here. I stole them from my own linkedin account because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 
 ### why
 
@@ -17,29 +17,30 @@ I also want to force myself to write about what I find interesting. Too often id
 
 ### content
 
-Short. Spartan. No fluff. I hate buzzwordy consulting nonsense, and you will not find it here.
+Expect something short, with a spartan tone. I hate buzzwordy consulting nonsense, and you will not find it here.
 
 Everything I write is my view. It doesn't represent my employer or anyone else.
 
 ### design
 
-I'm using [no-style-please](https://github.com/riggraz/no-style-please). Ugly? Yes. But it works. No CSS bloat, no distractions. This page will probably still render fine in 2074, whether you're on a browser or a brain implant.
+I'm using [no-style-please](https://github.com/riggraz/no-style-please) with the iconic [Cascadia Code](https://fonts.google.com/specimen/Cascadia+Code) font. Ugly? Yes. But it works. No CSS bloat, no distractions. 
+
+You can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're on a browser or a brain implant.
 
 ### inspiration
 
 Some people's sites that I like, both for content and aesthetics:
 
-* [elly.town](https://elly.town/)
-* [matmul.net](https://matmul.net/)
-* [geohot.com](https://geohot.com/)
-* [noperator.dev](https://noperator.dev/)
+  - [elly.town](https://elly.town/)
+  - [matmul.net](https://matmul.net/)
+  - [geohot.com](https://geohot.com/)
+  - [ian.sh](https://ian.sh/)
+  - [noperator.dev](https://noperator.dev/)
 
 ### privacy
 
-I use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits without cookies. No personal data. No GDPR headaches. Just simple numbers, that's it.
+I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits without cookies. No personal data. No GDPR headaches. Just to track visits at a high level, I'm not a stalker.
 
 ### see you around
 
 That's it for now. More posts to come. Or connect with me on [linkedin](https://www.linkedin.com/in/mllamazares/) if that's your vibe.
-
-[^1]: Linkedin is fine for some things, but it's not for thinking out loud. :)

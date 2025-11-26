@@ -3,11 +3,11 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_), an Offensive Security Manager currently working remotely at Accenture from northern Spain. 
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_) an Offensive Security Manager working remotely from the green edge of northern Spain. 🐄
 
 I'm obsessed with appsec, web pentesting and the growing role of AI in hacking.
 
-Here's are some highlights of my profile, but if you want the boring details, just check out my [linkedin](https://www.linkedin.com/in/mllamazares/).
+Here's are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
 ### stuff I broke
 
@@ -63,7 +63,8 @@ Some of the cybersecurity certifications I've earned over time [^1]:
  - privacy enjoyer
  - jazz guitar player
  - aspiring professional kite flyer
+ - my pug's name is _Lady Di_ 🐶👑 
 
----
+<br>
 
 [^1]: Currently preparing for the OSEP cert
