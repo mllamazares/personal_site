@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_) an Offensive Security Manager working remotely from the green edge of northern Spain. 🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. 🐄
 
 I'm obsessed with appsec, web pentesting and the growing role of AI in hacking.
 
@@ -34,7 +34,7 @@ Here's are some highlights of my profile, but if you want the boring details, yo
   - British Broadcasting Corporation (BBC)
 
 ### certs
-Some of the cybersecurity certifications I've earned over time [^1]:
+Some of the cybersecurity certifications I've earned over time [^2]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -67,4 +67,5 @@ Some of the cybersecurity certifications I've earned over time [^1]:
 
 <br>
 
-[^1]: Currently preparing for the OSEP cert
+[^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
+[^2]: Currently preparing for the OSEP cert
