@@ -1,13 +1,13 @@
 ---
 layout: post
-description: "This post is here to test jektex, a lightweight jekyll plugin for LaTeX rendering LaTeX."
+title: Hello World
 ---
 
 Hey there. Welcome.
 
-My name's [Miguel](/about.html). This is my little island on the internet. 🏝️
+I'm [Miguel](/about.html) and this is my little island on the internet. 🏝️
 
-You'll notice there're already some posts here. I stole them from my own linkedin account because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
+You'll notice there're already some posts here. I stole them from my own [linkedin account](https://www.linkedin.com/in/mllamazares/) because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 
 ### why
 
@@ -19,7 +19,9 @@ I also want to force myself to write about what I find interesting. Too often id
 
 Expect something short and straight to the point. I hate buzzwordy consulting nonsense, and you will not find it here.
 
-Everything I write is my view. It doesn't represent my employer or anyone else.
+I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a bad spam bot, rambling forever with AI slop just to maximize screen time, only to spring some surprise pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore.
+
+Lastly, everything I write is my view. It doesn't represent my employer or anyone else.
 
 ### design
 
