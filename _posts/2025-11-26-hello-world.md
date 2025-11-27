@@ -39,7 +39,7 @@ Some people's sites that I like, both for content and aesthetics:
 
 ### privacy
 
-I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits without cookies. No personal data. No GDPR headaches. Just to track visits at a high level, I'm not a stalker.
+I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits _without_ cookies. No personal data. No GDPR headaches. Just to get a rough sense of the traffic; I'm not a stalker. 🤞
 
 ### see you around
 
