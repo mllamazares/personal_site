@@ -19,7 +19,7 @@ I also want to force myself to write about what I find interesting. Too often id
 
 Expect something short and straight to the point. I hate buzzwordy consulting nonsense, and you will not find it here.
 
-I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a bad spam bot, rambling forever with AI slop just to maximize screen time, only to spring some surprise pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore.
+I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a bad spam bot, rambling forever with AI slop just to maximize screen time, only to spring some _surprise_ pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore.
 
 Lastly, everything I write is my view. It doesn't represent my employer or anyone else.
 
