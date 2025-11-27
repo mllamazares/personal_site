@@ -11,7 +11,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ### stuff I broke
 
-[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions:
+[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions [^2]:
 
   - NASA
   - United Nations (UN)
@@ -34,7 +34,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - British Broadcasting Corporation (BBC)
 
 ### certs
-Some of the cybersecurity certifications I've earned over time [^2]:
+Some of the cybersecurity certifications I've earned over time [^3]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -68,4 +68,5 @@ Some of the cybersecurity certifications I've earned over time [^2]:
 <br>
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
-[^2]: Currently preparing for the OSEP cert
+[^2]: Apart from these, I have also participated in a bunch of private programs.
+[^3]: Currently preparing for the OSEP cert
