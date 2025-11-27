@@ -4,7 +4,7 @@ slug: making-owasp-asvs-actually-usable
 title: Making OWASP ASVS Actually Usable
 ---
 
-I've always liked [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) as a concept. It's a solid blueprint of security controls. But try to take it straight off the shelf and implement it in a real product, and you'll quickly feel like you've been handed a map with no roads. _\*play sad_violins.mp3_ 🎻
+I've always liked [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/). It's a solid blueprint of security controls. But try to take it straight off the shelf and implement it in a real product, and you'll quickly feel like you've been handed a map with no roads. _\*play sad_violin.mp3_ 🎻
 
 ### exploratory categorization
 
@@ -19,7 +19,7 @@ Here's what I looked at:
   5. **Implementation complexity**. Not all controls are equal. Checking password length is trivial; comparing it against a breached passwords list is a bigger lift. Labeling like "hours", "days" or "weeks" is enough.
   6. **Verification complexity**. Same deal. 
 
-It's perfect? No. But it's better than trying to apply them as-is [^1].
+It's perfect? No. But it's better than trying to apply them raw [^1].
 
 ### folding it to the context
 
@@ -31,7 +31,7 @@ That said, most L1 controls require minimal context and should be enforced and t
 
 ### be flexible
 
-You need to create your **own** categorization. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. 
+You need to tailor them to your **own** context. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. 
 
 Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. 
 
@@ -39,7 +39,7 @@ In other words, this categorization must be _\*alive\*_.
 
 ### tooling
 
-There are some tools I found useful to ease their generation, automation and categorization:
+There are some tools I found useful to ease the implementation and validation of ASVS controls:
   - [OWASP ASVS Security Evaluation Templates with Nuclei](https://github.com/OWASP/www-project-asvs-security-evaluation-templates-with-nuclei)
   - [OWASP ASVS Testing Guide](https://github.com/BlazingWind/OWASP-ASVS-4.0-testing-guide)
   - [ASVS-Agile-Delivery-Guide](https://github.com/mario-platt/ASVS-Agile-Delivery-Guide)

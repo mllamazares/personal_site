@@ -1,11 +1,12 @@
 ---
 layout: post
+slug: hello-world
 title: Hello World
 ---
 
 Hey there. Welcome.
 
-My name's [Miguel](/about.html) and this is my little island on the internet. 🏝️
+My name's [Miguel](/about.html) and this is my little island on the Internet. 🏝️
 
 You'll notice there're already some posts here. I stole them from my own [linkedin account](https://www.linkedin.com/in/mllamazares/) because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 
@@ -19,15 +20,15 @@ I also want to force myself to write about what I find interesting. Too often id
 
 Expect something short and straight to the point. I hate buzzwordy consulting nonsense, and you will not find it here.
 
-I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a bad spam bot, rambling forever with AI slop just to maximize screen time, only to spring some _surprise_ pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore.
+I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a malfunctioning churn machine, rambling forever with AI slop just to maximize screen time, only to spring some _surprise_ pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the Internet a worse place to explore.
 
 Lastly, everything I write is my view. It doesn't represent my employer or anyone else.
 
 ### design
 
-I'm using [no-style-please](https://github.com/riggraz/no-style-please) with the iconic [Cascadia Code](https://fonts.google.com/specimen/Cascadia+Code) font. Ugly? Yes. But it works. No CSS bloat, no distractions. 
+I'm using the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme with the iconic [Cascadia Code](https://fonts.google.com/specimen/Cascadia+Code) font. Ugly? Yes. But it works. No CSS bloat, no distractions. 
 
-You can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're on a browser or a brain implant.
+You can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're using a browser or a brain implant.
 
 ### inspiration
 
