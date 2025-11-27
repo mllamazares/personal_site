@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. 🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
 
 I'm obsessed with appsec, web pentesting and the growing role of AI in hacking. That's why [I started this blog](/hello-world.html).
 
@@ -56,14 +56,16 @@ Some of the cybersecurity certifications I've earned over time [^3]:
 
 ### r4nd0m
  Here's some random stuff about me so you can create the _\*ultimate wordlist\*_ and crack all my passwords:
- - entp 
- - debian user
- - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
- - solarpunk fanboy
- - privacy enjoyer
- - jazz guitar player
- - aspiring professional kite flyer
- - my pug's name is _Lady Di_ 🐶👑 
+  - entp 
+  - debian user
+  - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
+  - solarpunk fanboy
+  - privacy enjoyer
+  - jazz guitar player
+  - aspiring professional kite flyer
+  - my pug's name is _Lady Di_ 🐶👑
+  - Vin Diesel is the best actor of all time (and I’m not going to argue about it).
+  - I'm fluent in COBOL and JCL
 
 <br>
 

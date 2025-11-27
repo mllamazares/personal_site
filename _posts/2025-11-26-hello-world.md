@@ -39,6 +39,8 @@ Some people's sites that I like, both for content and aesthetics:
   - [geohot.com](https://geohot.com/)
   - [ian.sh](https://ian.sh/)
   - [noperator.dev](https://noperator.dev/)
+  - [arp242.net](https://arp242.net/)
+  - [sophiebits.com](https://sophiebits.com/)
 
 ### privacy
 

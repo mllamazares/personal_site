@@ -23,6 +23,13 @@ body {
   overflow-wrap: break-word;
 }
 
+a[href^="http"]:not([href*="mll.sh"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  margin-left: -4px;
+  text-decoration: none;
+}
+
 .post-meta {
   text-align: right;
 }
