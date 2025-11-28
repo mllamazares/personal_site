@@ -23,24 +23,25 @@ It's perfect? No. But it's better than trying to apply them raw [^1].
 
 ### folding it to the context
 
-Most ASVS controls are technical, which is OK for developers. But if you want requirements that actually drive behavior, you need to fold in functional context: components, roles, exceptions, workflows, business impact. 
+Most ASVS controls are technical, which is enough for some close-ended scenarios. However, if you want requirements to actually drive behavior, you need to fold in functional context: components, roles, exceptions, workflows, business impact, etc. User stories are your friends. I love [this approach by Mario Platt](https://github.com/OpenSecuritySummit/project-ASVS-User-Stories) that uses [Gherkin](https://cucumber.io/docs/gherkin/reference) syntax. 
 
-They need to be digestible by business people, QA, devs, pentesters, etc. Otherwise, your requirements are just _words_ [^2].
+They need to be digestible by everyone involved in the process: business people, QA, devs, pentesters, etc. Otherwise, your requirements will be just _words_ [^2].
 
 That said, most L1 controls require minimal context and should be enforced and treated as _basic hygiene_. For instance, _TLS for all client connections (V9.1.1)_. If your threat model comes back with _"hey guys, use HTTPS instead of HTTP"_ people will (understandably) roll their eyes [^3]. Duh. 
 
+Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. Context is key.
+
 ### be flexible
 
-You need to tailor them to your **own** context. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. 
+Ultimately, you need to _leverage what you have_. Meaning that rather than creating a new workflow you should use the process and tools you already have in place. That will reduce friction and cognitive load. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. You get the idea. 
 
-Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. 
-
-In other words, this categorization must be _\*alive\*_.
+In other words, this categorization must be tailored and _\*alive\*_.
 
 ### tooling
 
 There are some tools I found useful to ease the implementation and validation of ASVS controls:
   - [OWASP ASVS Security Evaluation Templates with Nuclei](https://github.com/OWASP/www-project-asvs-security-evaluation-templates-with-nuclei)
+  - [OWASP ASVS User Stories](https://github.com/OpenSecuritySummit/project-ASVS-User-Stories)
   - [OWASP ASVS Testing Guide](https://github.com/BlazingWind/OWASP-ASVS-4.0-testing-guide)
   - [ASVS-Agile-Delivery-Guide](https://github.com/mario-platt/ASVS-Agile-Delivery-Guide)
   - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS)
