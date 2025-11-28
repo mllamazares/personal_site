@@ -11,9 +11,22 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
+
+
   {{ content }}
 </article>
 
+{% if page.tags.size > 0 %}
+<p class="post-tags">
+  {% for tag in page.tags %}
+  <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>{% unless forloop.last %}, {%
+  endunless
+  %}
+  {% endfor %}
+</p>
+{% endif %}
+
 <hr>
+
 <p>Hey, I'd love to hear your thoughts! Feel free to <a href="mailto:mllamazares@protonmail.com">drop me an email</a>.
 </p>

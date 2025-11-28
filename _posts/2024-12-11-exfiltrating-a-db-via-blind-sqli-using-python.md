@@ -2,6 +2,7 @@
 layout: post
 slug: exfiltrating-a-db-via-blind-sqli-using-python
 title: Exfiltrating a DB via Blind SQLi Using Python
+tags: [sqli, python, poc]
 ---
 
 Yesterday, during my bug-hunting journey, I discovered a cool blind SQL injection. To determine if the condition was fulfilled, I had to monitor the request content length. 

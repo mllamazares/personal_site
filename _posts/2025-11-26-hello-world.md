@@ -2,6 +2,7 @@
 layout: post
 slug: hello-world
 title: Hello World
+tags: [misc]
 ---
 
 Hey there. Welcome.

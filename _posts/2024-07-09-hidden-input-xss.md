@@ -2,6 +2,7 @@
 layout: post
 slug: hidden-input-xss
 title: Triggering XSS in Hidden Inputs
+tags: [bugbounty, xss, research]
 ---
 
 Did you know you can still exploit XSS in a hidden input? (I didn't either).

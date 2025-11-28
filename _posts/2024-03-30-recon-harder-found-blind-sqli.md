@@ -2,6 +2,7 @@
 layout: post
 slug: recon-harder-found-blind-sqli
 title: Recon Harder or How I Found a Hidden Blind SQLi
+tags: [bugbounty, sqli, recon]
 ---
 
 Found an interesting open port with [naabu](https://github.com/projectdiscovery/naabu), inspected JS files, and discovered an interesting API endpoint. 
