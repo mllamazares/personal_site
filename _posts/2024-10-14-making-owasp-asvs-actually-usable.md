@@ -14,8 +14,8 @@ Here's what I looked at:
 
   1. **DOs vs DON'Ts**. Some controls are proactive, some are preventative. A DO: _"Show a password strength meter to help users pick stronger passwords" (V2.1.8)_. A DON'T: _"Don't limit allowed characters in passwords" (V2.1.9)_. Simple distinction, but it changes how you communicate priorities.
   2. **Who does it**. Devs? Infra? Design? Operations? Knowing who owns the work saves a lot of finger-pointing.
-  3. **How you verify it**. SAST, DAST, SCA, code review, pentest, your grandma, etc. 
-  4. **Who verifies it**. QA, offensive team, devs, etc. Avoid assumptions.
+  3. **How you verify it**. SAST, DAST, SCA, code review, pentest, etc. 
+  4. **Who verifies it**. QA, offensive team, devs, your grandma, etc. Avoid assumptions.
   5. **Implementation complexity**. Not all controls are equal. Checking password length is trivial; comparing it against a breached passwords list is a bigger lift. Labeling like "hours", "days" or "weeks" is enough.
   6. **Verification complexity**. Same deal. 
 
