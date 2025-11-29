@@ -64,7 +64,7 @@ Some of the cybersecurity certifications I've earned over time [^3]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - Vin Diesel is the best actor of all time (and I’m not going to argue about it).
+  - Vin Diesel is the best actor of all time (and I’m not going to argue about it)
   - I'm fluent in COBOL and JCL
 
 <br>
