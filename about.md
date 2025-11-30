@@ -70,5 +70,5 @@ Some of the cybersecurity certifications I've earned over time [^3]:
 <br>
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
-[^2]: Apart from these, I have also participated in a bunch of private programs.
+[^2]: Apart from these, I also participate in a bunch of private programs
 [^3]: Currently preparing for the OSEP cert
