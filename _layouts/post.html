@@ -16,8 +16,11 @@ layout: default
   {{ content }}
 </article>
 
+
 {% if page.tags.size > 0 %}
+<br>
 <p class="post-tags">
+  tags:
   {% for tag in page.tags %}
   <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>{% unless forloop.last %}, {%
   endunless
