@@ -57,15 +57,15 @@ Some of the cybersecurity certifications I've earned over time [^3]:
 ### r4nd0m
  Here's some random stuff about me so you can create the _\*ultimate wordlist\*_ and crack all my passwords:
   - entp 
-  - debian user
+  - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
   - solarpunk fanboy
   - privacy enjoyer
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - Vin Diesel is the best actor of all time (and I’m not going to argue about it)
-  - I'm fluent in COBOL and JCL
+  - Vin Diesel is the best actor of all time (and I'm not going to argue about it)
+  - not to brag, but I'm fluent in COBOL, JCL and PL/I
 
 <br>
 
