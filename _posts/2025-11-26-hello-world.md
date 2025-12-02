@@ -43,6 +43,7 @@ Some people's sites that I like, both for content and aesthetics:
   - [ben.page](https://ben.page/)
   - [arp242.net](https://arp242.net/)
   - [sophiebits.com](https://sophiebits.com/)
+  - [hux.site](https://hux.site/)
 
 ### privacy
 
