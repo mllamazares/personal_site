@@ -5,7 +5,7 @@ title: My Experience Passing the OSWE Cert
 tags: [cert, oswe, pentesting]
 ---
 
-I wanted to share my experience passing the OSWE certification on the first attempt.
+In this post, I share how I passed the OSWE certification on my first try.
 
 Every now and then I get DMed on linkedin asking about this exam. Hopefully this will help me redirect people to this blog every time I get asked again, get some organic traffic, monetize with google ads, throw it into sh*tcoins, and eventually retire to a remote Japanese village. 🍜⛩️
 
