@@ -129,9 +129,10 @@ github repos:
   - [GitBook - jorgectf/awae-oswe-preparation-resources](https://jorgectf.gitbook.io/awae-oswe-preparation-resources/)
   - [enderphan94/Pre-OSWE](https://github.com/enderphan94/Pre-OSWE/wiki#tips-for-exam)
 - misc:
+  - [absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
   - [brutuspt/0click_HTB](https://github.com/brutuspt/0click_HTB/tree/master)
   - [elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
-  - [absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
+  - [VoorivexTeam/white-box-challenges](https://github.com/VoorivexTeam/white-box-challenges)
 
 misc:
 - [Youtube - @TJ_Null’s OSWE Prep](https://www.youtube.com/playlist?list=PLidcsTyj9JXKTnpphkJ310PVVGF-GuZA0)
