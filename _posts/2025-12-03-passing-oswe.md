@@ -96,7 +96,7 @@ Then I got ~~humbled~~ stuck for a while, so I had no option but to listen to so
 
 The real problem was me skimming the exam description and missing a key detail. Once I caught that, I tested my idea dynamically and it worked. After that it was *just* building the exploit.
 
-TBH, the whole thing was tougher than I expected. Slept three hours, skipped lunch, pushed through, and finally grabbed the flag in the last hour.
+TBH, the whole thing was tougher than I expected. Slept three hours, skipped lunch, *cried harder*, pushed through, and finally grabbed the flag in the last hour.
 
 Next day I cleaned up the notes, sorted the screenshots, and wrote the report following the required format. Used the default OffSec DOCX template this time, but I plan probably switch to [SysReptor](https://docs.sysreptor.com/offsec-reporting-with-sysreptor/) in the future. 
 
