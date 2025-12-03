@@ -80,9 +80,9 @@ So I created what I call the *Exploit Zoo🦒*[^4], basically a collection of pa
 
 I also organized the writeups of each lab with the working code like this:
 
-![OSWE writeups](/assets/img/oswe_labs_writeup.png)
+![OSWE labs writeups](/assets/img/oswe_labs_writeup.png)
 
-Sure, I know you can write everything from scratch during the exam, but having a solid starting point saves you precious minutes when the clock is ticking.
+Sure, I know you can code everything from scratch during the exam, but having a solid starting point saves you precious minutes when the clock is ticking.
 
 ### exam
 
