@@ -9,8 +9,7 @@ In this post, I share how I passed the OSWE certification on my first try.
 
 Every now and then I get DMed on linkedin asking about this exam. Hopefully this will help me redirect people to this blog every time I get asked again, get some organic traffic, monetize with google ads, throw it into sh*tcoins, and eventually retire to a remote japanese village. 🍜⛩️
 
-#### spoiler
-There will be no *spoilers* here. It's just my personal experience without anything that isn’t already public.
+**spoiler**: there will be no *spoilers* here. It's just my personal experience without anything that isn’t already public.
 
 ### os-what?
 
