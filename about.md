@@ -44,9 +44,9 @@ Some of the cybersecurity certifications I've earned over time [^3]:
   - [see more...](https://www.linkedin.com/in/mllamazares/details/certifications/)
 
 ### teaching & training
-  - Lecturer at [UNIR (Universidad Internacional de La Rioja)](https://www.unir.net/), teaching AI applications in offensive security in the Advanced AI Cybersecurity Program.
-  - Lecturer at [UCAM (Universidad Católica San Antonio de Murcia)](https://www.ucam.edu/), teaching the module on advanced WAF evasion techniques in the country's first [Bug Bounty MSc](https://www.campusciberseguridad.com/masters/master-bug-bounty/).
-  - Created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
+  - lecturer at [UNIR (Universidad Internacional de La Rioja)](https://www.unir.net/), teaching AI applications in offensive security in the Advanced AI Cybersecurity Program.
+  - lecturer at [UCAM (Universidad Católica San Antonio de Murcia)](https://www.ucam.edu/), teaching the module on advanced WAF evasion techniques in the country's first [Bug Bounty MSc](https://www.campusciberseguridad.com/masters/master-bug-bounty/).
+  - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
 ### projects
   - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM. *(featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252))*
