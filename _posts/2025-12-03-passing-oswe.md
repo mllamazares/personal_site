@@ -153,7 +153,7 @@ Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 
 The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*. 🔗
 
-To do that you need to understand the vulnerability in depth: what it is, why it happens, how to exploit it, what possibilities it opens, and whether there's another vuln you can combine to maximize impact, and so on.
+To do that you need to understand the vulnerability in depth: what it is, why it happens, how to exploit it, what possibilities it opens, whether there's another vuln you can combine to maximize impact, and so on.
 
 As a friend of mine likes to say [^6]:
 > you cannot avoid lose your time, without having lost your time in the past
