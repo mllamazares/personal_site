@@ -5,7 +5,7 @@ title: My Experience Passing the OSWE Cert
 tags: [cert, oswe, pentesting]
 ---
 
-After some months, I finally share my experience with OSWE cert and how I passed it on the first try.
+After some months, I finally share my experience with the AWAE course and how I passed the OSWE cert on the first try.
 
 Every now and then I get DMed on linkedin asking about this exam. Hopefully this will help me redirect people to this blog every time I get asked again, get some organic traffic, monetize with google ads, throw it into sh*tcoins, and eventually retire to a remote japanese village. 🍜⛩️
 
@@ -115,7 +115,7 @@ CTFs:
 - [SecureFlag](https://knowledge-base.secureflag.com/vulnerabilities/cross_site_scripting/cross_site_scripting_vulnerability.html)
 - [SecureCodeWarrior](https://www.securecodewarrior.com/)
 - [PentesterLab](https://pentesterlab.com/exercises/codereview/course)
-- [Web Security Academy](https://portswigger.net/web-security/all-topics)
+- [PortSwigger Academy](https://portswigger.net/web-security/all-topics)
 - [VulnHub](https://www.vulnhub.com/entry/securecode-1,651/)
 
 GitHub repos:
@@ -131,7 +131,7 @@ GitHub repos:
 - misc:
   - [brutuspt/0click_HTB](https://github.com/brutuspt/0click_HTB/tree/master)
   - [elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
-  - [GitHub - absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
+  - [absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
 
 Misc:
 - [Youtube - @TJ_Null’s OSWE Prep](https://www.youtube.com/playlist?list=PLidcsTyj9JXKTnpphkJ310PVVGF-GuZA0)
