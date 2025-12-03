@@ -122,24 +122,24 @@ CTFs:
 
 GitHub repos:
 - oswe specific:
-    - [GitHub - Xcatolin/OSWE-Prep](https://github.com/Xcatolin/OSWE-Prep/tree/main)
-    - [GitHub - shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes](https://github.com/shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes)
-    - [GitHub - snoopysecurity/OSWE-Prep](https://github.com/snoopysecurity/OSWE-Prep)
-    - [HTB and Vulnhub: An OSWE Approach](https://klezvirus.github.io/Misc/HTB-VH-OSWE/)
-    - [GitHub - mishmashclone/timip-OSWE](https://github.com/mishmashclone/timip-OSWE?tab=readme-ov-file)
-    - [GitHub - wetw0rk/AWAE-PREP](https://github.com/wetw0rk/AWAE-PREP/tree/master)
-    - [GitHub - rizemon/exploit-writing-for-oswe](https://github.com/rizemon/exploit-writing-for-oswe)
-    - [GitBook - jorgectf](https://jorgectf.gitbook.io/awae-oswe-preparation-resources/)
-    - [GitHub - enderphan94/Pre-OSWE](https://github.com/enderphan94/Pre-OSWE/wiki#tips-for-exam)
+  - [Xcatolin/OSWE-Prep](https://github.com/Xcatolin/OSWE-Prep/tree/main)
+  - [shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes](https://github.com/shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes)
+  - [snoopysecurity/OSWE-Prep](https://github.com/snoopysecurity/OSWE-Prep)
+  - [mishmashclone/timip-OSWE](https://github.com/mishmashclone/timip-OSWE?tab=readme-ov-file)
+  - [wetw0rk/AWAE-PREP](https://github.com/wetw0rk/AWAE-PREP/tree/master)
+  - [rizemon/exploit-writing-for-oswe](https://github.com/rizemon/exploit-writing-for-oswe)
+  - [GitBook - jorgectf/awae-oswe-preparation-resources](https://jorgectf.gitbook.io/awae-oswe-preparation-resources/)
+  - [enderphan94/Pre-OSWE](https://github.com/enderphan94/Pre-OSWE/wiki#tips-for-exam)
 - misc:
-    - [GitHub - brutuspt/0click_HTB](https://github.com/brutuspt/0click_HTB/tree/master)
-    - [GitHub - elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
+  - [brutuspt/0click_HTB](https://github.com/brutuspt/0click_HTB/tree/master)
+  - [elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
+  - [GitHub - absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
 
 Misc:
 - [Youtube - @TJ_Null’s OSWE Prep](https://www.youtube.com/playlist?list=PLidcsTyj9JXKTnpphkJ310PVVGF-GuZA0)
-- [GitHub - absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
 - [OWASP_Code_Review_Guide_v2.pdf](https://owasp.org/www-project-code-review-guide/assets/OWASP_Code_Review_Guide_v2.pdf)
 - [WSTG - Stable OWASP Foundation](https://owasp.org/www-project-web-security-testing-guide/stable/)
+- [HTB and Vulnhub: An OSWE Approach](https://klezvirus.github.io/Misc/HTB-VH-OSWE/)
 - [IppSec writeups](https://ippsec.rocks/)
 
 Additional tools:
@@ -157,12 +157,12 @@ The big takeaway, and IMHO what separates a junior from a senior web pentester, 
 
 To do that you need to understand the vulnerability: what it is, why it happens, how to exploit it, what possibilities it opens, and whether there's another vuln you can combine to maximize impact, and so on.
 
-As a friend of mine likes to say [^5]:
+As a friend of mine likes to say [^6]:
 > you cannot avoid lose your time, without having lost your time in the past
 
 Meaning that only by practicing you develop a sense of what is productive and what is not. In this exam, you will have tons of ideas, but the environment is full of possibilities (and rabbit holes), and you won't have time to validate every hypotesis that comes to mind. You have to *prioritize* based on your methodology and your gut.
 
-Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, but it gives you a solid foundation for tackling complex white-box pentests. I definitely recommend it.
+Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, but it gives you a solid foundation for tackling complex white-box pentests. I do recommend it.
 
 <br>
 
@@ -170,4 +170,5 @@ Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, 
 [^2]: I plan to move to Obsidian like the grown ups
 [^3]: note this was a work in progress; some categories or classifications don’t even make sense.
 [^4]: I should trademark this someday
-[^5]: this deserves a tattoo or something
+[^5]: this guy plays 4D chess
+[^6]: this deserves a tattoo or something
