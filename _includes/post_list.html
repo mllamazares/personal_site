@@ -4,7 +4,7 @@
 {%-assign posts = site.posts-%}
 {%-endif-%}
 
-{%-if include.limit and posts.size > include.limit-%}
+{%-if site.limit and posts.size > site.limit-%}
 {%-assign limit_exceeded = true-%}
 {%-else-%}
 {%-assign limit_exceeded = false-%}
