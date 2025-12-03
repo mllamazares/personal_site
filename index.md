@@ -11,7 +11,7 @@ Feel free to [drop me an email](mailto:mllamazares@protonmail.com) or connect wi
 ---
 {: data-content="posts"}
 
-{% include post_list.html limit=5 show_more=true show_more_text="see archive..." show_more_url="archive.html" %}
+{% include post_list.html limit=5 show_more=true show_more_text="see more..." show_more_url="archive.html" %}
 
 <br>
 
