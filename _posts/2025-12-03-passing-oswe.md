@@ -160,7 +160,7 @@ As a friend of mine likes to say [^6]:
 
 Meaning that only by practicing you develop a sense of what is productive and what is not. In this exam, you will have tons of ideas, but the environment is full of possibilities (and rabbit holes), and you won't have time to validate every hypotesis that comes to mind. You have to *prioritize* based on your methodology and your gut.
 
-Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, but it gives you a solid foundation for tackling complex white-box pentests. I do recommend it.
+Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, and it gives you a solid foundation for tackling complex white-box pentests. I do recommend it.
 
 <br>
 
