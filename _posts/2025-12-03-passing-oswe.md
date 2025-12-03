@@ -63,16 +63,16 @@ Once I felt comfortable with the topics, I bought the AWAE course. My strategy:
 3. complement the course with extra research and CTFs
 4. create my *own* notes and exploits
 
-Overall, I liked how the AWAE course was structured. You *learn by pwning* throught specific case studies. It doesn’t dump the solution on you but shows the thought process step by step. Something breaks, then it explains why it broke and how to break it. 
+Overall, I liked how the AWAE course was structured. You *learn by pwning* throught specific case studies. It doesn’t dump the solution on you but shows the thought process step by step. Something doesn't work, then it explains why and how to break it. 
 
 This approach works because you see everything in context, and that helps you to develop a good intuition. 
 
 ### notes
 
-I used Notion[^2] for notetaking and started categorizing vulns like below, but it ended up messy [^3]:
+I used Notion for notetaking[^2] and started categorizing vulns like below, but it ended up quite messy[^3]:
 ![Failed first structure](/assets/img/failed_exploit_zoo.png)
 
-So I created what I call the *Exploit Zoo🦒*[^4], basically a collection of payloads and exploits for each topic, neatly categorized and tagged: 
+So I created what I called the *Exploit Zoo🦒*[^4], basically a collection of payloads and exploits for each topic, neatly categorized and tagged: 
 
 ![Exploit zoo](/assets/img/exploit_zoo.png)
 
