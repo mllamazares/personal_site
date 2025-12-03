@@ -118,7 +118,7 @@ CTFs:
 - [PortSwigger Academy](https://portswigger.net/web-security/all-topics)
 - [VulnHub](https://www.vulnhub.com/entry/securecode-1,651/)
 
-GitHub repos:
+github repos:
 - oswe specific:
   - [Xcatolin/OSWE-Prep](https://github.com/Xcatolin/OSWE-Prep/tree/main)
   - [shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes](https://github.com/shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes)
@@ -133,14 +133,14 @@ GitHub repos:
   - [elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
   - [absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
 
-Misc:
+misc:
 - [Youtube - @TJ_Null’s OSWE Prep](https://www.youtube.com/playlist?list=PLidcsTyj9JXKTnpphkJ310PVVGF-GuZA0)
 - [OWASP_Code_Review_Guide_v2.pdf](https://owasp.org/www-project-code-review-guide/assets/OWASP_Code_Review_Guide_v2.pdf)
 - [WSTG - Stable OWASP Foundation](https://owasp.org/www-project-web-security-testing-guide/stable/)
 - [HTB and Vulnhub: An OSWE Approach](https://klezvirus.github.io/Misc/HTB-VH-OSWE/)
 - [IppSec writeups](https://ippsec.rocks/)
 
-Additional tools:
+additional tools:
 - [BurpSuite Extension - Copy As Python-Requests](https://portswigger.net/bappstore/b324647b6efa4b6a8f346389730df160)
 - [curlconverter](https://github.com/curlconverter/curlconverter)
 
@@ -151,7 +151,7 @@ Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 
 ![OSWE passed](/assets/img/owse_passed.png)
 
-The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*. 
+The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*. 🔗
 
 To do that you need to understand the vulnerability in depth: what it is, why it happens, how to exploit it, what possibilities it opens, and whether there's another vuln you can combine to maximize impact, and so on.
 
