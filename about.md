@@ -5,7 +5,7 @@ title: about
 
 Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
 
-I'm obsessed with appsec, web pentesting and the growing role of AI in hacking. That's why [I started this blog](/hello-world.html).
+I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world.html).
 
 Here are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
@@ -35,7 +35,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ### certs
 Some of the cybersecurity certifications I've earned over time [^3]:
-  - _Offensive Security Web Expert (OSWE)_ - Offensive Security
+  - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe.html))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
   - _API Security Certified Professional (ASCP)_ - APIsec University
@@ -49,9 +49,9 @@ Some of the cybersecurity certifications I've earned over time [^3]:
   - Created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
 ### projects
-  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM. (featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252))
+  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM. *(featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252))*
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
-  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology. (featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145))
+  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology. *(featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145))*
   - [see more on my github...](https://github.com/mllamazares)
 
 ### r4nd0m

@@ -2,7 +2,7 @@
 layout: post
 slug: using-node-graphs-for-subdomain-relationship-mapping
 title: Using Node Graphs for Subdomain Relationship Mapping
-tags: [recon, visualization, tools]
+tags: [recon, charts, subdomains]
 ---
 
 I ~~built~~ vibecoded a simple app that lets you visualize subdomain relationships using a dynamic, drag-and-drop node network chart (everything runs locally via 3D.js, so no data ever leaves your browser).
