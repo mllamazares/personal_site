@@ -63,7 +63,7 @@ Once I felt comfortable with the topics, I bought the AWAE course. My strategy:
 3. complement the course with extra research and CTFs
 4. create my *own* notes and exploits
 
-Overall, I liked how the AWAE course was structured. You learn by pwning specific case studies. It doesn’t dump the solution on you but shows the thought process step by step. Something breaks, then it explains why it broke and how to break it. 
+Overall, I liked how the AWAE course was structured. You *learn by pwning* throught specific case studies. It doesn’t dump the solution on you but shows the thought process step by step. Something breaks, then it explains why it broke and how to break it. 
 
 This approach works because you see everything in context, and that helps you to develop a good intuition. 
 
