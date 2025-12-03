@@ -12,7 +12,7 @@
 
 {%- if posts.size > 0 -%}
 <ul>
-  {%- for post in posts -%}
+  {%- for post in posts limit: site.limit -%}
   <li>
     <span>{{- post.date | date: site.theme_config.date_format -}}</span>
     {% if site.theme_config.lowercase_titles == true %}
@@ -22,5 +22,8 @@
     {% endif %}
   </li>
   {%- endfor -%}
+  {%- if include.show_more and limit_exceeded -%}
+  <li><a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a></li>
+  {%- endif -%}
 </ul>
 {%- endif -%}

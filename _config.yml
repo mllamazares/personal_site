@@ -23,7 +23,7 @@ theme_config:
 sass:
   style: compressed
 
-
+limit: 9
 exclude:
   - .jektex-cache
   - vendor
