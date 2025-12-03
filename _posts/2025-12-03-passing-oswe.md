@@ -96,7 +96,7 @@ The real problem was me skimming the exam description and missing a key detail. 
 
 TBH, the whole thing was tougher than I expected. Slept three hours, skipped lunch, *cried harder*, pushed through, and finally grabbed the flag in the last hour.
 
-Next day I cleaned up the notes, sorted the screenshots, and wrote the report following the required format. Used the default OffSec DOCX template this time, but I plan probably switch to [SysReptor](https://docs.sysreptor.com/offsec-reporting-with-sysreptor/) in the future. 
+Next day I cleaned up the notes, sorted the screenshots, and wrote the report following the required format. Used the default OffSec DOCX template this time, but I'll probably switch to [SysReptor](https://docs.sysreptor.com/offsec-reporting-with-sysreptor/) in the future. 
 
 ### tips
 
