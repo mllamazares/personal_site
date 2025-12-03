@@ -122,7 +122,7 @@ CTFs:
 
 GitHub repos:
 - oswe specific:
-    - [GitHub - Xcatolin/OSWE-Prep: Resources and exploits made for OSWE preparation.](https://github.com/Xcatolin/OSWE-Prep/tree/main)
+    - [GitHub - Xcatolin/OSWE-Prep](https://github.com/Xcatolin/OSWE-Prep/tree/main)
     - [GitHub - shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes](https://github.com/shreyaschavhan/oswe-awae-pre-preperation-plan-and-notes)
     - [GitHub - snoopysecurity/OSWE-Prep](https://github.com/snoopysecurity/OSWE-Prep)
     - [HTB and Vulnhub: An OSWE Approach](https://klezvirus.github.io/Misc/HTB-VH-OSWE/)
@@ -147,7 +147,7 @@ Additional tools:
 - [curlconverter](https://github.com/curlconverter/curlconverter)
 
 
-### whoot whoot
+### wh00t wh00t
 
 Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 
