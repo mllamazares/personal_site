@@ -126,9 +126,9 @@ github repos:
   - [mishmashclone/timip-OSWE](https://github.com/mishmashclone/timip-OSWE?tab=readme-ov-file)
   - [wetw0rk/AWAE-PREP](https://github.com/wetw0rk/AWAE-PREP/tree/master)
   - [rizemon/exploit-writing-for-oswe](https://github.com/rizemon/exploit-writing-for-oswe)
-  - [GitBook - jorgectf/awae-oswe-preparation-resources](https://jorgectf.gitbook.io/awae-oswe-preparation-resources/)
+  - [jorgectf/awae-oswe-preparation-resources](https://jorgectf.gitbook.io/awae-oswe-preparation-resources/)
   - [enderphan94/Pre-OSWE](https://github.com/enderphan94/Pre-OSWE/wiki#tips-for-exam)
-- misc:
+- other:
   - [absoluteappsec/handouts](https://github.com/absoluteappsec/handouts/tree/master): IMO, these guys have the best E2E secure code review methodology out there. Also found [here](https://absoluteappsec.com/blog/Secure-Code-Review/). Pure gold.
   - [brutuspt/0click_HTB](https://github.com/brutuspt/0click_HTB/tree/master)
   - [elqal3awii/WebSecurity-Academy-with-Python](https://github.com/elqal3awii/WebSecurity-Academy-with-Python)
