@@ -55,6 +55,6 @@ I pitched this approach in the OWASP Slack ASVS channel. They weren't convinced;
 
 <br>
 
-[^1]: aka _nirvana fallacy_, the informal fallacy of comparing actual things with unrealistic, idealized alternatives.
+[^1]: aka _nirvana fallacy_: comparing actual things with unrealistic, idealized alternatives.
 [^2]: I'm quite bullish about the use of LLMs for this use case.
-[^3]: Note that precisely this set of controls are the most easy to automate.
+[^3]: note that precisely this set of controls are the most easy to automate.

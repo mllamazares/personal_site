@@ -166,7 +166,7 @@ Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, 
 
 <br>
 
-[^1]: Used Goodnotes app on my iPad
+[^1]: used Goodnotes app on my iPad
 [^2]: I plan to move to Obsidian like the grown ups
 [^3]: note this was a work in progress; some categories or classifications don’t even make sense.
 [^4]: I should trademark this someday
