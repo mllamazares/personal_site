@@ -7,7 +7,7 @@ tags: [cert, oswe, pentesting]
 
 I wanted to share my experience passing the OSWE certification on the first attempt.
 
-Every now and then I get DMed on linkedin asking about this exam. Hopefully this will help me redirect people to this blog every time I get asked again, get some organic traffic, monetize with google ads, throw it into sh*tcoins, and eventually retire in the Bahamas.🍹🏝️
+Every now and then I get DMed on linkedin asking about this exam. Hopefully this will help me redirect people to this blog every time I get asked again, get some organic traffic, monetize with google ads, throw it into sh*tcoins, and eventually retire to a remote Japanese village. 🍜⛩️
 
 #### disclaimer
 * I took the exam in january 2025.
