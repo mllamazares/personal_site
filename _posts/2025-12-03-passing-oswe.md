@@ -21,7 +21,7 @@ The [Offensive Security Web Expert (OSWE)](https://www.offsec.com/courses/web-30
 * mastering advanced web security methodologies such as fuzzing, static and dynamic analysis, and manual code review
 * practicing session hijacking techniques to gain unauthorized access to sensitive data and functionality, including exploiting an RCE vulnerability in the Dolibarr application using a dedicated virtual machine
 
-Let me stress that it is a *white-box* penetration testing course, meaning you ~~should~~ must review the source code to find vulnerabilities, but also to a dynamic instance so you can validate them. You need to excel at both.
+Let me stress that it is a *white-box* penetration testing course, meaning you ~~should~~ must review the source code to find vulnerabilities, but also to a dynamic instance so you can validate them. You need to excel at both. Plus, you need to write an exploit that automates the whole process. 
 
 ### reqs
 
