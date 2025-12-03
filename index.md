@@ -2,7 +2,7 @@
 layout: home
 ---
 
-Offensive Security Manager by day, bug bounty hunter by night. 
+Offensive Security Manager by day, bug hunter by night. 🦉
 
 If you are oddly enough interested, [here's more about me](/about.html).
 
