@@ -23,6 +23,7 @@ theme_config:
 sass:
   style: compressed
 
+highlighter: none
 limit: 8
 exclude:
   - .jektex-cache
