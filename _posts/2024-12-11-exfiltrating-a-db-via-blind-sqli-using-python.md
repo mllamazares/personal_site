@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: exfiltrating-a-db-via-blind-sqli-using-python
-title: Exfiltrating a DB via Blind SQLi Using Python
+title: exfiltrating a DB via blind SQLi using Python
 tags: [bugbounty, sqli, python]
 ---
 

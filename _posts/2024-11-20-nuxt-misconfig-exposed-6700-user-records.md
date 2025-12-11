@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: nuxt-misconfig-exposed-6700-user-records
-title: Nuxt Misconfig Exposed +6,700 User Records
+title: NUXT misconfig exposed +6,700 user records
 tags: [bugbounty, idor, pii]
 ---
 

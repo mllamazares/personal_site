@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: using-node-graphs-for-subdomain-relationship-mapping
-title: Using Node Graphs for Subdomain Relationship Mapping
+title: using node graphs for subdomain relationship mapping
 tags: [recon, charts, subdomains]
 ---
 

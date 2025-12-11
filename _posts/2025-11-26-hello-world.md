@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: hello-world
-title: Hello World
+title: hello world
 tags: [misc]
 ---
 

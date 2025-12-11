@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: making-owasp-asvs-actually-usable
-title: Making OWASP ASVS Actually Usable
+title: making OWASP ASVS actually usable
 tags: [appsec, asvs, owasp]
 ---
 

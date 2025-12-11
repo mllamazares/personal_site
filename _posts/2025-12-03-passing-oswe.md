@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: passing-oswe
-title: My Experience Passing the OSWE Cert
+title: my experience passing the OSWE cert
 tags: [cert, oswe, pentesting]
 ---
 
@@ -152,7 +152,7 @@ Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 
 ![OSWE passed](/assets/img/owse_passed.png)
 
-The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*. 🔗
+The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*.
 
 To do that you need to understand the vulnerability in depth: what it is, why it happens, how to exploit it, what possibilities it opens, whether there's another vuln you can combine to maximize impact, and so on.
 
