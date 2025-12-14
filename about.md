@@ -44,7 +44,7 @@ Some of the cybersecurity certifications I've earned over time [^3]:
   - [see more...](https://www.linkedin.com/in/mllamazares/details/certifications/)
 
 ### teaching & training
-  - lecturer at [UNIR (Universidad Internacional de La Rioja)](https://www.unir.net/), teaching AI applications in offensive security in the Advanced AI Cybersecurity Program.
+  - lecturer at [UNIR (Universidad Internacional de La Rioja)](https://www.unir.net/), teaching AI applications in offensive security in the [Advanced AI Cybersecurity Program](https://www.unir.net/ingenieria/curso-inteligencia-artificial-aplicada-ciberseguridad/claustro/).
   - lecturer at [UCAM (Universidad Católica San Antonio de Murcia)](https://www.ucam.edu/), teaching the module on advanced WAF evasion techniques in the country's first [Bug Bounty MSc](https://www.campusciberseguridad.com/masters/master-bug-bounty/).
   - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 

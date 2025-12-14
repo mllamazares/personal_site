@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
-
-
 html,
 body {
     background: white;
@@ -36,6 +33,18 @@ a[href^="http"]:not([href*="mll.sh"])::after {
     background-size: contain;
 }
 
+img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+img:hover {
+    transform: scale(1.5);
+    z-index: 1000;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 .post-meta {
     text-align: right;
 }
@@ -47,7 +56,7 @@ h4,
 h5,
 h6 {
     font-family: 'DM Mono';
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h2,
@@ -105,10 +114,14 @@ td {
     padding: 0.4rem;
 }
 
-code {
-    color: white;
-    background: black;
+p>code {
+    color: #f8f8f2;
+    background: #272822;
+    font-size: 0.9em;
     font-family: 'DM Mono', monospace;
+    padding: 0.1em 0.6em;
+    overflow: auto;
+    border-radius: .3em;
 }
 
 div.highlighter-rouge code {
@@ -132,4 +145,11 @@ img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+}
+
+/* PrismJS font override */
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: 'DM Mono', monospace !important;
+    font-size: 0.9em !important;
 }

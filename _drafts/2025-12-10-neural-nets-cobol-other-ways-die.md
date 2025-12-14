@@ -1,67 +1,205 @@
 ---
 layout: post
-slug: passing-oswe
-title: Neural Networks in COBOL or [...]
-tags: [cert, oswe, pentesting]
+slug: neural-networks-cobol
+title: neural networks in COBOL and other creative ways to k*ll yourself
+tags: [cobol, humor, mainframe, neuralnetwork]
 ---
 
-https://crusdg.app/ 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+html {
+    cursor: url('/assets/img/cruelty-cursor.webp'), auto;
+}
+
+a:hover {
+    cursor: url('/assets/img/cruelty-hand1.webp'), auto;
+    animation: cursor 250ms linear infinite;
+}
+
+.handler-chat {
+    display: flex;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+    gap: 1rem;
+    background: black;
+    padding: 1rem;
+    border: 3px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Barriecito', monospace;
+    font-size: 1.2em;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.handler-avatar {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/assets/img/handler1.webp");
+    flex-shrink: 0;
+    border: 2px solid #00ff00;
+    animation: handler 1000ms linear infinite;
+}
+
+@keyframes cursor {
+    0% {
+        cursor: url("/assets/img/cruelty-hand1.webp"), pointer;
+    }
+    50% {
+        cursor: url("/assets/img/cruelty-hand2.webp"), pointer;
+    }
+    100% {
+        cursor: url("/assets/img/cruelty-hand3.webp"), pointer;
+    }
+}
 
 
-Yesterday I got a weird message. You know the kind. The type that pops up while you’re sipping coffee, thinking you might have a normal day for once.
+@keyframes handler {
+    0% {
+        background-image: url("/assets/img/handler1.webp");
+    }
+    25% {
+        background-image: url("/assets/img/handler2.webp");
+    }
+    75% {
+        background-image: url("/assets/img/handler3.webp");
+    }
+    100% {
+        background-image: url("/assets/img/handler4.webp");
+    }
+}
+
+.handler-message {
+    flex-grow: 1;
+}
+
+.handler-message p {
+    margin: 0 0 0.8rem 0;
+}
+
+.handler-message p:last-child {
+    margin: 0;
+}
+
+.handler-name {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .handler-chat {
+        flex-direction: column;
+    }
+
+    .handler-avatar {
+       margin: 0;
+    }
+    
+    .handler-avatar {
+        margin-bottom: 1rem;
+    }
+}
+</style>
+
+_**Disclaimer**: this is a tribute to the [Cruelty Squad](https://www.youtube.com/watch?v=CHm2d3wf8EU) video game. Just to showcase how COBOL can still be used in bizarre ways to maximize shareholder value._
+
+---
+
+Yesterday I got a *weird* message from [The Handler](https://crueltysquad.fandom.com/wiki/The_Handler). You know the kind. The type that pops up while you're sipping coffee, thinking you might have a normal day for once.
 
 It said this:
 
-> **THE HANDLER:**
-> Listen, employee. Your next assignment involves critical bio-surveillance operations. We have intercepted subversive penguins attempting to infiltrate corporate aquaculture infrastructure.
->
-> Your task is to classify these traitorous birds based on flipper length and other obscene morphological features.
->
-> And you will do it in COBOL.
->
-> Do not disappoint me. The shareholders already do.
+<div class="handler-chat">
+  <div class="handler-avatar" aria-label="the handler"></div>
+  <div class="handler-message">
+    <p>Listen, employee. Your next assignment involves critical bio-surveillance operations: we have intercepted subversive penguins attempting to infiltrate corporate aquaculture infrastructure.</p>
+    <p>Your task is to classify these traitorous birds based on flipper length and other obscene morphological features. </p>
+    <p>BTW, you need to do it in COBOL (hope's is not a problem).</p>
+    <p>Do not disappoint me. The shareholders already do.</p>
+  </div>
+</div>
 
-I stared at my screen. Penguins. Infiltrating corporate aquaculture infrastructure. And COBOL. There’s satire, there’s absurdity, and then there’s whatever this is.
+Naturally, I asked if I could at least sketch the thing in Python first. I got this reply:
 
-So I replied:
+<div class="handler-chat">
+  <div class="handler-avatar" aria-label="the handler"></div>
+  <div class="handler-message">
+    <p>Fine. Babysit your little scripting language. But in the end, you return to the mainframe.</p> 
+    <p><i>You always return to the mainframe.</i></p>
+    <p>Now classify those penguins before they unionize.</p>
+  </div>
+</div>
 
-> **Me:** Can I at least sketch the thing in Python first?
+Alright. Let's do this.
 
-> **THE HANDLER:**
-> Fine. Babysit your little scripting language. But in the end, you return to the mainframe. You always return to the mainframe.
->
-> Now classify those penguins before they unionize.
 
-Alright. Let’s do this.
 
----
+## neural what?
 
-## the plan
+A neural network is a function $$ f(x) $$ that takes an input vector $$ x $$ and returns an output vector $$ y $$.
 
-First I’ll outline what we’re trying to build, so you don’t feel like you’re following a fever dream.
-
-We want a single hidden layer neural network that takes penguin measurements and predicts a class.
+In this context, we want a single hidden layer neural network that takes penguin measurements and predicts a class.
 A simple feedforward network.
 
-Mathematically, for an input vector ( x \in \mathbb{R}^n ):
+Before we dive in, I want to recommend the [A Programmer's Introduction to Mathematics](https://pimbook.org/) book. It's a great resource for anyone who wants to understand the math and speak symbols like the grown ups if you have a coding background.
 
-[
-h = \sigma(W_1 x + b_1)
-]
+Mathematically, for an input vector $$ ( x \in \mathbb{R}^n ) $$:
 
-[
-\hat{y} = \text{softmax}(W_2 h + b_2)
-]
+$$ h = \sigma(W_1 x + b_1) $$
+
+$$ \hat{y} = \text{softmax}(W_2 h + b_2) $$
+
+In python we would do:
+
+```python
+def softmax(z):
+    exp = np.exp(z - np.max(z, axis=1, keepdims=True))
+    return exp / np.sum(exp, axis=1, keepdims=True)
+```
 
 Training will involve gradient descent:
 
-[
-W := W - \alpha \frac{\partial L}{\partial W}
-]
 
-Pretty normal stuff. Except for the COBOL part. That’s where the pain begins later.
+$$ W := W - \alpha \frac{\partial L}{\partial W} $$
 
-Before that, let’s build a clean Python version so we know the formulas are right and the logic is sound.
+Pretty normal stuff. Except for the COBOL part. That's where the pain begins later.
+
+Before that, let's build a clean Python version so we know the formulas are right and the logic is sound.
+
+
+## housekeeping
+
+First I'll outline what we're trying to build, so you don't feel like you're following a fever dream.
+
+First let's inspect the penguin dataset:
+
+```python
+import pandas as pd
+import numpy as np
+
+penguins = pd.read_csv("penguins.csv")
+penguins.head()
+```
+
+| species | island | bill_length_mm | bill_depth_mm | flipper_length_mm | body_mass_g | sex |
+|---------|--------|----------------|---------------|-------------------|-------------|-----|
+| Adelie  | Torgersen | 39.1 | 18.7 | 181 | 3750 | male |
+| Adelie  | Torgersen | 39.5 | 17.4 | 186 | 3800 | female |
+| Adelie  | Torgersen | 40.3 | 18.0 | 195 | 3250 | female |
+| Adelie  | Torgersen | 36.7 | 19.3 | 193 | 3450 | male |
+| Adelie  | Torgersen | 39.3 | 20.6 | 190 | 3650 | male |
+
+
+Very cool. That means that the features are:
+
+$$ x = [bill\_length\_mm, bill\_depth\_mm, flipper\_length\_mm, body\_mass\_g] $$   
+
+OK, so these features will be our vectors.
+
+And the target is $$ y = [species] $$
+
 
 ## playin with the snake
 
@@ -126,12 +264,16 @@ class TinyNN:
 # nn.fit(X, y_onehot)
 ```
 
-This works. It’s clean. It’s readable. You can tweak the hidden layer, loss, whatever. You can reason about it without wanting to scream.
+This works. It's clean. It's readable. You can tweak the hidden layer, loss, whatever. You can reason about it without wanting to scream.
 
-Naturally, The Handler hates this.
+Naturally, the handler hates this.
 
-> **THE HANDLER:**
-> Enough with your cheerful toy language. The mainframe thirsts.
+<div class="handler-chat">
+  <div class="handler-avatar" aria-label="the handler"></div>
+  <div class="handler-message">
+    <p>Enough with your cheerful toy language. The mainframe thirsts.</p>
+  </div>
+</div>
 
 Great.
 
@@ -142,7 +284,7 @@ Enjoy the pain.
 
 COBOL was built for accountants, not gradient descent. You get fixed-width fields, no arrays the way you want them, no dynamic memory, and arithmetic that feels like chiseling numbers into wet clay.
 
-But fine. Here’s a sketch. It won’t run fast. It won’t run pretty. But it’ll gesture in the vague direction of a neural net.
+But fine. Here's a sketch. It won't run fast. It won't run pretty. But it'll gesture in the vague direction of a neural net.
 
 This demonstrates:
 • reading feature inputs
@@ -229,14 +371,18 @@ This demonstrates:
            STOP RUN.
 ```
 
-This thing barely computes a forward pass. Backpropagation in COBOL is theoretically possible, but so is doing neurosurgery with a spoon. Everything becomes manual loops, manually tracked indexes, manually computed derivatives, and prayers to gods that don’t answer email.
+This thing barely computes a forward pass. Backpropagation in COBOL is theoretically possible, but so is doing neurosurgery with a spoon. Everything becomes manual loops, manually tracked indexes, manually computed derivatives, and prayers to gods that don't answer email.
 
-But hey, it technically meets The Handler’s demands.
+But hey, it technically meets the handler's demands.
 Penguins classified. Shareholders appeased. Reality degraded.
 
 ## wh00t wh00t
 
-> **THE HANDLER:**
-> Satisfactory. The penguin insurgency will be contained... For now.
+<div class="handler-chat">
+  <div class="handler-avatar" aria-label="the handler"></div>
+  <div class="handler-message">
+    <p>Satisfactory. The penguin insurgency will be contained... For now.</p>
+  </div>
+</div>
 
 

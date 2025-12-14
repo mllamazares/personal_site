@@ -1,7 +1,9 @@
 *.gem
 .bundle
-.jekyll-cache
+.jekyll-cache/*
+.jektex-cache/*
 .sass-cache
 _site
 vendor
 Gemfile.lock
+.jektex-cache/jektex-cache.marshal
