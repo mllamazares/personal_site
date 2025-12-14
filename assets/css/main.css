@@ -114,7 +114,7 @@ td {
     padding: 0.4rem;
 }
 
-p>code {
+li>code, p>code {
     color: #f8f8f2;
     background: #272822;
     font-size: 0.9em;
