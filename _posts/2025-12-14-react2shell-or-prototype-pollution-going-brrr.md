@@ -205,7 +205,7 @@ Stack those and you get RCE. 💅🏻
 
 ### how to test
 
-Please, do not use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits.html)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
+Please, do _\*not\*_ use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits.html)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
 
 Keep calm and use nuclei:
 
