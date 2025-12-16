@@ -127,7 +127,7 @@ X-Action-Redirect: /login?a=uid=0(root) gid=0(root) groups=0(root);push
 
 Let's analyze the exploit step by step:
 
-1. *trigger react server action decoding*: `Next-Action` makes Next.js treat the request body as a React Server Components payload. This is not JSON parsing. This is object graph reconstruction with execution side effects.
+1. *trigger react server action decoding*: `Next-Action` makes Next.js treat the request body as a React Server Components payload. 
 
     ```http
     POST / HTTP/1.1
@@ -196,16 +196,16 @@ Let's analyze the exploit step by step:
 Why this works:
 
 * RSC deserializes object graphs, not data.
-* Thenables are executed during decode.
-* Prototype traversal is allowed.
+* thenables are executed during decode.
+* prototype traversal is allowed.
 * `constructor.constructor` is still `Function`.
 
-Stack those and you get RCE.
+Stack those and you get RCE. 💅🏻
 
 
 ### how to test
 
-Do not use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits.html)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
+Please, do _\*not\*_ use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits.html)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
 
 Keep calm and use nuclei:
 
@@ -280,8 +280,8 @@ Another trick is playing with encoding. [@phithon_xg demoed this](https://x.com/
 
 `form-data` fields can use charsets like `utf16le` or `ucs2`. Then you need to apend a null byte after each character. Why? Because it stores characters in pairs:
 
-* "A" becomes `41 00`
-* "B" becomes `42 00`
+* `A` becomes `41 00`
+* `B` becomes `42 00`
 
 You can also use base64 or Unicode escaping. [Another example by @pyn3rd](https://x.com/pyn3rd/status/1996788502386909539):
 
@@ -291,11 +291,11 @@ Some WAFs fail to normalize these properly.
 
 ### wrap up
 
-React2shell is primarily a prototype pollution vulnerability, but it involves deserialization as part of the attack chain. The patch is (in most cases) trivial, the exploitation is dead simple [^1], and the blast radius was huge.
+React2shell is primarily a prototype pollution vulnerability, but it involves deserialization as part of the attack chain. The patch is (in most cases) trivial, the exploitation is dead simple[^1], and the blast radius was huge.
 
-If you're running a WAF thinking it's enough, it is not.  Every month there is a new bypass and the rules gets updated. This is the cat and the mouse game that will never end. Don't get me wrong, WAFs have their place [^2], they buy you time, but they're not a substitute for patching.
+If you're running a WAF thinking it's enough, it is not.  Every month there is a new bypass and the rules gets updated. This is the cat and the mouse game that will never end. Don't get me wrong, WAFs have their place[^2], they buy you time, but they're not a substitute for patching.
 
-Eventually, React2Shell will fade. But the pattern won't. The next super-ultra-critical vuln will look different, but it'll rhyme the same way [^3]. 
+Eventually, React2Shell will fade. But the pattern won't. The next super-ultra-critical vuln will look different, but it'll rhyme the same way[^3]. 
 
 Stay sharp.
 
