@@ -21,7 +21,7 @@ https://REDACTED/subscribe?source=mllamazares%22%20accesskey=%22X%22%20onclick=%
 
 Although this method involves user interaction, requires less social engineering than an average self-XSS. I'm sharing this for the creativity of the attack, not for its potential impact (usually triaged as low or informative).
 
-**bonus**: here's [another cool method](https://x.com/garethheyes/status/1854191120277733760) [^1] to do this which does _\*not\*_ require user interaction [^2] that leverages `oncontentvisibilityautostatechange` with `content-visibility: auto` to trigger the `alert` event:
+**bonus**: here's [another cool method](https://x.com/garethheyes/status/1854191120277733760)[^1] to do this which does _\*not\*_ require user interaction[^2] that leverages `oncontentvisibilityautostatechange` with `content-visibility: auto` to trigger the `alert` event:
 
 ```
 https://REDACTED/subscribe?source=mllamazares%22%20oncontentvisibilityautostatechange%3Dalert%281%29%20style%3Dcontent-visibility%3Aauto%3E%20

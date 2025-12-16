@@ -156,7 +156,7 @@ The big takeaway, and IMHO what separates a junior from a senior web pentester, 
 
 To do that you need to understand the vulnerability in depth: what it is, why it happens, how to exploit it, what possibilities it opens, whether there's another vuln you can combine to maximize impact, and so on.
 
-As a friend of mine likes to say [^6]:
+As a friend of mine likes to say[^6]:
 > you cannot avoid lose your time, without having lost your time in the past
 
 Meaning that only by practicing you develop a sense of what is productive and what is not. In this exam, you will have tons of ideas, but there are plenty of possibilities (and rabbit holes), and you won't have time to validate every hypotesis that comes to mind. You have to *prioritize* based on your methodology and your gut.

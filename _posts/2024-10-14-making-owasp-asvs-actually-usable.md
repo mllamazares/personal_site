@@ -20,15 +20,15 @@ Here's what I looked at:
   5. **Implementation complexity**. Not all controls are equal. Checking password length is trivial; comparing it against a breached passwords list is a bigger lift. Labeling like "hours", "days" or "weeks" is enough.
   6. **Verification complexity**. Same deal. 
 
-It's perfect? No. But it's better than trying to apply them raw [^1].
+It's perfect? No. But it's better than trying to apply them raw[^1].
 
 ### folding it to the context
 
 Most ASVS controls are technical, which is enough for some close-ended scenarios. However, if you want requirements to actually drive behavior, you need to fold in functional context: components, roles, exceptions, workflows, business impact, etc. User stories are your friends. I love [this approach by Mario Platt](https://github.com/OpenSecuritySummit/project-ASVS-User-Stories) that uses [Gherkin](https://cucumber.io/docs/gherkin/reference) syntax. 
 
-They need to be digestible by everyone involved in the process: business people, QA, devs, pentesters, etc. Otherwise, your requirements will be just _words_ [^2].
+They need to be digestible by everyone involved in the process: business people, QA, devs, pentesters, etc. Otherwise, your requirements will be just _words_[^2].
 
-That said, most L1 controls require minimal context and should be enforced and treated as _basic hygiene_. For instance, _TLS for all client connections (V9.1.1)_. If your threat model comes back with _"hey guys, use HTTPS instead of HTTP"_ people will (understandably) roll their eyes [^3]. Duh. 
+That said, most L1 controls require minimal context and should be enforced and treated as _basic hygiene_. For instance, _TLS for all client connections (V9.1.1)_. If your threat model comes back with _"hey guys, use HTTPS instead of HTTP"_ people will (understandably) roll their eyes[^3]. Duh. 
 
 Also, take into account that it's not that complex to implement V2.1.7 for the first time or the N-th time. Context is key.
 

@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_ [^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
 
 I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world.html), which currently has {% include total_word_count.html %} words.
 
@@ -11,7 +11,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ### stuff I broke
 
-[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions [^2]:
+[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions[^2]:
 
   - NASA
   - United Nations (UN)
@@ -34,7 +34,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - British Broadcasting Corporation (BBC)
 
 ### certs
-Some of the cybersecurity certifications I've earned over time [^3]:
+Some of the cybersecurity certifications I've earned over time[^3]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe.html))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -64,7 +64,7 @@ Some of the cybersecurity certifications I've earned over time [^3]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - strongly believe Vin Diesel is the best actor of all time [^4]
+  - strongly believe Vin Diesel is the best actor of all time[^4]
   - fluent in COBOL, JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
 
