@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: recon-harder-found-blind-sqli
-title: recon harder or how I found a hidden blind SQLi
+title: recon harder or how I found a hidden blind sqli
 tags: [bugbounty, sqli, recon]
 ---
 
