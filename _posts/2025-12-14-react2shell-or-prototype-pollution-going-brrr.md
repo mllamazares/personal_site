@@ -270,7 +270,7 @@ A [great example by @pywrd](https://x.com/pyn3rd/status/1997365282344677807) vs 
 
 ![react2shell Akamai bypass](/assets/img/r2s-akamai-bypass.png)
 
-The Burp extension I like for this is assetnote/nowafpls. It includes a table of junk sizes that works like a charm.
+The Burp extension I like for this is [assetnote/nowafpls](https://github.com/assetnote/nowafpls). It includes a table of junk sizes that works like a charm.
 
 #### encoding bypass
 
@@ -295,7 +295,7 @@ React2shell is primarily a prototype pollution vulnerability, but it involves de
 
 If you're running a WAF thinking it's enough, it is not.  Every month there is a new bypass and the rules gets updated. This is the cat and the mouse game that will never end. Don't get me wrong, WAFs have their place[^2], they buy you time, but they're not a substitute for patching.
 
-Eventually, React2Shell will fade. But the pattern won't. The next super-ultra-critical vuln will look different, but it'll rhyme the same way[^3]. 
+Eventually, react2shell will fade. But the pattern won't. The next super-ultra-critical vuln will look different, but it'll rhyme the same way[^3]. 
 
 Stay sharp.
 

@@ -20,7 +20,7 @@ theme_config:
   show_description: false # show blog description in home page
 
 highlighter: none
-limit: 8
+limit: 999
 exclude:
   - .jektex-cache
   - vendor
