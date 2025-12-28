@@ -118,7 +118,8 @@ td {
     padding: 0.4rem;
 }
 
-li>code, p>code {
+li>code,
+p>code {
     color: #f8f8f2;
     background: #272822;
     font-size: 0.9em;
@@ -160,4 +161,8 @@ pre[class*="language-"] {
 
 .dud {
     color: #757575;
+}
+
+ul {
+    list-style-type: "– ";
 }
