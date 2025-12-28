@@ -166,3 +166,7 @@ pre[class*="language-"] {
 ul {
     list-style-type: "– ";
 }
+
+.reversefootnote {
+    font-family: 'Geist Mono', monospace;
+}
