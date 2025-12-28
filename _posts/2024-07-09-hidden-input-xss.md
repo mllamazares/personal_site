@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: hidden-input-xss
-title: triggering XSS in hidden inputs
+title: triggering xss in hidden inputs
 tags: [bugbounty, xss]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: passing-oswe
-title: my experience passing the OSWE cert
+title: my experience passing the oswe cert
 tags: [cert, oswe, pentesting]
 ---
 
