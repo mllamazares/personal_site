@@ -4,7 +4,18 @@ layout: default
 
 {%-include back_link.html-%}
 
-<article>
+{% assign words = content | number_of_words %}
+{% assign read_time = words | divided_by: 200 %}
+{% if read_time < 1 %}{% assign read_time=1 %}{% endif %} <article>
+  <aside id="toc-sidebar">
+    <div class="toc-meta">
+      <div class="toc-title">{{ page.title }}</div>
+      <div class="toc-time">{{ read_time }} min read</div>
+    </div>
+    <div class="toc-wrapper">
+      <div class="toc-line"></div>
+    </div>
+  </aside>
   <p class="post-meta">
     <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
   </p>
@@ -14,22 +25,23 @@ layout: default
 
 
   {{ content }}
-</article>
+  <aside id="footnote-sidebar"></aside>
+  </article>
 
 
-{% if page.tags.size > 0 %}
-<br>
-<p class="post-tags">
-  tags:
-  {% for tag in page.tags %}
-  <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>{% unless forloop.last %}, {%
-  endunless
-  %}
-  {% endfor %}
-</p>
-{% endif %}
+  {% if page.tags.size > 0 %}
+  <br>
+  <p class="post-tags">
+    tags:
+    {% for tag in page.tags %}
+    <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>{% unless forloop.last %}, {%
+    endunless
+    %}
+    {% endfor %}
+  </p>
+  {% endif %}
 
-<hr>
+  <hr>
 
-<p>Hey, I'd love to hear your thoughts! Just <a href="mailto:mllamazares@protonmail.com">drop me an email</a>.
-</p>
+  <p>Hey, I'd love to hear your thoughts! Just <a href="mailto:mllamazares@protonmail.com">drop me an email</a>.
+  </p>
