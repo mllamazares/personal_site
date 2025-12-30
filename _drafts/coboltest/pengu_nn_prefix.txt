@@ -1,0 +1,163 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PENGU-NN.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT CSV-FILE ASSIGN TO "penguins.csv"
+               ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  CSV-FILE.
+       01  CSV-RECORD PIC X(200).
+
+       WORKING-STORAGE SECTION.
+      *    Configuration
+       01  CONSTANTS.
+           05 MAX-ROWS          PIC 9(4) VALUE 500.
+
+      *    Data Loading Variables
+       01  WS-EOF               PIC X VALUE 'N'.
+           88 END-OF-FILE       VALUE 'Y'.
+       01  WS-ROW-COUNT         PIC 9(4) VALUE 0.
+       01  WS-VALID-ROWS        PIC 9(4) VALUE 0.
+       01  WS-TRAIN-ROWS        PIC 9(4).
+       01  WS-TEST-ROWS         PIC 9(4).
+
+      *    Preprocessing Variables
+       01  WS-STATS.
+           05 WS-SUM-X1         COMP-2 VALUE 0.
+           05 WS-SUM-X2         COMP-2 VALUE 0.
+           05 WS-SUM-X3         COMP-2 VALUE 0.
+           05 WS-SUM-X4         COMP-2 VALUE 0.
+           05 WS-MEAN-X1        COMP-2 VALUE 0.
+           05 WS-MEAN-X2        COMP-2 VALUE 0.
+           05 WS-MEAN-X3        COMP-2 VALUE 0.
+           05 WS-MEAN-X4        COMP-2 VALUE 0.
+           05 WS-VAR-X1         COMP-2 VALUE 0.
+           05 WS-VAR-X2         COMP-2 VALUE 0.
+           05 WS-VAR-X3         COMP-2 VALUE 0.
+           05 WS-VAR-X4         COMP-2 VALUE 0.
+           05 WS-STD-X1         COMP-2 VALUE 0.
+           05 WS-STD-X2         COMP-2 VALUE 0.
+           05 WS-STD-X3         COMP-2 VALUE 0.
+           05 WS-STD-X4         COMP-2 VALUE 0.
+           05 WS-TEMP-DIFF      COMP-2.
+
+      *    Shuffling
+       01  WS-INDICES.
+           05 WS-IDX OCCURS 500 TIMES PIC 9(4).
+       01  WS-RAND-VAL          COMP-2.
+       01  WS-SWAP-IDX          PIC 9(4).
+       01  WS-TEMP-IDX          PIC 9(4).
+       01  J-IDX                PIC 9(4).
+       
+      *    Neural Network Hyperparams
+       01  WS-HYPERPARAMS.
+           05 WS-LR             COMP-2 VALUE 0.1.
+           05 WS-EPOCHS         PIC 9(4) VALUE 150.
+           05 WS-INPUT-DIM      PIC 9(4) VALUE 4.
+           05 WS-HIDDEN-DIM     PIC 9(4) VALUE 16.
+           05 WS-OUTPUT-DIM     PIC 9(4) VALUE 3.
+           05 WS-EPOCH-CTR      PIC 9(4).
+
+      *    Weights and Biases
+       01  WS-WEIGHTS.
+      *    W1: 4x16
+           05 WS-W1-TABLE.
+               10 W1-ROW OCCURS 4 TIMES.
+                   15 W1-VAL OCCURS 16 TIMES COMP-2.
+      *    B1: 16
+           05 WS-B1-TABLE.
+               10 B1-VAL OCCURS 16 TIMES COMP-2.
+      *    W2: 16x3
+           05 WS-W2-TABLE.
+               10 W2-ROW OCCURS 16 TIMES.
+                   15 W2-VAL OCCURS 3 TIMES COMP-2.
+      *    B2: 3
+           05 WS-B2-TABLE.
+               10 B2-VAL OCCURS 3 TIMES COMP-2.
+
+      *    Gradients
+       01  WS-GRADS.
+           05 WS-DW1-TABLE.
+               10 DW1-ROW OCCURS 4 TIMES.
+                   15 DW1-VAL OCCURS 16 TIMES COMP-2.
+           05 WS-DB1-TABLE.
+               10 DB1-VAL OCCURS 16 TIMES COMP-2.
+           05 WS-DW2-TABLE.
+               10 DW2-ROW OCCURS 16 TIMES.
+                   15 DW2-VAL OCCURS 3 TIMES COMP-2.
+           05 WS-DB2-TABLE.
+               10 DB2-VAL OCCURS 3 TIMES COMP-2.
+
+      *    Activations
+      *    Stored for all rows (Mini-batch = Full Batch)
+       01  WS-ACTIVATIONS.
+      *    Z1: Nx16
+           05 Z1-TABLE.
+               10 Z1-ROW OCCURS 500 TIMES.
+                   15 Z1-VAL OCCURS 16 TIMES COMP-2.
+      *    H: Nx16 (ReLU output)
+           05 H-TABLE.
+               10 H-ROW OCCURS 500 TIMES.
+                   15 H-VAL OCCURS 16 TIMES COMP-2.
+      *    Z2: Nx3
+           05 Z2-TABLE.
+               10 Z2-ROW OCCURS 500 TIMES.
+                   15 Z2-VAL OCCURS 3 TIMES COMP-2.
+      *    PROBS: Nx3 (Softmax output)
+           05 P-TABLE.
+               10 P-ROW OCCURS 500 TIMES.
+                   15 P-VAL OCCURS 3 TIMES COMP-2.
+      
+      *    Loss
+       01  WS-LOSS              COMP-2.
+       01  WS-ACCURACY          COMP-2.
+       01  WS-PRED-CLASS        PIC 9.
+       
+      *    Loop Counters
+       01  IDX-I                PIC 9(4).
+       01  IDX-J                PIC 9(4).
+       01  IDX-K                PIC 9(4).
+       01  IDX-S                PIC 9(4).
+
+       01  WS-PARSING.
+           05 WS-UNSTRING-PTR   PIC 9(4).
+           05 WS-FIELD-STR      PIC X(50).
+           05 WS-VAL-NUM        PIC 9(5)V9(2).
+           05 WS-SPECIES-STR    PIC X(20).
+           05 WS-ISLAND         PIC X(20).
+           05 WS-BILL-LEN       PIC X(10).
+           05 WS-BILL-DEP       PIC X(10).
+           05 WS-FLIP-LEN       PIC X(10).
+           05 WS-BODY-MASS      PIC X(10).
+           05 WS-SEX            PIC X(10).
+
+      *    Dataset Arrays
+       01  DATASET-TABLE.
+           05 DATA-ROW OCCURS 500 TIMES INDEXED BY I-ROW.
+               10 D-SPECIES-NAME PIC X(20).
+               10 D-X1           COMP-2.
+               10 D-X2           COMP-2.
+               10 D-X3           COMP-2.
+               10 D-X4           COMP-2.
+               10 D-Y            PIC 9.
+
+      *    Temp variables
+       01  WS-CONV-NUM           COMP-2.
+       01  WS-RAND-U1            COMP-2.
+       01  WS-RAND-U2            COMP-2.
+       01  WS-GAUSSIAN           COMP-2.
+       01  WS-PI                 COMP-2 VALUE 3.14159265358979.
+
+       01  WS-BACKPROP-VARS.
+           05 BP-DZ2            OCCURS 3 TIMES COMP-2.
+           05 BP-DH             OCCURS 16 TIMES COMP-2.
+           05 BP-DZ1            OCCURS 16 TIMES COMP-2.
+        01  WS-DEBUG-VARS.
+            05 WS-C1             PIC 9(4).
+            05 WS-C2             PIC 9(4).
+            05 WS-C3             PIC 9(4).
+
