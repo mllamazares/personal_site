@@ -65,7 +65,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
   - strongly believe Vin Diesel is the best actor of all time[^4]
-  - fluent in COBOL, JCL and PL/I
+  - fluent in [COBOL](/neural-networks-cobol.html), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
 
 <br>

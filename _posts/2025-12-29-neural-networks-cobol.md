@@ -2,7 +2,7 @@
 layout: post
 slug: neural-networks-cobol
 title: neural networks in cobol and other creative ways to k*ll yourself
-tags: [cobol, humor, mainframe, neuralnetwork]
+tags: [cobol, humor, mainframe, neuralnetwork, ai]
 ---
 
 _**Disclaimer**: this is a tribute to the [Cruelty Squad](https://www.youtube.com/watch?v=CHm2d3wf8EU) video game. Just to showcase how COBOL can still be used in bizarre ways to maximize shareholder value._ ✨
