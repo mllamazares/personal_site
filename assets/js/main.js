@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     class TextScramble {
         constructor(el) {
             this.el = el;
-            this.chars = '!<>-_\\/[]{}—=+*^?#¡________';
+            this.chars = '!<>-_\\/[]{}*^?#&%$()________¶▒░▓';
             this.update = this.update.bind(this);
         }
 
         setText(newText) {
             const oldText = this.el.innerText;
-            const length = Math.max(oldText.length, newText.length);
+            const length = oldText.length; //Math.max(oldText.length, newText.length);
             const promise = new Promise((resolve) => this.resolve = resolve);
             this.queue = [];
             for (let i = 0; i < length; i++) {
