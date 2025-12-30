@@ -768,7 +768,7 @@ END-EVALUATE
 
 ## grand finale
 
-To compile it, just _keep calm and use [gnucobol](https://gnucobol.sourceforge.io/)_:
+To compile these 578 lines of pure madness, just _keep calm and use [gnucobol](https://gnucobol.sourceforge.io/)_:
 
 ```shell
 $ cobc -x -o pengu_nn pengu_nn.cob && ./pengu_nn
