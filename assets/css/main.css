@@ -299,7 +299,6 @@ ul {
 }
 
 /* Footnote Sidebar */
-/* Footnote Sidebar */
 #footnote-sidebar {
     position: absolute;
     top: 0;
@@ -319,6 +318,7 @@ ul {
     padding: 5px 10px;
     border-radius: 4px;
     opacity: 0.6;
+    display: flex;
 }
 
 .footnote-item:hover,
