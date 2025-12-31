@@ -13,7 +13,7 @@ While researching, I stumbled upon [a great article from PortSwigger](https://po
 
 In this case, I ended up using the following payload, which also displays `Press Alt+Shift+X to continue` to maximize the chances of success 😈:
 
-```
+```shell
 https://REDACTED/subscribe?source=mllamazares%22%20accesskey=%22X%22%20onclick=%22alert(document.domain)%22/%3EPress%20Alt%2BShift%2BX%20to%20continue%20
 ```
 
@@ -21,13 +21,13 @@ https://REDACTED/subscribe?source=mllamazares%22%20accesskey=%22X%22%20onclick=%
 
 Although this method involves user interaction, requires less social engineering than an average self-XSS. I'm sharing this for the creativity of the attack, not for its potential impact (usually triaged as low or informative).
 
-**bonus**: here's [another cool method](https://x.com/garethheyes/status/1854191120277733760)[^1] to do this which does _\*not\*_ require user interaction[^2] that leverages `oncontentvisibilityautostatechange` with `content-visibility: auto` to trigger the `alert` event:
+## bonus
 
-```
+Here's [another cool method](https://x.com/garethheyes/status/1854191120277733760)[^1] to do this which does _\*not\*_ require user interaction[^2] that leverages `oncontentvisibilityautostatechange` with `content-visibility: auto` to trigger the `alert` event:
+
+```shell
 https://REDACTED/subscribe?source=mllamazares%22%20oncontentvisibilityautostatechange%3Dalert%281%29%20style%3Dcontent-visibility%3Aauto%3E%20
 ```
-
-<br>
 
 [^1]: also by Gareth Heyes
 [^2]: just works in chrome

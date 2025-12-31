@@ -27,7 +27,7 @@ Lastly, everything I write is my view. It doesn't represent my employer or anyon
 
 ### design
 
-I'm using the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme with the iconic [Geist Mono](https://fonts.google.com/specimen/Geist+Mono) font. Ugly? Yes. But it works. No CSS bloat, no distractions. 
+I used the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme as a baseline, along with the iconic [Geist Mono](https://fonts.google.com/specimen/Geist+Mono) font. Ugly? Yes. But it works. No CSS bloat, no distractions. 
 
 You can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're using a browser or a brain implant.
 

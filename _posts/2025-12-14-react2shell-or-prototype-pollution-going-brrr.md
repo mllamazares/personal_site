@@ -299,8 +299,6 @@ Eventually, react2shell will fade. But the pattern won't. The next super-ultra-c
 
 Stay sharp.
 
-<br>
-
 [^1]: although the discovery and initial payload are super cool. I learned a lot.
 [^2]: ~~sometimes~~ most of the times they are a pain in the a**
 [^3]: omg, that was almost poetic, huh? 🌈

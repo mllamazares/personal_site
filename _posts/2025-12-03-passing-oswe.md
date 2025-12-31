@@ -163,8 +163,6 @@ Meaning that only by practicing you develop a sense of what is productive and wh
 
 Overall, the OSWE was a tough but rewarding experience. It’ll make you sweat, and it gives you a solid foundation for tackling complex white-box pentests. I do recommend it.
 
-<br>
-
 [^1]: used Goodnotes app on my iPad
 [^2]: I plan to move to Obsidian like the grown ups
 [^3]: note this was a work in progress; some categories or classifications don’t even make sense.
