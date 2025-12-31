@@ -2,17 +2,20 @@
 layout: home
 ---
 
+
+
 Hacking manager by day, bug hunter by night. 🦉
 
 If you are oddly enough interested, [here's more about me](/about.html).
 
-Feel free to [drop me an email](mailto:mllamazares@protonmail.com) or connect with me on [linkedin](https://www.linkedin.com/in/mllamazares/)[^1].
+<div class="social-links">
+<a href="mailto:mllamazares@protonmail.com">email</a>
+<a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mllamazares">linkedin</a>
+<a href="https://github.com/mllamazares">github</a>
+<a href="https://tryhackme.com/p/mllamazares">tryhackme</a>
+<a href="https://stackoverflow.com/users/1709738/mllamazares">stackoverflow</a>
+</div>
 
 ---
-{: data-content="posts"}
 
-{% include post_list.html limit=5 show_more=true show_more_text="see more..." show_more_url="archive.html" %}
-
-<br>
-
-[^1]: my mom says I'm very friendly
+{% include post_list.html limit=999 show_more=true show_more_text="see more..." show_more_url="archive.html" %}

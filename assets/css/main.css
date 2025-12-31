@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    color: black;
+    color: #2d3436;
     font-family: 'Geist Mono', 'Noto Color Emoji', monospace;
     font-size: 16px;
     line-height: 1.4;
@@ -49,6 +49,15 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+
+a {
+    color: #3c40c6;
+    text-underline-offset: 4px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1.5px;
+}
+
 
 a[href^="http"]:not([href*="mll.sh"])::after {
     content: "";
@@ -101,7 +110,21 @@ h1 {
 }
 
 hr {
-    margin: 2rem 0;
+    margin-block: calc(.25rem * 10);
+    border-style: none;
+    height: auto;
+}
+
+hr:before {
+    content: "# # #";
+    text-align: center;
+    background: linear-gradient(to right, black 0%, black 33%, black 33%, black 66%, black 66%, black 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    width: max-content;
+    margin-inline: auto;
+    display: block;
 }
 
 p {
@@ -118,19 +141,6 @@ li {
     padding: 4rem 2rem;
 }
 
-hr {
-    text-align: center;
-    border: 0;
-}
-
-hr:before {
-    content: '/////'
-}
-
-hr:after {
-    content: attr(data-content) '/////'
-}
-
 table {
     width: 100%;
 }
@@ -143,10 +153,20 @@ td {
     padding: 0.4rem;
 }
 
+.postlist {
+    padding-inline-start: 0px;
+    list-style-type: "";
+}
+
+.postlist-year {
+    color: gray;
+}
+
+
 li>code,
 p>code {
-    color: #f8f8f2;
-    background: #272822;
+    color: #2d3436;
+    background: #dfe6e9;
     font-size: 0.9em;
     font-family: 'DM Mono', monospace;
     padding: 0.1em 0.6em;
@@ -348,4 +368,25 @@ ul {
     .footnotes {
         display: none;
     }
+}
+
+/* Social Links Styles */
+.social-links {
+    margin-top: 5px;
+}
+
+.social-links a {
+    color: #95a5a6;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    color: #7f8c8d;
+    text-decoration: underline;
+}
+
+.social-links a::after {
+    content: none !important;
+    display: none !important;
 }
