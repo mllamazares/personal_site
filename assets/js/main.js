@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="http"]').forEach(a => a.setAttribute('target', '_blank'));
 
-    // Text Scramble Effect
-    if (window.baffle) {
-        let b = baffle('h1', {
-            characters: '!<>-_\\/[]{}*^?#&%$()________¶▒░▓',
-            speed: 50
-        });
-        b.start();
-        b.reveal(500, 500); // 500ms delay, 500ms duration
-    }
-
     // Table of Contents Generation
     const tocSidebar = document.getElementById('toc-sidebar');
     if (tocSidebar) {
@@ -166,5 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(positionFootnotes, 500);
             setTimeout(positionFootnotes, 2000);
         }
+    }
+
+    // Text Scramble Effect
+    if (window.baffle) {
+        let b = baffle('h1', {
+            characters: '!<>-_\\/[]{}*^?#&%$()________¶▒░▓',
+            speed: 50
+        });
+        b.start();
+        b.reveal(400, 400); // 400ms delay, 400ms duration
     }
 });
