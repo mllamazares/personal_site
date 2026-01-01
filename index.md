@@ -10,7 +10,7 @@ If you are oddly enough interested, [here's more about me](/about.html).
 
 <div class="social-links">
 <a href="mailto:mllamazares@protonmail.com">email</a>
-<a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mllamazares">linkedin</a>
+<a href="https://www.linkedin.com/in/mllamazares">linkedin</a>
 <a href="https://github.com/mllamazares">github</a>
 <a href="https://tryhackme.com/p/mllamazares">tryhackme</a>
 <a href="https://stackoverflow.com/users/1709738/mllamazares">stackoverflow</a>
