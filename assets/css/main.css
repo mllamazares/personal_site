@@ -196,7 +196,7 @@ img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: zoom-in;
 }
 
@@ -204,7 +204,10 @@ img:hover {
     transform: scale(1.5);
     z-index: 1000;
     position: relative;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: var(--bg-body);
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.2),
+        0 0 0 100vmax rgba(255, 255, 255, 0.85);
 }
 
 /* Tables */
@@ -287,7 +290,6 @@ hr::before,
 
 .social-links a {
     color: var(--fg-faint);
-    /* #b2bec3 is close to #95a5a6 */
     text-decoration: none;
     margin-right: 8px;
 }
@@ -409,7 +411,6 @@ hr::before,
     position: absolute;
     top: 0;
     left: calc(50% + 340px);
-    /* 640/2 + 20 */
     width: 300px;
     height: 100%;
     display: none;

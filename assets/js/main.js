@@ -149,12 +149,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
-            window.addEventListener('load', positionFootnotes);
+            // Use ResizeObserver to handle layout changes (e.g., lazy loaded images)
+            const resizeObserver = new ResizeObserver(() => {
+                positionFootnotes();
+            });
+            resizeObserver.observe(article);
+
+            // Also listen to window resize for horizontal layout changes
             window.addEventListener('resize', positionFootnotes);
 
-            // Re-calc after a short delay to ensure fonts/images loaded
-            setTimeout(positionFootnotes, 500);
-            setTimeout(positionFootnotes, 2000);
+            // Initial calculation
+            positionFootnotes();
         }
     }
 
