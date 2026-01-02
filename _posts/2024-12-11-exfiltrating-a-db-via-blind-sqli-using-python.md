@@ -9,9 +9,9 @@ Yesterday, during my bug-hunting journey, I discovered a cool blind SQL injectio
 
 I could vibehacked it using sqlmap, but, since I was studiying for OSWE, I coded this simple Python PoC to exfiltrate the database version.
 
-![blind sqli script poc](/assets/img/blind-sql-injection-poc-code.png)
+![blind sqli script poc](/assets/img/blind-sql-injection-poc-code.png){: loading="lazy"}
 
 And the output:
 
-![blind sqli script output](/assets/img/blind-sql-injection-poc-output.png)
+![blind sqli script output](/assets/img/blind-sql-injection-poc-output.png){: loading="lazy"}
 

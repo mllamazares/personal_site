@@ -10,3 +10,5 @@ gem "base64"
 gem "logger"
 
 gemspec
+gem "image_optim", "~> 0.31.4"
+gem "image_optim_pack", "~> 0.12.2"

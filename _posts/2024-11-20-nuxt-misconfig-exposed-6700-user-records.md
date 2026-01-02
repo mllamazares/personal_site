@@ -11,7 +11,7 @@ In this case, the Nuxt context object stored PII of all registered users (name, 
 
 In the PoC below, you can see a sample of the emails retrieved and the total volume of users disclosed. 
 
-![nuxt pii disclosure](/assets/img/nuxt-pii-disclosure.png)
+![nuxt pii disclosure](/assets/img/nuxt-pii-disclosure.png){: loading="lazy"}
 
 The organization is already working on a fix.
 

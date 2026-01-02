@@ -9,6 +9,6 @@ Found an interesting open port with [naabu](https://github.com/projectdiscovery/
 
 After some fuzzing and rebuilding the requests I found in the JS files, I reported an IDOR and this time-based SQLi[^1]:
 
-![simple sqli poc](/assets/img/simple-sqli-poc.png)
+![simple sqli poc](/assets/img/simple-sqli-poc.png){: loading="lazy"}
 
 [^1]: yep, plain curl, because you don't always need burp :)

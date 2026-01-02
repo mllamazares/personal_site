@@ -17,7 +17,7 @@ In this case, I ended up using the following payload, which also displays `Press
 https://REDACTED/subscribe?source=mllamazares%22%20accesskey=%22X%22%20onclick=%22alert(document.domain)%22/%3EPress%20Alt%2BShift%2BX%20to%20continue%20
 ```
 
-![hidden input xss](/assets/img/hidden-input-xss1.png)
+![hidden input xss](/assets/img/hidden-input-xss1.png){: loading="lazy"}
 
 Although this method involves user interaction, requires less social engineering than an average self-XSS. I'm sharing this for the creativity of the attack, not for its potential impact (usually triaged as low or informative).
 

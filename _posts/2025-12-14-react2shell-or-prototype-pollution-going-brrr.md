@@ -37,7 +37,7 @@ RSC lets you render components on the server instead of choking the browser. The
 
 This is a sequence diagram to illustrate the server action flow:
 
-![server action flow](assets/img/mermaid-react2shell.png)
+![server action flow](assets/img/mermaid-react2shell.png){: loading="lazy"}
 
 Here is a simplified example of how React Flight chunks look:
 
@@ -268,7 +268,7 @@ See this [classic example from 2012 in Exploit-DB](https://www.exploit-db.com/ex
 
 A [great example by @pywrd](https://x.com/pyn3rd/status/1997365282344677807) vs Akamai:
 
-![react2shell Akamai bypass](/assets/img/r2s-akamai-bypass.png)
+![react2shell Akamai bypass](/assets/img/r2s-akamai-bypass.png){: loading="lazy"}
 
 The Burp extension I like for this is [assetnote/nowafpls](https://github.com/assetnote/nowafpls). It includes a table of junk sizes that works like a charm.
 
@@ -276,7 +276,7 @@ The Burp extension I like for this is [assetnote/nowafpls](https://github.com/as
 
 Another trick is playing with encoding. [@phithon_xg demoed this](https://x.com/phithon_xg/status/1997005756013728204):
 
-![react2shell charset bypass](/assets/img/r2s-charset-bypass.png)
+![react2shell charset bypass](/assets/img/r2s-charset-bypass.png){: loading="lazy"}
 
 `form-data` fields can use charsets like `utf16le` or `ucs2`. Then you need to apend a null byte after each character. Why? Because it stores characters in pairs:
 
@@ -285,7 +285,7 @@ Another trick is playing with encoding. [@phithon_xg demoed this](https://x.com/
 
 You can also use base64 or Unicode escaping. [Another example by @pyn3rd](https://x.com/pyn3rd/status/1996788502386909539):
 
-![react2shell encoding bypass](/assets/img/r2s-encoding-bypass.png)
+![react2shell encoding bypass](/assets/img/r2s-encoding-bypass.png){: loading="lazy"}
 
 Some WAFs fail to normalize these properly.
 
