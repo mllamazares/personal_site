@@ -7,7 +7,7 @@ tags: [misc]
 
 Hey there. Welcome.
 
-My name's [Miguel](/about.html) and this is my little island on the Internet. 🏝️
+My name's [Miguel](/about) and this is my little island on the Internet. 🏝️
 
 You'll notice there're already some posts here. I stole them from my own [linkedin account](https://www.linkedin.com/in/mllamazares/) because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 

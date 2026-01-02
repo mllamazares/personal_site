@@ -37,7 +37,7 @@ RSC lets you render components on the server instead of choking the browser. The
 
 This is a sequence diagram to illustrate the server action flow:
 
-![server action flow](assets/img/mermaid-react2shell.png){: loading="lazy"}
+![server action flow](/assets/img/mermaid-react2shell.png){: loading="lazy"}
 
 Here is a simplified example of how React Flight chunks look:
 
@@ -205,7 +205,7 @@ Stack those and you get RCE. 💅🏻
 
 ### how to test
 
-Please, do _\*not\*_ use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits.html)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
+Please, do _\*not\*_ use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
 
 Keep calm and use nuclei:
 

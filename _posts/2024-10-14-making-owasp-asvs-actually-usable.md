@@ -53,8 +53,6 @@ There are some tools I found useful to ease the implementation and validation of
 
 I pitched this approach in the OWASP Slack ASVS channel. They weren't convinced; they preferred to keep the standard minimal and context-independent. Fair enough. But in practice, a little context makes a lot of difference.
 
-<br>
-
 [^1]: aka _nirvana fallacy_: comparing actual things with unrealistic, idealized alternatives.
 [^2]: I'm quite bullish about the use of LLMs for this use case.
 [^3]: note that precisely this set of controls are the most easy to automate.

@@ -5,7 +5,7 @@ title: about
 
 Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
 
-I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world.html), which currently has {% include total_word_count.html %} words.
+I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words.
 
 Here are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
@@ -35,7 +35,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ### certs
 Some of the cybersecurity certifications I've earned over time[^3]:
-  - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe.html))
+  - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
   - _API Security Certified Professional (ASCP)_ - APIsec University
@@ -49,9 +49,9 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
 ### projects
-  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM. *(featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252))*
+  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^4].
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
-  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology. *(featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145))*
+  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^5].
   - [see more on my github...](https://github.com/mllamazares)
 
 ### r4nd0m
@@ -64,13 +64,13 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - strongly believe Vin Diesel is the best actor of all time[^4]
-  - fluent in [COBOL](/neural-networks-cobol.html), JCL and PL/I
+  - strongly believe Vin Diesel is the best actor of all time[^6]
+  - fluent in [COBOL](/neural-networks-cobol), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
-
-<br>
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
 [^2]: apart from these, I also participate in a bunch of private programs
 [^3]: currently preparing for the OSEP cert
-[^4]: I'm not going to argue about that
+[^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
+[^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
+[^6]: I'm not going to argue about that

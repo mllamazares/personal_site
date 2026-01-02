@@ -805,7 +805,7 @@ The penguins get classified. The loss goes down. The mainframe hums in approval.
 
 ---
 
-You can find the full working code, including all the ugly declarations I spared you from, [in this github repo](https://github.com/mllamazares/neural-networks-in-cobol)
+You can find the full working code, including all the ugly declarations I spared you from, [in this github repo](https://github.com/mllamazares/neural-networks-in-cobol).
 
 
 [^1]: yep, I know we don't need IMS here. I just wanted to flex with that since I don't get many chances, lol.
