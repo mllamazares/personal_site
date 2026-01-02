@@ -230,6 +230,7 @@ hr::before,
 .footnotes::before {
     content: "# # #";
     text-align: center;
+    font-weight: bold;
     background: linear-gradient(to right, var(--color-dark-gray) 0%, var(--color-dark-gray) 33%, var(--color-dark-gray) 33%, var(--color-dark-gray) 66%, var(--color-dark-gray) 66%, var(--color-dark-gray) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -267,6 +268,11 @@ hr::before,
     margin-top: 2rem;
 }
 
+.footnote {
+    margin-left: 2px;
+    text-decoration: none;
+}
+
 .reversefootnote {
     font-family: var(--font-code);
 }
@@ -276,6 +282,7 @@ hr::before,
    ========================================= */
 .social-links {
     margin-top: 5px;
+    font-size: 0.8rem;
 }
 
 .social-links a {
