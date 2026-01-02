@@ -14,6 +14,7 @@ If you are oddly enough interested, [here's more about me](/about.html).
 <a href="https://github.com/mllamazares">github</a>
 <a href="https://tryhackme.com/p/mllamazares">tryhackme</a>
 <a href="https://stackoverflow.com/users/1709738/mllamazares">stackoverflow</a>
+<a href="/feed.xml">rss</a>
 </div>
 
 ---
