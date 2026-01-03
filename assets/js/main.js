@@ -172,4 +172,23 @@ document.addEventListener('DOMContentLoaded', () => {
         b.start();
         b.reveal(400, 400); // 400ms delay, 400ms duration
     }
+    // Scroll to Top Arrow Logic
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
