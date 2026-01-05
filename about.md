@@ -67,6 +67,8 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - strongly believe Vin Diesel is the best actor of all time[^6]
   - fluent in [COBOL](/neural-networks-cobol), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
+  - pre-llm[^7]
+  - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
 [^2]: apart from these, I also participate in a bunch of private programs
@@ -74,3 +76,4 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 [^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
 [^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
 [^6]: I'm not going to argue about that
+[^7]: learned *to think* before *to prompt*
