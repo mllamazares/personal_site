@@ -50,7 +50,7 @@ Stenberg identified three converging bad trends:
 2. human reporters doing worse than ever (likely also misled by AI)
 3. submitters approaching with a bad-faith mindset: trying to twist anything into a critical vulnerability rather than genuinely helping improve the project
 
-So this program died because thousands of people who didn't understand the problem domain used a tool they also didn't understand, and buried the signal in noise. Apache Log4j's bounty program reportedly headed the same direction[^3].
+The program died because thousands of people who didn't understand the problem domain used a tool they also didn't understand, and buried the signal in noise. Apache Log4j's bounty program reportedly headed the same direction[^3].
 
 This is what the lack of a framework looks like. So let me give you one.
 
@@ -77,7 +77,7 @@ Below is a visual representation of these domains:
 
 My take is that llms are nearly flawless in _clear_, they dominate in _complicated_, they degrade fast in _complex_, and they're catastrophic in _chaotic_.
 
-So the idea is not to use the same prompt strategy everywhere, but to match it to the specific problem's context. 
+The idea is not to use the same prompt strategy everywhere, but to match it to the context of the specific problem.
 
 Let's break it down with practical examples:
 
