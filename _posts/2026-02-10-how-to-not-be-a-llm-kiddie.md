@@ -67,7 +67,7 @@ Here are the cynefin domains, oversimplified:
 - **🌪️ chaotic:** no cause and effect relationship perceivable. novel practice. *act → sense → respond.*
 - **🧭 confusion (disorder):** you don't even know which of the previous domain you're in.
 
-Here's a visual representation of these domains:
+Below is a visual representation of these domains:
 
 ![cynefin](/assets/img/cynefin.png)
 
@@ -77,7 +77,9 @@ Here's a visual representation of these domains:
 
 My take is that llms are nearly flawless in _clear_, they dominate in _complicated_, they degrade fast in _complex_, and they're catastrophic in _chaotic_.
 
-So the idea is not to use the same prompt strategy everywhere, but to match the tool to the terrain. Let's break it down:
+So the idea is not to use the same prompt strategy everywhere, but to match it to the specific problem's context. 
+
+Let's break it down with practical examples:
 
 ### 🔨 clear: let the machine do the boring stuff
 
@@ -282,7 +284,7 @@ Chaos means there is no perceivable relationship between cause and effect. In se
 
 **the key insight:** in chaotic domains, the llm's main value is *speed of ideation*. You need options fast. You don't need them to be perfect: you need them to be actionable *right now*.
 
-#### example #1: IR containment tips
+#### example #1: IR containment brainstorming
 
 ```text
 We just discovered active exploitation of our customer-facing 
