@@ -37,8 +37,6 @@ Now the part nobody selling you a _"hack anything with AI 🌈"_  course wants y
 
 If you want to see what happens when llm kiddies operate at scale, look at what happened to curl[^1].
 
-Daniel Stenberg, the creator and maintainer of curl, documented the slow-motion destruction across two blog posts. 
-
 In jul 2025, Daniel Stenberg[^2] published ["Death by a thousand slops"](https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/), describing how AI-generated vulnerability reports were flooding the curl bug bounty on HackerOne. About 20% of all submissions were obvious AI slop, and only around 5% of total submissions turned out to be genuine vulnerabilities: a massive decline from the prior rate of over 15%. 
 
 The reports had titles like _"Buffer Overflow Vulnerability in WebSocket Handling"_ and _"HTTP Request Smuggling Vulnerability Analysis"_: beautifully formatted, confidently stated, and completely fabricated, kek.
@@ -52,7 +50,7 @@ Stenberg identified three converging bad trends:
 2. human reporters doing worse than ever (likely also misled by AI)
 3. submitters approaching with a bad-faith mindset: trying to twist anything into a critical vulnerability rather than genuinely helping improve the project
 
-So, this program died because thousands of people who didn't understand the problem domain used a tool they also didn't understand, and buried the signal in noise. Apache Log4j's bounty program reportedly headed the same direction[^3].
+So this program died because thousands of people who didn't understand the problem domain used a tool they also didn't understand, and buried the signal in noise. Apache Log4j's bounty program reportedly headed the same direction[^3].
 
 This is what the lack of a framework looks like. So let me give you one.
 
