@@ -32,6 +32,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - Red Bull
   - Adyen
   - British Broadcasting Corporation (BBC)
+  - Deutsche Telekom
 
 ### certs
 Some of the cybersecurity certifications I've earned over time[^3]:

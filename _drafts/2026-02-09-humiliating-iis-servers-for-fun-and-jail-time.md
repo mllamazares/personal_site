@@ -331,3 +331,12 @@ The beauty of IIS in bug bounty is that the attack surface is well-understood bu
 
 Don't skip the blue screen. Dig in. That's where the money is.
 
+## further reading
+
+There are the following meaningful references:
+- https://youtu.be/cqM-MdPkaWo -> NahamCon2021 - Hacking IIS
+- https://youtu.be/yyD8Z5Qar5I -> THE POWER OF RECON by Orwa Atyat
+- https://docs.google.com/presentation/d/1AA0gX2-SI_9ErTkBhtW0b-5BH70-1B1X
+- https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services
+- https://mike-n1.github.io/ExtensionsOverview
+- https://x.com/infosec_au/status/1340785029899698181
