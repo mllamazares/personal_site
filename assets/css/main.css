@@ -3,8 +3,9 @@
 :root {
     /* Palette */
     --color-white: #ffffff;
-    --color-dark-gray: #2d3436;
-    --color-blue: #d35400;
+    --color-black: #000;
+    --color-orange: #d35400;
+    --color-gray-0: #242424cc;
     --color-gray-1: #636e72;
     /* Replacement for #666, #757575 */
     --color-gray-2: #b2bec3;
@@ -14,10 +15,10 @@
 
     /* Semantic Variables */
     --bg-body: var(--color-white);
-    --fg-body: var(--color-dark-gray);
-    --fg-link: var(--color-blue);
+    --fg-body: var(--color-black);
+    --fg-link: var(--color-orange);
 
-    --fg-code: var(--color-dark-gray);
+    --fg-code: var(--color-black);
     --bg-code: var(--color-gray-3);
 
     --fg-muted: var(--color-gray-1);
@@ -56,7 +57,7 @@ html {
 
 body {
     background: var(--bg-body);
-    color: var(--fg-body);
+    color: var(--color-gray-0);
     font-family: var(--font-primary);
     font-size: 16px;
     line-height: 1.4;
@@ -98,6 +99,7 @@ h5,
 h6 {
     font-family: var(--font-primary);
     font-weight: 700;
+    color: #000;
 }
 
 h2,
@@ -138,7 +140,7 @@ a[href^="http"]:not([href*="mll.sh"])::after {
 
 blockquote {
     font-style: italic;
-    border: thin solid var(--color-dark-gray);
+    border: thin solid var(--color-black);
     padding: 1rem;
 }
 
@@ -218,7 +220,7 @@ table {
 table,
 th,
 td {
-    border: thin solid var(--color-dark-gray);
+    border: thin solid var(--color-black);
     border-collapse: collapse;
     padding: 0.4rem;
 }
@@ -234,7 +236,7 @@ hr::before,
     content: "# # #";
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, var(--color-dark-gray) 0%, var(--color-dark-gray) 33%, var(--color-dark-gray) 33%, var(--color-dark-gray) 66%, var(--color-dark-gray) 66%, var(--color-dark-gray) 100%);
+    background: linear-gradient(to right, var(--color-black) 0%, var(--color-black) 33%, var(--color-black) 33%, var(--color-black) 66%, var(--color-black) 66%, var(--color-black) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -490,5 +492,5 @@ hr::before,
 #scroll-to-top svg {
     width: 24px;
     height: 24px;
-    color: var(--color-dark-gray);
+    color: var(--color-black);
 }
