@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Offensive Security Manager working remotely from the green edge of northern Spain. ⛰️🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager[^2] working remotely from the green edge of northern Spain. ⛰️🐄
 
 I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words.
 
@@ -11,8 +11,9 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ### stuff I broke
 
-[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions[^2]:
+[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions[^3]:
 
+  - Apple[^4]
   - NASA
   - United Nations (UN)
   - UK Ministry of Defence (MoD)
@@ -35,7 +36,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - Deutsche Telekom
 
 ### certs
-Some of the cybersecurity certifications I've earned over time[^3]:
+Some of the cybersecurity certifications I've earned over time[^5]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -50,9 +51,9 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
 ### projects
-  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^4].
+  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^6].
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
-  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^5].
+  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^7].
   - [see more on my github...](https://github.com/mllamazares)
 
 ### r4nd0m
@@ -65,16 +66,18 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - strongly believe Vin Diesel is the best actor of all time[^6]
+  - strongly believe Vin Diesel is the best actor of all time[^8]
   - fluent in [COBOL](/neural-networks-cobol), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
-  - pre-llm[^7]
+  - pre-llm[^9]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
-[^2]: apart from these, I also participate in a bunch of private programs
-[^3]: currently preparing for the OSEP cert
-[^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
-[^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
-[^6]: I'm not going to argue about that
-[^7]: learned *to think* before *to prompt*
+[^2]: with 13+ years of technical experience
+[^3]: apart from these, I also participate in a bunch of private programs
+[^4]: the triage team will add my name to the HoF next Q
+[^5]: currently prepping for the OSEP cert
+[^6]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
+[^7]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
+[^8]: I'm not going to argue about that
+[^9]: learned *to think* before *to prompt*
