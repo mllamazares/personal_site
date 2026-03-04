@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager with 13+ years of tech experience currently working remotely from the green edge of northern Spain. ⛰️🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager with <span id="years-experience">13+</span> years of tech experience currently working remotely from the green edge of northern Spain. ⛰️🐄
 
 I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words.
 
@@ -72,7 +72,7 @@ Some of the cybersecurity certifications I've earned over time[^4]:
   - pre-llm[^8]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
 
-[^1]: I know it’s challenging to pronounce for non-native Spanish speakers, lol
+[^1]: I know it’s challenging to pronounce for non-native Spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
 [^3]: the triage team will add my name to the HoF next Q
 [^4]: currently prepping for the OSEP cert
