@@ -9,7 +9,7 @@ I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking.
 
 Here are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
-### stuff I broke
+## stuff I broke
 
 [Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions[^2]:
 
@@ -35,7 +35,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - British Broadcasting Corporation (BBC)
   - Deutsche Telekom
 
-### certs
+## certs
 Some of the cybersecurity certifications I've earned over time[^4]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
@@ -45,18 +45,19 @@ Some of the cybersecurity certifications I've earned over time[^4]:
   - _Certified DevSecOps Leader (CDL)_ - Practical DevSecOps
   - [see more...](https://www.linkedin.com/in/mllamazares/details/certifications/)
 
-### teaching & training
+## teaching & training
   - lecturer at [UNIR (Universidad Internacional de La Rioja)](https://www.unir.net/), teaching AI applications in offensive security in the [Advanced AI Cybersecurity Program](https://www.unir.net/ingenieria/curso-inteligencia-artificial-aplicada-ciberseguridad/claustro/).
   - lecturer at [UCAM (Universidad Católica San Antonio de Murcia)](https://www.ucam.edu/), teaching the module on advanced WAF evasion techniques in the country's first [Bug Bounty MSc](https://www.campusciberseguridad.com/masters/master-bug-bounty/).
   - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
-### projects
+## projects
   - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^5].
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
   - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^6].
+  - [webnose](https://github.com/mllamazares/webnose): modular, concurrent web scanner designed to sniff out "smells" (security characteristics, interesting tech, or potential vulnerabilities) in web apps.
   - [see more on my github...](https://github.com/mllamazares)
 
-### r4nd0m
+## r4nd0m
  Here's some random stuff about me so you can create the _\*ultimate wordlist\*_ and crack all my passwords:
   - entp 
   - debian zealot
