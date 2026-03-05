@@ -54,7 +54,7 @@ Some of the cybersecurity certifications I've earned over time[^4]:
   - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^5].
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
   - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^6].
-  - [webnose](https://github.com/mllamazares/webnose): modular, concurrent web scanner designed to sniff out "smells" (security characteristics, interesting tech, or potential vulnerabilities) in web apps.
+  - [webnose](https://github.com/mllamazares/webnose): modular, concurrent web scanner to sniff out *smells* like security traits, interesting tech, or potential vulns and ranks the output.
   - [see more on my github...](https://github.com/mllamazares)
 
 ## r4nd0m
