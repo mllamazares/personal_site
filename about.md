@@ -76,7 +76,7 @@ Some of the cybersecurity certifications I've earned over time[^4]:
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
 [^3]: the triage team will add my name to the HoF next Q
-[^4]: currently prepping for the OSEP cert
+[^4]: currently prepping for the CARTE cert
 [^5]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
 [^6]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
 [^7]: I'm not going to argue about that
