@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager with <span id="years-experience">13+</span> years of tech experience currently working remotely from the green edge of northern Spain. ⛰️🐄
+Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager with <span id="years-experience">13+</span> years of technical experience currently working remotely from the green edge of northern Spain. ⛰️🐄
 
 I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words.
 
@@ -81,3 +81,18 @@ Some of the cybersecurity certifications I've earned over time[^4]:
 [^6]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
 [^7]: I'm not going to argue about that
 [^8]: learned *to think* before *to prompt*
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Calculate years of experience dynamically
+    const yearsExperienceElement = document.getElementById('years-experience');
+    if (yearsExperienceElement) {
+        const startDate = new Date('2013-04-01');
+        const now = new Date();
+        const diffInMs = now - startDate;
+        const years = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
+        yearsExperienceElement.textContent = years.toFixed(2);
+    }
+});
+</script>

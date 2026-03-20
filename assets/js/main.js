@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="http"]').forEach(a => a.setAttribute('target', '_blank'));
 
-    // Calculate years of experience dynamically
-    const yearsExperienceElement = document.getElementById('years-experience');
-    if (yearsExperienceElement) {
-        const startDate = new Date('2013-04-01');
-        const now = new Date();
-        const diffInMs = now - startDate;
-        const years = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
-        yearsExperienceElement.textContent = years.toFixed(1);
-    }
-
     // Table of Contents Generation
     const tocSidebar = document.getElementById('toc-sidebar');
     if (tocSidebar) {
