@@ -55,7 +55,7 @@ org:"target" http.title:"IIS"
 
 These sample queries will list IIS boxes tied to the target's org or SSL certificates. You'll sometimes find staging servers, forgotten admin panels, and internal tools that nobody realized were internet-facing.
 
-Feel free to replace or combine shodan with other platforms like fofa, censys, netlas, odin, etc. They all index different slices of the internet, so running the same logic across multiple engines will catch boxes that any single one misses.
+Feel free to replace or combine shodan with other platforms like fofa, censys, netlas, odin, etc. They all index different slices of the internet. 🍕
 
 ### google dorking
 
