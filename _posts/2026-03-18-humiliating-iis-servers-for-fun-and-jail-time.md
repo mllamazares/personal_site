@@ -1,18 +1,18 @@
 ---
 layout: post
 slug: humiliating-iis-servers-for-fun-and-jail-time
-title: humiliating IIS servers for fun and jail time
+title: humiliating iis servers for fun and jail time
 tags: [iis]
 ---
 
 A friend of mine once told me: 
-> If you see an IIS blue screen, don't stop there; there must be something. 😈
+> If you see an IIS blue screen, don't stop there; there must be something.
 
-Yep, he was right. That IIS splash page is not a dead end. It's a welcome mat. 
+Yep, he was right. That IIS splash page is not a dead end. It's a welcome mat. 👋
 
-Behind that blue window logo sits one of the most consistently misconfigured web servers on the www, and it's practically begging you to look deeper.
+Behind that ugly blue window sits one of the most consistently misconfigured web servers on the www, and it's practically begging you to look deeper.
 
-Let me walk you through how I approach IIS targets during bug bounty.
+So let me walk you through how I approach IIS targets during bug bounty:
 
 #### table of contents
 
@@ -57,7 +57,7 @@ org:"target" http.title:"IIS"
 
 These sample queries will list IIS boxes tied to the target's org or SSL certificates. You'll sometimes find staging servers, forgotten admin panels, and internal tools that nobody realized were internet-facing.
 
-Of course, you can combine these queries with your favorite platform: fofa, censys, netlas, odin, etc. they all index different slices of the internet, so running the same logic across multiple engines will catch boxes that any single one misses.
+Feel free to replace or combine shodan with other platforms like fofa, censys, netlas, odin, etc. They all index different slices of the internet, so running the same logic across multiple engines will catch boxes that any single one misses.
 
 ### google dorking
 
