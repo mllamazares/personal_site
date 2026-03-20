@@ -4,7 +4,7 @@
     /* Palette */
     --color-white: #ffffff;
     --color-black: #000;
-    --color-orange: #d35400;
+    --color-turquoise: #22a6b3;
     --color-gray-0: #242424cc;
     --color-gray-1: #636e72;
     /* Replacement for #666, #757575 */
@@ -16,7 +16,7 @@
     /* Semantic Variables */
     --bg-body: var(--color-white);
     --fg-body: var(--color-black);
-    --fg-link: var(--color-orange);
+    --fg-link: var(--color-turquoise);
 
     --fg-code: var(--color-black);
     --bg-code: var(--color-gray-3);
