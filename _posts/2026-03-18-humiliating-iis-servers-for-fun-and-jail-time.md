@@ -8,7 +8,7 @@ tags: [iis]
 A friend of mine once told me: 
 > If you see an IIS blue screen, don't stop there; there must be something.
 
-Yep, he was right. That IIS splash page is not a dead end. Behind that ugly blue window sits one of the most consistently misconfigured web servers on the www, and it's practically begging you to look deeper.
+Yep, he was right. That IIS splash page is not a dead end. Behind that blue window sits one of the most consistently misconfigured web servers on the www, and it's begging you to look deeper.
 
 So let me walk you through how I approach IIS targets during bug bounty:
 
