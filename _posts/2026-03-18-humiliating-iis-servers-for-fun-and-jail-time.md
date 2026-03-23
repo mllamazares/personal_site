@@ -342,15 +342,12 @@ This is one of the most reliable IIS RCE chains in existence. Tools like [ysoser
 
 #### path traversal to web.config
 
-If you find any kind of file download or file read parameter, immediately try:
+If you find any kind of file download or file read parameter, try stuff like:
 
 ```shell
 GET /download?id=../../web.config
 GET /download?id=..%2f..%2fweb.config
-GET /download?id=..%2f..%2fbin/WebApplication1.dll
 ```
-
-That last one is interesting too: downloading DLLs from the `bin` directory lets you decompile the application with tools like JetBrains dotPeek and read the actual source code.
 
 #### bin directory DLL exposure via cookieless sessions
 
