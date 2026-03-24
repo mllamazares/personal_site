@@ -27,7 +27,7 @@ Lastly, everything I write is my view. It doesn't represent my employer or anyon
 
 ### design
 
-I used the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme as a baseline, along with the iconic [Geist Mono](https://fonts.google.com/specimen/Geist+Mono) font. Ugly? Yes. But it works. No CSS bloat, no distractions[^1].
+I used the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme as a baseline, along with the iconic [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font. Ugly? Yep. But it works. No CSS bloat, no distractions[^1].
 
 ### inspiration
 

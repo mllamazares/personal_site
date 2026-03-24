@@ -5,7 +5,7 @@ title: making owasp asvs actually usable
 tags: [appsec, asvs, owasp]
 ---
 
-I've always liked [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/). It's a solid blueprint of security controls. But try to take it straight off the shelf and implement it in a real product, and you'll quickly feel like you've been handed a map with no roads. _\*play sad_violin.mp3_ 🎻
+I've always liked [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/). It's a solid blueprint of security controls. But try to take it straight off the shelf and implement it in a real product, and you'll quickly feel like you've been handed a map with no roads. \*play sad_violin.mp3_ 🎻
 
 ## exploratory categorization
 
@@ -36,7 +36,7 @@ Also, take into account that it's not that complex to implement V2.1.7 for the f
 
 Ultimately, you need to _leverage what you have_. Meaning that rather than creating a new workflow you should use the process and tools you already have in place. That will reduce friction and cognitive load. No SAST? Use code review. Teams differ? Create a RASCI matrix for alignment. You get the idea. 
 
-In other words, this categorization must be tailored and _\*alive\*_.
+In other words, this categorization must be tailored and \*alive\*.
 
 ## tooling
 

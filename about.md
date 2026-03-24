@@ -11,7 +11,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ## stuff I broke
 
-[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for _\*ethically\*_ reporting web vulnerabilities to the following organizations and institutions[^2]:
+[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for \*ethically\* reporting web vulnerabilities to the following organizations and institutions[^2]:
 
   - Apple[^3]
   - NASA
@@ -58,7 +58,7 @@ Some of the cybersecurity certifications I've earned over time[^4]:
   - [see more on my github...](https://github.com/mllamazares)
 
 ## r4nd0m
- Here's some random stuff about me so you can create the _\*ultimate wordlist\*_ and crack all my passwords:
+ Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
   - entp 
   - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
