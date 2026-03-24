@@ -13,7 +13,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 [Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for \*ethically\* reporting web vulns to the following orgs and institutions[^2]:
 
-  - Apple[^3]
+  - Apple
   - NASA
   - United Nations (UN)
   - UK Ministry of Defence (MoD)
@@ -36,7 +36,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - Deutsche Telekom
 
 ## certs
-Some of the cybersecurity certs I've earned over time[^4]:
+Some of the cybersecurity certifications I've earned over time[^3]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -51,9 +51,9 @@ Some of the cybersecurity certs I've earned over time[^4]:
   - created appsec CTFs for more than +400K students at [Secure Code Warrior](https://www.securecodewarrior.com/).
 
 ## projects
-  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^5].
+  - [vulncov](https://github.com/mllamazares/vulncov): correlate Semgrep scans with Python test coverage to prioritize SAST findings and get bug fix suggestions via a self-hosted LLM[^4].
   - [gitpaths](https://github.com/mllamazares/gitpaths): lists the folder structure of a GitHub repo without cloning it to create ad hoc fuzzing wordlists.
-  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^6].
+  - [STRIDE-vs-ASVS](https://github.com/mllamazares/STRIDE-vs-ASVS): equivalence table between OWASP ASVS standard and STRIDE threat modeling methodology[^5].
   - [webnose](https://github.com/mllamazares/webnose): modular, concurrent web scanner to sniff out *smells* like security traits, interesting tech, or potential vulns and ranks the output.
   - [see more on my github...](https://github.com/mllamazares)
 
@@ -67,20 +67,19 @@ Some of the cybersecurity certs I've earned over time[^4]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - strongly believe Vin Diesel is the best actor of all time[^7]
+  - strongly believe Vin Diesel is the best actor of all time[^6]
   - fluent in [COBOL](/neural-networks-cobol), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
-  - pre-llm[^8]
+  - pre-llm[^7]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
-[^3]: the triage team will add my name to the HoF next Q
-[^4]: currently prepping for the CARTE cert
-[^5]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
-[^6]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
-[^7]: I'm not going to argue about that
-[^8]: learned *to think* before *to prompt*
+[^3]: currently prepping for the CARTE
+[^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
+[^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
+[^6]: I'm not going to argue about that
+[^7]: learned *to think* before *to prompt*
 
 
 <script>
