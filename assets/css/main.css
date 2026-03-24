@@ -34,8 +34,8 @@
     --scrollbar-thumb-hover: rgba(0, 0, 0, 0.4);
 
     /* Fonts */
-    --font-primary: 'Geist Mono', 'Noto Color Emoji', monospace;
-    --font-code: 'Geist Mono', monospace;
+    --font-primary: 'JetBrains Mono', 'Noto Color Emoji', monospace;
+    --font-code: 'JetBrains Mono', monospace;
 
     /* Layout */
     --width-content: 640px;
