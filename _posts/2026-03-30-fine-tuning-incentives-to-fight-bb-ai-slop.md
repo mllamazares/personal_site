@@ -1,7 +1,7 @@
 ---
 layout: post
-slug: rethinking-incentives-to-fight-bug-bounty-ai-slop
-title: rethinking incentives to fight bug bounty AI slop
+slug: fine-tuning-incentives-to-fight-bb-ai-slop
+title: fine-tuning incentives to fight bug bounty AI slop
 tags: [bugbounty, ai]
 ---
 
@@ -11,7 +11,7 @@ His take is that this is unsustainable, and he's right. You can literally point 
 
 I already wrote about the individual researcher side of this problem in [how to not be an llm kiddie](https://mll.sh/how-to-not-be-a-llm-kiddie/). But today I want to talk about the *platform* side. What can HackerOne, Bugcrowd, and the rest actually *do* about this?
 
-Because right now, their answer is "fight AI with AI", and that's not enough.
+Because right now, their answer is _"fight AI with AI"_, and, IMHO, that's not enough.
 
 ## what h1 is doing
 
@@ -58,11 +58,11 @@ These three specific proposals address that objection. Next.
 
 I insist: this would \*only\* affect those who submit spam, not everyone. If companies and platforms spend more than expected on triage, bounties will drop to cover those costs, or they'll ultimately close their programs.
 
-The fee is a *negative* incentive, but it can be combined with *positive* incentives too, like adding a bonus for whoever sends an excellent report. Google VRP already does that.
+The fee is a *negative* incentive, but it can be combined with *positive* incentives too, like adding a bonus for whoever sends an excellent-written report. Google VRP [already does that](https://bughunters.google.com/blog/level-up-your-reports-introducing-our-updated-report-quality-framework).
 
 ## my modest proposal
 
-To condense the point, here is the specific proposal:
+To condense my point, here is the specific proposal:
 
 1. application conditions:
   * if your FP rate exceeds X% in your last N reports, you start paying a small fee per submission (5-20€ range).
@@ -96,6 +96,6 @@ A symbolic fee won't kill bug bounty. It might actually save it.
 
 [^1]: Stenberg described it as being "effectively DSoSed" by volunteers. Which is both hilarious and deeply sad.
 [^2]: and as we saw with the curl case, some reporters game even that by closing their own reports as N/A before the program can mark them, avoiding reputation hits entirely. Beautiful system.
-[^3]: This helps AI slopers detox from the habit.
+[^3]: this helps AI slopers detox from the habit.
 [^4]: this isn’t a “reject and keep the cash” scheme. It’s a “prove you did the work” filter.
 [^5]: send me an email with your best insults. I have thick skin. 🥊

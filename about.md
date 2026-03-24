@@ -11,7 +11,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ## stuff I broke
 
-[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for \*ethically\* reporting web vulnerabilities to the following organizations and institutions[^2]:
+[Publicly recognized](https://www.linkedin.com/in/mllamazares/details/honors/) for \*ethically\* reporting web vulns to the following orgs and institutions[^2]:
 
   - Apple[^3]
   - NASA
@@ -36,7 +36,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
   - Deutsche Telekom
 
 ## certs
-Some of the cybersecurity certifications I've earned over time[^4]:
+Some of the cybersecurity certs I've earned over time[^4]:
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
