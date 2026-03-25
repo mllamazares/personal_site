@@ -5,7 +5,7 @@ title: fine-tuning incentives to fight bug bounty AI slop
 tags: [bugbounty, ai]
 ---
 
-Recently, [Robbe Van Roey](https://www.linkedin.com/feed/update/urn:li:activity:7441023910696882176/) posted something on LinkedIn that resonated with pretty much everyone in the bug bounty space: HackerOne receives around 200 reports *per hour* now. Two hundred. Per hour. 
+Recently, [Robbe Van Roey](https://www.linkedin.com/feed/update/urn:li:activity:7441023910696882176/) posted something on linkedin that resonated with pretty much everyone in the bug bounty space: HackerOne receives around 200 reports *per hour* now. Two hundred. Per hour. 
 
 His take is that this is unsustainable, and he's right. You can literally point an AI agent at a target, tell it to _"hAcK tHiS sItE"_ and it will produce something that *looks* like a vulnerability report. Chain that with automated submission and zero human oversight, and you've got a firehose of slop with the occasional real finding buried somewhere in the pile. 🗑️
 
@@ -81,7 +81,7 @@ IMO, pretty obvious:
 
 1. **fewer false positives**: when submitting garbage has a cost, even a tiny one, the volume of pure slop drops dramatically. Spam economics 101.
 2. **funded triage**: the retained fees from actual false positives go directly toward funding the triage process. The noise literally pays for its own cleanup. 
-3. **better signal-to-noise for everyone**: real researchers get triaged faster because the queue isn't clogged with hallucinated buffer overflows in functions that don't exist.
+3. **better signal-to-noise for everyone**: real researchers get triaged faster because the queue isn't clogged with *critical*self-XSS via paste injections and CSRFs on public newsletter signup forms.
 4. **preserved incentives for quality work**: if you're good at this, your FP rate is low, and you never pay a dime. The system is invisible to competent researchers.
 5. **reinsertion in mind**: if llm kiddies start sending legit reports, they will improve their FP rate. This is calculated based on the last N reports, not overall. This doesn't condemn someone to _The Eternal Fee_. Reinsertion is possible.
 
@@ -97,5 +97,5 @@ A symbolic fee won't kill bug bounty. It might actually save it.
 [^1]: Stenberg described it as being "effectively DSoSed" by volunteers. Which is both hilarious and deeply sad.
 [^2]: and as we saw with the curl case, some reporters game even that by closing their own reports as N/A before the program can mark them, avoiding reputation hits entirely. Beautiful system.
 [^3]: this helps AI slopers detox from the habit.
-[^4]: this isn’t a “reject and keep the cash” scheme. It’s a “prove you did the work” filter.
+[^4]: this isn’t a "reject and keep the cash" scheme. It’s a "prove you did the work" filter.
 [^5]: send me an email with your best insults. I have thick skin. 🥊
