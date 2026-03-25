@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const list = document.createElement('ul');
 
             const positionLinks = () => {
-                const articleRect = article.getBoundingClientRect();
                 const articleTop = article.offsetTop;
                 const articleHeight = article.offsetHeight;
+                const wrapperHeight = tocWrapper.offsetHeight;
+                const minGap = 4;
+                let lastVisualBottom = -Infinity;
 
                 headers.forEach((header, index) => {
                     let li = list.children[index];
@@ -28,14 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         list.appendChild(li);
                     }
 
-                    // Calculate relative position
-                    // We map the header's position in the article to the sidebar's height
+                    // Map header's position in the article to the sidebar's height
                     const relativeTop = header.offsetTop - articleTop;
-                    const percentage = (relativeTop / articleHeight) * 100;
+                    const percentage = Math.max(0, Math.min(100, (relativeTop / articleHeight) * 100));
+                    let topPx = (percentage / 100) * wrapperHeight;
 
-                    // Clamp between 0 and 100
-                    const clampedDetails = Math.max(0, Math.min(100, percentage));
-                    li.style.top = `${clampedDetails}%`;
+                    // Prevent overlap (li uses translateY(-50%), so visual edges are offset)
+                    const itemHeight = li.offsetHeight || 20;
+                    const visualTop = topPx - itemHeight / 2;
+                    if (visualTop < lastVisualBottom + minGap) {
+                        topPx = lastVisualBottom + minGap + itemHeight / 2;
+                    }
+
+                    li.style.top = `${topPx}px`;
+                    lastVisualBottom = topPx + itemHeight / 2;
                 });
             };
 
