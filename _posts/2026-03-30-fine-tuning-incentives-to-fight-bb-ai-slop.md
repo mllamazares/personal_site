@@ -64,16 +64,18 @@ The fee is a *negative* incentive, but it can be combined with *positive* incent
 
 To condense my point, here is the specific proposal:
 
-1. application conditions:
+1. **application conditions**:
   * if your FP rate exceeds X% in your last N reports, you start paying a small fee per submission (5-20€ range).
   * if you have a high overall FP rate but your last N reports are valid, the fee is waived[^3].
-2. fee calculation:
+2. **fee calculation**:
   * the higher the FP rate, the higher the fee.
   * the fee should be sensitive to the researcher's country.
   * the fee must align with the potential bounty. Locking $20 for a $50 bounty is not reasonable.
-3. the fee gets refunded if:
+3. **the fee gets refunded if**:
   * the report is accepted as a valid vulnerability.
   * the report is submitted in good faith (e.g., borderline scope, duplicate, or reasonable but ultimately N/A). To keep the money, the triager must objectively justify the FP determination by referencing the Rules of Engagement[^4].
+
+Also, note I've focused on a _platform-level_ approach to fight AI slop, but can apply measures to other layers of the workflow, like defining clear scopes and fallbacks (@companies) or using tools like [Hai](https://www.hackerone.com/resources/hai/hai-agentic-report-assistant) or [NoiseGate](https://github.com/sgmurphy/NoiseGate) to double-check (@hunters).
 
 ## the benefits
 
@@ -81,7 +83,7 @@ IMO, pretty obvious:
 
 1. **fewer false positives**: when submitting garbage has a cost, even a tiny one, the volume of pure slop drops dramatically. Spam economics 101.
 2. **funded triage**: the retained fees from actual false positives go directly toward funding the triage process. The noise literally pays for its own cleanup. 
-3. **better signal-to-noise for everyone**: real researchers get triaged faster because the queue isn't clogged with *critical*self-XSS via paste injections and CSRFs on public newsletter signup forms.
+3. **better signal-to-noise for everyone**: real researchers get triaged faster because the queue isn't clogged with *critical* self-XSS via paste injections and CSRFs on public newsletter signup forms.
 4. **preserved incentives for quality work**: if you're good at this, your FP rate is low, and you never pay a dime. The system is invisible to competent researchers.
 5. **reinsertion in mind**: if llm kiddies start sending legit reports, they will improve their FP rate. This is calculated based on the last N reports, not overall. This doesn't condemn someone to _The Eternal Fee_. Reinsertion is possible.
 
