@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{%- include back_link.html -%}
+
+<h1>{{ page.title }}</h1>
+
+{% include tag_graph.html %}
+
+<ul class="postlist">
+    {%- for post in site.posts -%}
+    <li data-tags="{{ post.tags | join: ',' }}">
+        <span>{{ post.date | date: site.theme_config.date_format }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {%- endfor -%}
+</ul>

@@ -2,7 +2,7 @@
 layout: post
 slug: making-owasp-asvs-actually-usable
 title: making owasp asvs actually usable
-tags: [appsec, asvs, owasp]
+tags: [appsec, owasp, asvs, consulting]
 ---
 
 I've always liked [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/). It's a solid blueprint of security controls. But try to take it straight off the shelf and implement it in a real product, and you'll quickly feel like you've been handed a map with no roads. \*play sad_violin.mp3_ 🎻

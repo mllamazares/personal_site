@@ -2,7 +2,7 @@
 layout: post
 slug: humiliating-iis-servers-for-fun-and-jail-time
 title: humiliating iis servers for fun and jail time
-tags: [iis]
+tags: [pentesting, iis, recon, waf]
 ---
 
 A friend of mine once told me: 

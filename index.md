@@ -17,6 +17,6 @@ If you are oddly enough interested, [here's more about me](/about).
 <a href="/feed.xml">rss</a>
 </div>
 
----
+{% include tag_graph.html %}
 
 {% include post_list.html limit=999 show_more=true show_more_text="see more..." show_more_url="archive" %}

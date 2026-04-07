@@ -2,7 +2,7 @@
 layout: post
 slug: react2shell-or-prototype-pollution-going-brrr
 title: react2shell or prototype pollution going brrr
-tags: [rce, react, react2shell, cve, waf, bypass]
+tags: [rce, appsec, pentesting, waf, cve]
 ---
 
 I guess we can call this JARP, *Just Another React2Shell Post*, because everyone has already milked this vuln that exploded like it was auditioning for Log4j's sequel. But here we are. 

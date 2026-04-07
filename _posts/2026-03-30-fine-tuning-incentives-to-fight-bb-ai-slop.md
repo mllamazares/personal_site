@@ -2,7 +2,7 @@
 layout: post
 slug: fine-tuning-incentives-to-fight-bb-ai-slop
 title: fine-tuning incentives to fight bug bounty AI slop
-tags: [bugbounty, ai]
+tags: [bugbounty, ai, consulting]
 ---
 
 Recently, [Robbe Van Roey](https://www.linkedin.com/feed/update/urn:li:activity:7441023910696882176/) posted something on linkedin that resonated with pretty much everyone in the bug bounty space: HackerOne receives around 200 reports *per hour* now. Two hundred. Per hour. 

@@ -2,7 +2,7 @@
 layout: post
 slug: how-to-not-be-a-llm-kiddie
 title: how to not be an llm kiddie
-tags: [llm, ai, bugbounty]
+tags: [ai, bugbounty, consulting]
 ---
 
 Most people use llms the same way regardless of what they're doing: hunting for an IDOR in a SaaS app, triaging a buffer overflow in a C codebase, or brainstorming names for a cat that will never answer to any of them. 😸

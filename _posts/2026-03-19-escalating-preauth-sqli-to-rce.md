@@ -2,7 +2,7 @@
 layout: post
 slug: escalating-preauth-sqli-to-rce
 title: escalating a preauth sqli to rce
-tags: [sqli, mssql, rce, dns]
+tags: [sqli, rce, pentesting, mssql]
 ---
 
 I recently escalated a preauth SQL injection on an ASP app sitting on top of MSSQL to full RCE and exfiltrated the output via DNS. All in a single messy GET request:
@@ -80,12 +80,6 @@ Let me unpack each line:
 
 3. **triggering the DNS lookup:** `xp_dirtree` is an undocumented stored procedure whose original purpose is listing files in a directory. but when you point it at a UNC path, MSSQL tries to resolve the hostname via DNS. this is the classic out-of-band (OOB) exfiltration channel for MSSQL injection. the DNS query lands on your Burp Collaborator (or [interactsh](https://github.com/projectdiscovery/interactsh), or your own authoritative DNS server), and the exfiltrated data shows up as a subdomain prefix.
 
-So if everything goes right, you see a DNS hit for something like:
-
-![rce poc](/assets/img/sqlrcepoc-collab.png)
-
-Yay! This confirms the SQL Server service account is singing for us. 💅🏻
-
 ### step 5: clean up
 
 ```sql
@@ -114,6 +108,14 @@ This isn't part of the exploit. This is *structural padding*.
 The original query expected a `WHERE` clause filter, and our injection sits right in the middle of it. Without a syntactically valid `SELECT` at the end, the whole thing blows up with a SQL error. The `1=1 AND 1=1` chain is just filler to keep the parser happy[^3].
 
 I managed to infer the table and column names because the app gave verbose SQL error messages. Those errors were the initial breadcrumb that led to the whole chain, kek.
+
+### jackpot
+
+So if everything goes right, you see a DNS hit for something like:
+
+![rce poc](/assets/img/sqlrcepoc-collab.png)
+
+Yay! This confirms the SQL Server service account is singing for us. 💅🏻
 
 ### the full chain, visualized
 
