@@ -1,7 +1,7 @@
 ---
 layout: post
-slug: sqli-column-enumeration-waf-bypass
-title: proving a blind sqli when everything is against you
+slug: bypassing-waf-rate-limiting-to-prove-blind-sqli
+title: bypassing waf rate limiting to prove blind sqli
 tags: [sqli, bugbounty, waf]
 ---
 
