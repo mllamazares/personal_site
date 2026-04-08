@@ -2,7 +2,7 @@
 layout: post
 slug: escalating-preauth-sqli-to-rce
 title: escalating a preauth sqli to rce
-tags: [sqli, rce, pentesting, mssql]
+tags: [sqli, rce, pentesting]
 ---
 
 I recently escalated a preauth SQL injection on an ASP app sitting on top of MSSQL to full RCE and exfiltrated the output via DNS. All in a single messy GET request:
