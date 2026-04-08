@@ -5,7 +5,7 @@ title: bypassing waf rate limiting to prove blind sqli
 tags: [sqli, bugbounty, waf]
 ---
 
-This is the story of how [abfe](https://www.linkedin.com/in/kareem-abfe-b27454347/) and I turned a closed-as-informational report into a critical finding with max bounty, by using column name validation as a boolean oracle and AWS API Gateway to dodge Cloudflare's rate limiting. 🏎️
+This is the story of how [abfe](https://www.linkedin.com/in/kareem-abfe-b27454347/) and I turned a closed-as-informational report into a critical finding with max bounty, by using column name validation as a boolean oracle and AWS API Gateway to dodge Cloudflare's rate limiting. 🫰
 
 Let's get to it.
 
