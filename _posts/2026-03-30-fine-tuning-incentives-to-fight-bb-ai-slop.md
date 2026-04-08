@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: fine-tuning-incentives-to-fight-bb-ai-slop
-title: fine-tuning incentives to fight bug bounty AI slop
+title: fine-tuning incentives to fight bug bounty ai slop
 tags: [bugbounty, ai, consulting]
 ---
 
