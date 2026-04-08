@@ -83,6 +83,16 @@ As you can see, existing columns returned 200:
 
 ![full chain](/assets/img/waf-ratelimit-fuzz2.png)
 
+#### bonus trick
+
+You can combine IP Rotate with other tools by proxying traffic through burp. Here is a practical example using `--proxy http://127.0.0.1:8080` in sqlmap:
+
+```shell
+python sqlmap.py -u http://target.com/coupons/coupon_list\?keyword\=as --batch --level 5 --risk 3 --cookie="$(cat ./cookie.txt)" --random-agent --tamper=between,randomcase,space2comment,charencode --dbms mysql --time-sec 15 --proxy http://127.0.0.1:8080 --dbs
+```
+
+I recommend increasing `--time-sec 15` or higher because requests tend to be slower when using this setup[^4].
+
 ### going the extra mile
 
 The generic wordlist gave us a few hits, but we wanted more. We went through the entire application and built a custom wordlist with column names that were specific to this app's domain. Coupons, users, transactions, whatever terminology the app used in its frontend, we turned it into candidate column names (`column_name`, `columnname`, `col_name`, etc.).
@@ -104,3 +114,4 @@ Don't try *harder*, try *smarter*. 🧠
 [^1]: we probably didn't have enough permissions to generate data that would have been filtered by this endpoint. And/or it might have just been a logging field. Who knows.
 [^2]: I bet it was not *impossible*, but at least not *straightforward*.
 [^3]: because half the internet’s legitimate traffic comes from AWS anyway, kek.
+[^4]: duh
