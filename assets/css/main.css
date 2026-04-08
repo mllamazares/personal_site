@@ -47,6 +47,11 @@
 /* =========================================
    Reset & Global
    ========================================= */
+::selection {
+    background: #fffa65;
+    color: var(--color-black);
+}
+
 html {
     height: 100%;
     scroll-behavior: smooth;
@@ -310,6 +315,7 @@ hr::before,
 }
 
 @media (min-width: 768px) {
+
     #tag-graph-section,
     #tag-filter-label {
         display: block;
