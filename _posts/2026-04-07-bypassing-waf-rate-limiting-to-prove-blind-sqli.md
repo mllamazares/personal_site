@@ -9,7 +9,7 @@ This is the story of how [abfe](https://www.linkedin.com/in/kareem-abfe-b2745434
 
 Let's get to it.
 
-### sniff, sniff... that's smells like a sqli
+### sniff, sniff... that smells like a sqli
 
 The endpoint was a coupon listing page with a `keyword` search parameter. Classic stuff. We started poking at it:
 
