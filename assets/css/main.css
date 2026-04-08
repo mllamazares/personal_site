@@ -4,7 +4,7 @@
     /* Palette */
     --color-white: #ffffff;
     --color-black: #000;
-    --color-accent: #000;
+    --color-accent: #7158e2;
     --color-gray-0: #242424cc;
     --color-gray-1: #636e72;
     /* Replacement for #666, #757575 */
@@ -128,6 +128,11 @@ a {
     text-underline-offset: 4px;
     text-decoration-line: underline;
     text-decoration-thickness: 1.5px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #555;
 }
 
 /* External Link Icon */

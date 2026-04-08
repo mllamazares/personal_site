@@ -2,7 +2,7 @@
 layout: post
 slug: passing-oswe
 title: my experience passing the oswe cert
-tags: [pentesting, appsec, certification]
+tags: [pentesting, appsec, certs]
 ---
 
 After some months, I finally decided to share my experience with the AWAE course and how I passed the OSWE cert on the first try.

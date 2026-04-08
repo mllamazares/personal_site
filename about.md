@@ -5,7 +5,7 @@ title: about
 
 Hey, I'm Miguel Llamazares (_/miˈɣel ʎamaˈθaɾes/_[^1]) an Hacking Manager with <span id="years-experience">13+</span> years of technical experience currently working remotely from the green edge of northern Spain. ⛰️🐄
 
-I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words.
+I'm obsessed with appsec, web pentesting, and the growing role of AI in hacking. That's why [I started this blog](/hello-world), which currently has {% include total_word_count.html %} words distributed in {{ site.posts.size }} posts.
 
 Here are some highlights of my profile, but if you want the boring details, you can always check my [linkedin](https://www.linkedin.com/in/mllamazares/).
 
