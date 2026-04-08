@@ -177,11 +177,46 @@ div.highlighter-rouge code {
     padding: 1rem;
 }
 
-/* PrismJS font override */
+/* PrismJS overrides */
 code[class*="language-"],
 pre[class*="language-"] {
     font-family: var(--font-code) !important;
     font-size: 0.9em !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+}
+
+/* Code block toolbar */
+.code-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.35);
+    user-select: none;
+}
+
+.code-lang {
+    text-transform: uppercase;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 2px;
+    line-height: 0;
+    transition: color 0.15s;
+}
+
+.copy-btn:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.copy-btn.copied {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* =========================================

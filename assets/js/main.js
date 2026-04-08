@@ -1,6 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="http"]').forEach(a => a.setAttribute('target', '_blank'));
 
+    // Code block toolbar (language label + copy button)
+    document.querySelectorAll('pre > code').forEach(function (code) {
+        var pre = code.parentElement;
+        var toolbar = document.createElement('div');
+        toolbar.className = 'code-toolbar';
+
+        // Language label
+        var lang = '';
+        var cls = code.className || '';
+        var match = cls.match(/language-(\S+)/);
+        if (match) lang = match[1];
+        var label = document.createElement('span');
+        label.className = 'code-lang';
+        label.textContent = lang;
+        toolbar.appendChild(label);
+
+        // Copy button
+        var copyIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        var checkIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.innerHTML = copyIcon;
+        btn.addEventListener('click', function () {
+            navigator.clipboard.writeText(code.textContent).then(function () {
+                btn.innerHTML = checkIcon;
+                btn.classList.add('copied');
+                setTimeout(function () {
+                    btn.innerHTML = copyIcon;
+                    btn.classList.remove('copied');
+                }, 1500);
+            });
+        });
+        toolbar.appendChild(btn);
+
+        pre.insertBefore(toolbar, code);
+    });
+
     // Table of Contents Generation
     const tocSidebar = document.getElementById('toc-sidebar');
     if (tocSidebar) {
