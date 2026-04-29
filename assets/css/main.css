@@ -191,7 +191,7 @@ li>code,
 p>code {
     color: var(--fg-code);
     background: var(--bg-code);
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-family: var(--font-code);
     padding: 0.1em 0.6em;
     overflow: auto;
@@ -209,7 +209,7 @@ div.highlighter-rouge code {
 code[class*="language-"],
 pre[class*="language-"] {
     font-family: var(--font-code) !important;
-    font-size: 0.9em !important;
+    font-size: 0.95em !important;
     white-space: pre-wrap !important;
     word-wrap: break-word !important;
 }
@@ -390,7 +390,7 @@ hr::before,
    ========================================= */
 .social-links {
     margin-top: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .social-links a {
