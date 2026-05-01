@@ -202,10 +202,9 @@ a[href^="http"]:not([href*="mll.sh"])::after {
     width: 12px;
     height: 12px;
     margin-left: 4px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2.5' stroke='gray' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25' /%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-color: var(--fg-faint);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25' /%3E%3C/svg%3E%0A") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25' /%3E%3C/svg%3E%0A") no-repeat center / contain;
 }
 
 blockquote {
@@ -224,6 +223,10 @@ ul {
 
 li {
     margin: 0.4rem 0;
+}
+
+li::marker {
+    color: var(--fg-faint);
 }
 
 /* =========================================
@@ -369,7 +372,22 @@ hr::before,
 .postlist li>span {
     margin-right: 1rem;
     font-size: 0.9em;
-    color: var(--color-gray-0);
+    color: var(--fg-faint);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .postlist li {
+        padding: 0.5rem 0;
+    }
+
+    .postlist li>span {
+        display: block;
+        margin-right: 0;
+    }
 }
 
 .dud {
