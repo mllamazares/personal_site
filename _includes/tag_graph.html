@@ -9,274 +9,274 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
-(function () {
-    var graphEl = document.getElementById('tag-graph');
-    if (!graphEl || typeof d3 === 'undefined') return;
+    (function () {
+        var graphEl = document.getElementById('tag-graph');
+        if (!graphEl || typeof d3 === 'undefined') return;
 
-    var rawData = JSON.parse(document.getElementById('tag-graph-data').textContent);
-    var nodes = rawData.nodes.map(function (d) { return Object.assign({}, d); });
-    var posts = rawData.posts;
+        var rawData = JSON.parse(document.getElementById('tag-graph-data').textContent);
+        var nodes = rawData.nodes.map(function (d) { return Object.assign({}, d); });
+        var posts = rawData.posts;
 
-    // Compute co-occurrence links between tags sharing a post
-    var coMap = {};
-    posts.forEach(function (post) {
-        var tags = post.tags || [];
-        for (var i = 0; i < tags.length; i++) {
-            for (var j = i + 1; j < tags.length; j++) {
-                var a = tags[i], b = tags[j];
-                var key = a < b ? a + '\x00' + b : b + '\x00' + a;
-                coMap[key] = (coMap[key] || 0) + 1;
+        // Compute co-occurrence links between tags sharing a post
+        var coMap = {};
+        posts.forEach(function (post) {
+            var tags = post.tags || [];
+            for (var i = 0; i < tags.length; i++) {
+                for (var j = i + 1; j < tags.length; j++) {
+                    var a = tags[i], b = tags[j];
+                    var key = a < b ? a + '\x00' + b : b + '\x00' + a;
+                    coMap[key] = (coMap[key] || 0) + 1;
+                }
             }
-        }
-    });
-    var links = Object.keys(coMap).map(function (key) {
-        var parts = key.split('\x00');
-        return { source: parts[0], target: parts[1], count: coMap[key] };
-    });
-
-    var section = document.getElementById('tag-graph-section');
-    var W = section.clientWidth;
-    var H = 350;
-
-    var rScale = function (d) { return Math.max(4, Math.min(10, 3 + d.count * 1.2)); };
-
-    var svg = d3.select(graphEl)
-        .attr('width', W)
-        .attr('height', H);
-
-    var simulation = d3.forceSimulation(nodes)
-        .force('link', d3.forceLink(links).id(function (d) { return d.id; })
-            .distance(function (d) { return 60 + (3 - Math.min(d.count, 3)) * 15; }))
-        .force('charge', d3.forceManyBody().strength(-160))
-        .force('collide', d3.forceCollide(function (d) { return rScale(d) + 16; }))
-        .force('center', d3.forceCenter(W / 2, H / 2))
-        .force('x', d3.forceX(W / 2).strength(0.05))
-        .force('y', d3.forceY(H / 2).strength(0.06));
-
-    var linkSel = svg.append('g')
-        .selectAll('line')
-        .data(links)
-        .join('line')
-        .attr('class', 'tag-link')
-        .attr('stroke', 'var(--color-gray-2)')
-        .attr('stroke-width', function (d) { return Math.max(0.3, Math.min(1.5, d.count * 0.4)); });
-
-    var nodeSel = svg.append('g')
-        .selectAll('g')
-        .data(nodes)
-        .join('g')
-        .attr('class', 'tag-node')
-        .style('cursor', 'pointer');
-
-    nodeSel.append('circle')
-        .attr('r', rScale)
-        .attr('fill', 'var(--fg-body)');
-
-    nodeSel.append('text')
-        .text(function (d) { return d.id; })
-        .attr('dy', function (d) { return rScale(d) + 11; })
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'var(--fg-muted)')
-        .attr('font-size', '11px')
-        .attr('font-family', 'var(--font-primary)')
-        .style('pointer-events', 'none')
-        .style('user-select', 'none');
-
-    // Drag to reposition nodes
-    var drag = d3.drag()
-        .on('start', function (event, d) {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x; d.fy = d.y;
-        })
-        .on('drag', function (event, d) { d.fx = event.x; d.fy = event.y; })
-        .on('end', function (event, d) {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null; d.fy = null;
         });
-    nodeSel.call(drag);
-
-    simulation.on('tick', function () {
-        var pad = 20;
-        nodes.forEach(function (d) {
-            d.x = Math.max(pad, Math.min(W - pad, d.x));
-            d.y = Math.max(pad, Math.min(H - pad, d.y));
+        var links = Object.keys(coMap).map(function (key) {
+            var parts = key.split('\x00');
+            return { source: parts[0], target: parts[1], count: coMap[key] };
         });
-        linkSel
-            .attr('x1', function (d) { return d.source.x; })
-            .attr('y1', function (d) { return d.source.y; })
-            .attr('x2', function (d) { return d.target.x; })
-            .attr('y2', function (d) { return d.target.y; });
-        nodeSel.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
-    });
 
-    // Selection & post filtering (lazy-query: post list is below the script in the DOM)
-    var selectedTag = null;
-    var postItems = null;
-    var filterLabel = null;
-    function getPostItems() {
-        if (!postItems) postItems = document.querySelectorAll('.postlist li[data-tags]');
-        if (!filterLabel) filterLabel = document.getElementById('tag-filter-label');
-    }
+        var section = document.getElementById('tag-graph-section');
+        var W = section.clientWidth;
+        var H = 350;
 
-    function resetView() {
-        getPostItems();
-        nodeSel.select('circle')
-            .attr('fill', 'var(--fg-body)')
-            .attr('r', rScale)
-            .style('filter', null);
-        nodeSel.select('text')
-            .attr('fill', 'var(--fg-muted)');
-        linkSel
+        var rScale = function (d) { return Math.max(4, Math.min(10, 3 + d.count * 1.2)); };
+
+        var svg = d3.select(graphEl)
+            .attr('width', W)
+            .attr('height', H);
+
+        var simulation = d3.forceSimulation(nodes)
+            .force('link', d3.forceLink(links).id(function (d) { return d.id; })
+                .distance(function (d) { return 60 + (3 - Math.min(d.count, 3)) * 15; }))
+            .force('charge', d3.forceManyBody().strength(-160))
+            .force('collide', d3.forceCollide(function (d) { return rScale(d) + 16; }))
+            .force('center', d3.forceCenter(W / 2, H / 2))
+            .force('x', d3.forceX(W / 2).strength(0.05))
+            .force('y', d3.forceY(H / 2).strength(0.06));
+
+        var linkSel = svg.append('g')
+            .selectAll('line')
+            .data(links)
+            .join('line')
+            .attr('class', 'tag-link')
             .attr('stroke', 'var(--color-gray-2)')
-            .attr('opacity', 1);
-        postItems.forEach(function (li) { li.style.display = ''; });
-        if (filterLabel) filterLabel.innerHTML = '';
-    }
+            .attr('stroke-width', function (d) { return Math.max(0.3, Math.min(1.5, d.count * 0.4)); });
 
-    function selectTag(tagId) {
-        getPostItems();
-        var connected = new Set([tagId]);
-        links.forEach(function (l) {
-            var s = typeof l.source === 'object' ? l.source.id : l.source;
-            var t = typeof l.target === 'object' ? l.target.id : l.target;
-            if (s === tagId) connected.add(t);
-            if (t === tagId) connected.add(s);
+        var nodeSel = svg.append('g')
+            .selectAll('g')
+            .data(nodes)
+            .join('g')
+            .attr('class', 'tag-node')
+            .style('cursor', 'pointer');
+
+        nodeSel.append('circle')
+            .attr('r', rScale)
+            .attr('fill', 'var(--fg-body)');
+
+        nodeSel.append('text')
+            .text(function (d) { return d.id; })
+            .attr('dy', function (d) { return rScale(d) + 11; })
+            .attr('text-anchor', 'middle')
+            .attr('fill', 'var(--fg-muted)')
+            .attr('font-size', '13px')
+            .attr('font-family', 'var(--font-primary)')
+            .style('pointer-events', 'none')
+            .style('user-select', 'none');
+
+        // Drag to reposition nodes
+        var drag = d3.drag()
+            .on('start', function (event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x; d.fy = d.y;
+            })
+            .on('drag', function (event, d) { d.fx = event.x; d.fy = event.y; })
+            .on('end', function (event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null; d.fy = null;
+            });
+        nodeSel.call(drag);
+
+        simulation.on('tick', function () {
+            var pad = 20;
+            nodes.forEach(function (d) {
+                d.x = Math.max(pad, Math.min(W - pad, d.x));
+                d.y = Math.max(pad, Math.min(H - pad, d.y));
+            });
+            linkSel
+                .attr('x1', function (d) { return d.source.x; })
+                .attr('y1', function (d) { return d.source.y; })
+                .attr('x2', function (d) { return d.target.x; })
+                .attr('y2', function (d) { return d.target.y; });
+            nodeSel.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
         });
 
-        nodeSel.select('circle')
-            .attr('fill', function (d) {
-                if (d.id === tagId) return 'var(--fg-body)';
-                if (connected.has(d.id)) return 'var(--color-gray-1)';
-                return 'var(--color-gray-3)';
-            })
-            .attr('r', function (d) { return d.id === tagId ? rScale(d) + 2 : rScale(d); })
-            .style('filter', function (d) {
-                return d.id === tagId ? 'drop-shadow(0 0 4px rgba(0,0,0,0.4))' : null;
-            });
-
-        nodeSel.select('text')
-            .attr('fill', function (d) {
-                if (d.id === tagId) return 'var(--fg-body)';
-                if (connected.has(d.id)) return 'var(--fg-muted)';
-                return 'var(--color-gray-2)';
-            });
-
-        linkSel
-            .attr('stroke', function (l) {
-                var s = typeof l.source === 'object' ? l.source.id : l.source;
-                var t = typeof l.target === 'object' ? l.target.id : l.target;
-                return (s === tagId || t === tagId) ? 'var(--color-gray-1)' : 'var(--color-gray-3)';
-            })
-            .attr('opacity', function (l) {
-                var s = typeof l.source === 'object' ? l.source.id : l.source;
-                var t = typeof l.target === 'object' ? l.target.id : l.target;
-                return (s === tagId || t === tagId) ? 1 : 0.12;
-            });
-
-        var count = 0;
-        postItems.forEach(function (li) {
-            var tags = li.dataset.tags ? li.dataset.tags.split(',') : [];
-            var show = tags.indexOf(tagId) !== -1;
-            li.style.display = show ? '' : 'none';
-            if (show) count++;
-        });
-
-        if (filterLabel) {
-            filterLabel.innerHTML = count + ' post' + (count !== 1 ? 's' : '') +
-                ' tagged <strong>#' + tagId + '</strong> &mdash; ' +
-                '<a href="#" id="clear-filter">clear</a>';
-            document.getElementById('clear-filter').addEventListener('click', function (e) {
-                e.preventDefault();
-                selectedTag = null;
-                resetView();
-            });
+        // Selection & post filtering (lazy-query: post list is below the script in the DOM)
+        var selectedTag = null;
+        var postItems = null;
+        var filterLabel = null;
+        function getPostItems() {
+            if (!postItems) postItems = document.querySelectorAll('.postlist li[data-tags]');
+            if (!filterLabel) filterLabel = document.getElementById('tag-filter-label');
         }
-    }
 
-    nodeSel.on('click', function (event, d) {
-        event.stopPropagation();
-        if (selectedTag === d.id) {
-            selectedTag = null;
-            resetView();
-        } else {
-            selectedTag = d.id;
-            selectTag(d.id);
+        function resetView() {
+            getPostItems();
+            nodeSel.select('circle')
+                .attr('fill', 'var(--fg-body)')
+                .attr('r', rScale)
+                .style('filter', null);
+            nodeSel.select('text')
+                .attr('fill', 'var(--fg-muted)');
+            linkSel
+                .attr('stroke', 'var(--color-gray-2)')
+                .attr('opacity', 1);
+            postItems.forEach(function (li) { li.style.display = ''; });
+            if (filterLabel) filterLabel.innerHTML = '';
         }
-    });
 
-    svg.on('click', function () {
-        if (selectedTag) {
-            selectedTag = null;
-            resetView();
-        }
-    });
-
-    // Hover: Obsidian-style highlight
-    var highlight = '#7158e2';
-    nodeSel
-        .on('mouseenter', function (event, d) {
-            if (selectedTag) return;
-            var neighbors = new Set();
+        function selectTag(tagId) {
+            getPostItems();
+            var connected = new Set([tagId]);
             links.forEach(function (l) {
                 var s = typeof l.source === 'object' ? l.source.id : l.source;
                 var t = typeof l.target === 'object' ? l.target.id : l.target;
-                if (s === d.id) neighbors.add(t);
-                if (t === d.id) neighbors.add(s);
+                if (s === tagId) connected.add(t);
+                if (t === tagId) connected.add(s);
             });
 
             nodeSel.select('circle')
-                .attr('fill', function (n) {
-                    if (n.id === d.id) return highlight;
-                    if (neighbors.has(n.id)) return 'var(--color-gray-1)';
-                    return 'var(--color-gray-2)';
+                .attr('fill', function (d) {
+                    if (d.id === tagId) return 'var(--fg-body)';
+                    if (connected.has(d.id)) return 'var(--color-gray-1)';
+                    return 'var(--color-gray-3)';
                 })
-                .attr('r', function (n) { return n.id === d.id ? rScale(n) + 3 : rScale(n); });
+                .attr('r', function (d) { return d.id === tagId ? rScale(d) + 2 : rScale(d); })
+                .style('filter', function (d) {
+                    return d.id === tagId ? 'drop-shadow(0 0 4px rgba(0,0,0,0.4))' : null;
+                });
 
             nodeSel.select('text')
-                .attr('fill', function (n) { return n.id === d.id ? 'var(--fg-body)' : 'var(--fg-muted)'; });
+                .attr('fill', function (d) {
+                    if (d.id === tagId) return 'var(--fg-body)';
+                    if (connected.has(d.id)) return 'var(--fg-muted)';
+                    return 'var(--color-gray-2)';
+                });
 
             linkSel
                 .attr('stroke', function (l) {
                     var s = typeof l.source === 'object' ? l.source.id : l.source;
                     var t = typeof l.target === 'object' ? l.target.id : l.target;
-                    return (s === d.id || t === d.id) ? highlight : 'var(--color-gray-3)';
-                })
-                .attr('stroke-width', function (l) {
-                    var s = typeof l.source === 'object' ? l.source.id : l.source;
-                    var t = typeof l.target === 'object' ? l.target.id : l.target;
-                    return (s === d.id || t === d.id) ? 1.2 : Math.max(0.3, Math.min(1.5, l.count * 0.4));
+                    return (s === tagId || t === tagId) ? 'var(--color-gray-1)' : 'var(--color-gray-3)';
                 })
                 .attr('opacity', function (l) {
                     var s = typeof l.source === 'object' ? l.source.id : l.source;
                     var t = typeof l.target === 'object' ? l.target.id : l.target;
-                    return (s === d.id || t === d.id) ? 1 : 0.1;
+                    return (s === tagId || t === tagId) ? 1 : 0.12;
                 });
-        })
-        .on('mouseleave', function (event, d) {
-            if (selectedTag) return;
-            nodeSel.select('circle')
-                .attr('fill', 'var(--fg-body)')
-                .attr('r', rScale);
-            nodeSel.select('text')
-                .attr('fill', 'var(--fg-muted)');
-            linkSel
-                .attr('stroke', 'var(--color-gray-2)')
-                .attr('stroke-width', function (l) { return Math.max(0.3, Math.min(1.5, l.count * 0.4)); })
-                .attr('opacity', 1);
+
+            var count = 0;
+            postItems.forEach(function (li) {
+                var tags = li.dataset.tags ? li.dataset.tags.split(',') : [];
+                var show = tags.indexOf(tagId) !== -1;
+                li.style.display = show ? '' : 'none';
+                if (show) count++;
+            });
+
+            if (filterLabel) {
+                filterLabel.innerHTML = count + ' post' + (count !== 1 ? 's' : '') +
+                    ' tagged <strong>#' + tagId + '</strong> &mdash; ' +
+                    '<a href="#" id="clear-filter">clear</a>';
+                document.getElementById('clear-filter').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    selectedTag = null;
+                    resetView();
+                });
+            }
+        }
+
+        nodeSel.on('click', function (event, d) {
+            event.stopPropagation();
+            if (selectedTag === d.id) {
+                selectedTag = null;
+                resetView();
+            } else {
+                selectedTag = d.id;
+                selectTag(d.id);
+            }
         });
 
-    // Responsive resize
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            W = section.clientWidth;
-            svg.attr('width', W);
-            simulation
-                .force('center', d3.forceCenter(W / 2, H / 2))
-                .force('x', d3.forceX(W / 2).strength(0.05))
-                .alpha(0.3).restart();
-        }, 100);
-    });
-})();
+        svg.on('click', function () {
+            if (selectedTag) {
+                selectedTag = null;
+                resetView();
+            }
+        });
+
+        // Hover: Obsidian-style highlight
+        var highlight = '#126db2';
+        nodeSel
+            .on('mouseenter', function (event, d) {
+                if (selectedTag) return;
+                var neighbors = new Set();
+                links.forEach(function (l) {
+                    var s = typeof l.source === 'object' ? l.source.id : l.source;
+                    var t = typeof l.target === 'object' ? l.target.id : l.target;
+                    if (s === d.id) neighbors.add(t);
+                    if (t === d.id) neighbors.add(s);
+                });
+
+                nodeSel.select('circle')
+                    .attr('fill', function (n) {
+                        if (n.id === d.id) return highlight;
+                        if (neighbors.has(n.id)) return 'var(--color-gray-1)';
+                        return 'var(--color-gray-2)';
+                    })
+                    .attr('r', function (n) { return n.id === d.id ? rScale(n) + 3 : rScale(n); });
+
+                nodeSel.select('text')
+                    .attr('fill', function (n) { return n.id === d.id ? 'var(--fg-body)' : 'var(--fg-muted)'; });
+
+                linkSel
+                    .attr('stroke', function (l) {
+                        var s = typeof l.source === 'object' ? l.source.id : l.source;
+                        var t = typeof l.target === 'object' ? l.target.id : l.target;
+                        return (s === d.id || t === d.id) ? highlight : 'var(--color-gray-3)';
+                    })
+                    .attr('stroke-width', function (l) {
+                        var s = typeof l.source === 'object' ? l.source.id : l.source;
+                        var t = typeof l.target === 'object' ? l.target.id : l.target;
+                        return (s === d.id || t === d.id) ? 1.2 : Math.max(0.3, Math.min(1.5, l.count * 0.4));
+                    })
+                    .attr('opacity', function (l) {
+                        var s = typeof l.source === 'object' ? l.source.id : l.source;
+                        var t = typeof l.target === 'object' ? l.target.id : l.target;
+                        return (s === d.id || t === d.id) ? 1 : 0.1;
+                    });
+            })
+            .on('mouseleave', function (event, d) {
+                if (selectedTag) return;
+                nodeSel.select('circle')
+                    .attr('fill', 'var(--fg-body)')
+                    .attr('r', rScale);
+                nodeSel.select('text')
+                    .attr('fill', 'var(--fg-muted)');
+                linkSel
+                    .attr('stroke', 'var(--color-gray-2)')
+                    .attr('stroke-width', function (l) { return Math.max(0.3, Math.min(1.5, l.count * 0.4)); })
+                    .attr('opacity', 1);
+            });
+
+        // Responsive resize
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                W = section.clientWidth;
+                svg.attr('width', W);
+                simulation
+                    .force('center', d3.forceCenter(W / 2, H / 2))
+                    .force('x', d3.forceX(W / 2).strength(0.05))
+                    .alpha(0.3).restart();
+            }, 100);
+        });
+    })();
 </script>

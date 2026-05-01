@@ -36,12 +36,12 @@ Fun fact: I managed to [escalate a sqli to a rce](/escalating-preauth-sqli-to-rc
 - network section was accurate and alinged I've seen that in real enterprise setups.
 - the demo of _why_ and _how_ the default meterpreter obfuscation gets flagged is quite good.
 - the challenges' attack paths review the course material quite organically. 
-- adcs section has now new been included.
+- adcs section has now new been included!
 - phishing via ics calendar invites was pretty interesting. 
-- pnwing ci/cd pipelines. 
+- pnwing ci/cd pipelines opens a ton of possibilities for latmov. 
 
 #### stuff I didn't \*love\*
-- **sometimes post-exploitation is too crazy**: once you are local admin you have too much freedom. i.e. disable defender and/or firewall rules once admin. 
+- **sometimes post-exploitation is too crazy**: once you are local admin you have too much freedom. i.e. disable defender and/or firewall rules. <>
 - **few OPSEC refs/considerations**. ie. psexec usage, `net user`, etc.
 - **some av bypasses are too naïve**. ie. process hollowing by itself would be blocked by Crowdstrike or any other competent edr. Although edr evasion is a very exigent field and you need to update constantly, and this course provides a decent baseline.
 - **phishing is mostly vba macros and hta**. Both techniques are a bit outdated (ie., macros disabled by default) and easy to detect for any competent SOC. 

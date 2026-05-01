@@ -42,6 +42,7 @@ Some people's sites that I like, both for content and aesthetics:
   - [arp242.net](https://arp242.net/)
   - [sophiebits.com](https://sophiebits.com/)
   - [lesswrong.com](https://lesswrong.com/)
+  - [stephango.com](https://stephango.com/)
 
 ### privacy
 
