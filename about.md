@@ -37,6 +37,7 @@ Here are some highlights of my profile, but if you want the boring details, you 
 
 ## certs
 Some of the cybersecurity certifications I've earned over time[^3]:
+  - _Offensive Security Experienced Pentester (OSEP)_ - Offensive Security
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
@@ -75,7 +76,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 
 [^1]: I know it’s challenging to pronounce for non-native Spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
-[^3]: currently prepping for the OSEP
+[^3]: currently prepping for the OSED
 [^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
 [^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
 [^6]: I'm not going to argue about that
