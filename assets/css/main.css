@@ -24,7 +24,7 @@
     --color-black: #100F0F;
     --color-accent: var(--color-black);
     --color-gray-0: #242424cc;
-    --color-gray-1: #6F6E69;
+    --color-gray-1: #898781;
     /* Replacement for #666, #757575 */
     --color-gray-2: #b2bec3;
     /* Replacement for #999, #95a5a6 */
@@ -46,7 +46,7 @@
 
     --fg-muted: var(--color-gray-1);
     /* Footnotes, secondary text */
-    --fg-faint: var(--color-gray-2);
+    --fg-faint: var(--color-gray-1);
     /* Dates, weak links */
 
     --border-light: var(--color-gray-3);
