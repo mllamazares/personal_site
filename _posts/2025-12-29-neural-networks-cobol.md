@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: neural-networks-cobol
-title: neural networks in cobol and other creative ways to k*ll yourself
+title: neural nets in cobol & other creative ways to k*ll yourself
 tags: [ai, humor, cobol]
 ---
 

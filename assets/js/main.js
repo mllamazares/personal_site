@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="http"]').forEach(a => a.setAttribute('target', '_blank'));
 
+    // Heading anchor links (copy URL with #section-slug to clipboard)
+    var linkIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+    var anchorCheckIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    document.querySelectorAll('article h2[id], article h3[id], article h4[id], article h5[id], article h6[id]').forEach(function (h) {
+        var anchor = document.createElement('a');
+        anchor.className = 'heading-anchor';
+        anchor.href = '#' + h.id;
+        anchor.setAttribute('aria-label', 'copy link to this section');
+        anchor.innerHTML = linkIcon;
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            var url = window.location.origin + window.location.pathname + '#' + h.id;
+            history.replaceState(null, '', '#' + h.id);
+            navigator.clipboard.writeText(url).then(function () {
+                anchor.innerHTML = anchorCheckIcon;
+                anchor.classList.add('copied');
+                setTimeout(function () {
+                    anchor.innerHTML = linkIcon;
+                    anchor.classList.remove('copied');
+                }, 1500);
+            });
+        });
+        h.insertBefore(anchor, h.firstChild);
+    });
+
     // Code block toolbar (language label + copy button)
     document.querySelectorAll('pre > code').forEach(function (code) {
         var pre = code.parentElement;
