@@ -39,7 +39,7 @@
     --fg-link-hover: #126db2;
 
     --fg-code: var(--color-black);
-    --bg-code: var(--color-gray-3);
+    --bg-code: var(--bg-hover);
     --code-font-size: 0.95em;
     --code-toolbar-fg: rgba(255, 255, 255, 0.35);
     --code-toolbar-fg-active: rgba(255, 255, 255, 0.7);
