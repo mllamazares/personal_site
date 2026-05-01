@@ -122,7 +122,7 @@ I grabbed a monster[^6] and started the exam at 01:00 AM. I promised myself I wo
 
 After 6 hours I had 40 points. I was feeling confident about the next steps, so I took a nap.
 
-I woke up at 10:00 AM. Then I made a lot of progress. Not everything is linear, and effort doesn't always translate into flags. People always stress that if you're stuck, don't force it — take a walk. But I think the opposite is also true: if you're on a roll, **don't stop digging**. 🪏
+I woke up at 10:00 AM. Then I made a lot of progress. Not everything is linear, and effort doesn't always translate into flags. People always stress that if you're stuck, don't force it: take a walk. But I think the opposite is also true: if you're on a roll, **don't stop digging**. 🪏
 
 Then I hit a wall after the 6th flag. So I took a walk to lower my cortisol levels. My strategy was to tryhard until day two, and if no luck, move to the second path and grab more flags.
 
@@ -143,7 +143,7 @@ Two days after the exam I received the beloved email. I passed!
 
 
 
-[^1]: well, generalizing here — there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: evasion, c2, etc.
+[^1]: well, generalizing here: there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: evasion, c2, etc.
 [^2]: Wasted hours because of this, kek.
 [^3]: somehow slow AF.
 [^4]: I had already purchased it when doing the PNPT cert a while ago.
