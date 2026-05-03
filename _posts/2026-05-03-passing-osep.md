@@ -7,9 +7,9 @@ tags: [cert, osep, pentesting]
 
 I recently passed the OSEP exam on the first attempt, achieving both independent requirements to pass: 100+ points and the slippery `secret.txt` flag. 💅
 
-I wanted to solidify my internal pentesting skillz, since I'm generally more comfortable with web hacking. So it was a nice opportunity to learn and test myself in a challenging environment.
+I wanted to solidify my internal pentesting skillz, since I'm generally more comfortable with web hacking (check my [oswe review](./2026-05-03-passing-osep.md)). So it was a great opportunity to learn and test myself in a challenging environment.
 
-Here I'll share my experience preparing and pwning for this exam.
+Here I'll share my personal experience preparing for this exam.
 
 **Spoiler**: there will be no *spoilers* here. It's just my personal experience, without anything that isn't already public.
 
