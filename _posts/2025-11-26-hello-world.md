@@ -39,7 +39,6 @@ Some people's sites that I like, both for content and aesthetics:
   - [ian.sh](https://ian.sh/)
   - [noperator.dev](https://noperator.dev/)
   - [ben.page](https://ben.page/)
-  - [arp242.net](https://arp242.net/)
   - [sophiebits.com](https://sophiebits.com/)
   - [lesswrong.com](https://lesswrong.com/)
   - [stephango.com](https://stephango.com/)
