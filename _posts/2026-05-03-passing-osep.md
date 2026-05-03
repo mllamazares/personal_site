@@ -118,7 +118,7 @@ And my kali setup:
 
 ### exam
 
-As you may already know, OffSec advanced exams give you 48 hours to break into two machines and 24 hours to write the report.
+As you may already know, OffSec advanced exams give you 48h for the technical part and 24h to write the report. I knew it was going to be *intense*.
 
 I grabbed a monster[^6] and started it at 0100 AM. I promised myself I wouldn't go to sleep until I got comfortable with the progress.
 
