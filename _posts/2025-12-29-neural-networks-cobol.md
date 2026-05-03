@@ -277,7 +277,7 @@ They should. It is accurate.
 
 Let's see the flow in context:
 
-![Neural Network Flow](/assets/img/mermaid-nn.png){: loading="lazy"}
+![Neural Network Flow](/assets/img/mermaid-nn.png)
 
 ## from english to python
 
@@ -454,7 +454,7 @@ Enjoy the pain.
 
 Well, I guess I have to dust off my ancient COBOL books[^1]:
 
-![IMS COBOL books](/assets/img/ims-cobol-books.jpeg){: loading="lazy"}
+![IMS COBOL books](/assets/img/ims-cobol-books.jpeg)
 
 COBOL was built for accountants, not gradient descent. You get fixed-width fields, no arrays the way you want them, no dynamic memory, and arithmetic that feels like chiseling numbers into wet clay.
 

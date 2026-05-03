@@ -70,15 +70,15 @@ This approach works because you see everything in context, and that helps you to
 ### notes
 
 I used Notion for notetaking[^2] and started categorizing vulns like below, but it ended up quite messy[^3]:
-![Failed first structure](/assets/img/failed_exploit_zoo.png){: loading="lazy"}
+![Failed first structure](/assets/img/failed_exploit_zoo.png)
 
 So I created what I called the *Exploit Zoo🦒*[^4], basically a collection of payloads and exploits for each topic, neatly categorized and tagged: 
 
-![Exploit zoo](/assets/img/exploit_zoo.png){: loading="lazy"}
+![Exploit zoo](/assets/img/exploit_zoo.png)
 
 I also organized the writeups of each lab with the working code like this:
 
-![OSWE labs writeups](/assets/img/oswe_labs_writeup.png){: loading="lazy"}
+![OSWE labs writeups](/assets/img/oswe_labs_writeup.png)
 
 Sure, I know you can code everything from scratch during the exam, but having a solid starting point saves you precious minutes when the clock is ticking.
 
@@ -145,12 +145,14 @@ additional tools:
 - [BurpSuite Extension - Copy As Python-Requests](https://portswigger.net/bappstore/b324647b6efa4b6a8f346389730df160)
 - [curlconverter](https://github.com/curlconverter/curlconverter)
 
+Not strictly required, but the book "Web Application Hackers Handbook 2nd Edition" has an in-depth overview of most types of web vulns:
+![Evading EDR book](/assets/img/webapp-hackers.jpeg)
 
 ### wh00t wh00t
 
 Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 
-![OSWE passed](/assets/img/owse_passed.png){: loading="lazy"}
+![OSWE passed](/assets/img/owse_passed.png)
 
 The big takeaway, and IMHO what separates a junior from a senior web pentester, is the *ability to chain vulns*.
 
