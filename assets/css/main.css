@@ -36,7 +36,7 @@
     --bg-selection: rgba(187, 220, 206, 0.3);
     --fg-body: var(--color-black);
     --fg-link: var(--color-accent);
-    --fg-link-hover: #126db2;
+    --fg-link-hover: rgb(32, 94, 166);
 
     --fg-code: var(--color-black);
     --bg-code: var(--bg-hover);
