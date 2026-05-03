@@ -41,17 +41,17 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 - pwning ci/cd pipelines open a ton of possibilities for latmov. Learned a lot here!
 
 #### stuff I didn't \*love\*
-- **post-exploitation is sometimes too permissive**: once you're local admin, you can do basically anything, like disabling defender and/or firewall rules.
-- **few OPSEC refs/considerations**, e.g. psexec usage, `net user`, etc.
-- **some AV bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
-- **phishing is mostly vba macros and hta**. both are a bit outdated (macros are disabled by default now) and easy to detect.
+- _post-exploitation is sometimes too permissive_: once you're local admin, you can do basically anything, like disabling defender and/or firewall rules.
+- _few OPSEC refs/considerations_, e.g. psexec usage, `net user`, etc.
+- _some AV bypasses are too naïve_, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
+- _phishing is mostly vba macros and hta_. both are a bit outdated (macros are disabled by default now) and easy to detect.
 
 ### reqs
 IMHO, the following skills matter:
-- **ad hacking**: being familiar with the core concepts and common offensive techniques.
-- **programming background**: being fluent with c# and powershell.
-- **ctf experience**: if you don't have some background pwning boxes, you will struggle.
-- **windows internals**: nothing crazy, but knowing winapi, process and filesystem structure, etc. helps.
+- _ad hacking_: being familiar with the core concepts and common offensive techniques.
+- _programming background_: being fluent with c# and powershell.
+- _ctf experience_: if you don't have some background pwning boxes, you will struggle.
+- _windows internals_: nothing crazy, but knowing winapi, process and filesystem structure, etc. helps.
 
 ### prep
 I prepped for 1.5 months, and this was my strategy:
