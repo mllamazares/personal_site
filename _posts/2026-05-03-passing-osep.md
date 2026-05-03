@@ -34,11 +34,11 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 
 #### stuff I liked
 - the network section was accurate and aligned with what I've seen in real enterprise setups.
-- the demo of _why_ and _how_ the default meterpreter obfuscation gets flagged is quite good.
-- the challenges' attack paths cover the course material quite organically.
+- the demo of _why_ and _how_ the default meterpreter obfuscation gets flagged is 🔥.
+- the challenges' attack paths cover the course material organically.
 - the adcs section has now been included!
-- phishing via ics calendar invites was pretty interesting.
-- pwning ci/cd pipelines open a ton of possibilities for latmov.
+- phishing via ics calendar invites was pretty interesting and up to date.
+- pwning ci/cd pipelines open a ton of possibilities for latmov. Learned a lot here!
 
 #### stuff I didn't \*love\*
 - **sometimes post-exploitation is too crazy**: once you're local admin you have too much freedom. e.g. disabling defender and/or firewall rules.
@@ -91,7 +91,7 @@ Related off-topic resources:
 - [tcm ad section of the PEH course](https://tcm-sec.com/academy/practical-ethical-hacking/)[^4].
 - [orange cyberdefense ad cheatsheet](https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg)
 
-Not strictly required, but the book "Evading EDR" from No Starch Press is lit:
+Not strictly required, but the book _"Evading EDR"_ from No Starch Press is 🔥:
 ![Evading EDR book](/assets/img/evading-edr.jpeg)
 
 ### my gig
@@ -130,7 +130,7 @@ It was quite frustrating since I had a clear idea of what I wanted to do, but so
 
 So after 23h I went to sleep with 9 flags in my pocket: I just needed one more. On day two, I woke up at 0800 AM. Then I pulled `secret.txt` at 1000 AM, which meant I met both independent criteria to pass: 100+ points and the `secret.txt`. 
 
-I then crafted the report with sysreptor and sent it for review that same evening.
+Finally, I crafted the report with sysreptor and sent it for review that same evening.
 
 #### timeline
 
