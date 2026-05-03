@@ -5,7 +5,7 @@ title: my experience passing the osep cert
 tags: [certs, osep, pentesting]
 ---
 
-I recently passed the OSEP exam on the first attempt, achieving both independent requirements to pass: 100+ points and the slippery `secret.txt` flag. 💅
+I recently passed the OSEP exam on the first attempt, achieving both independent requirements to pass: >=100 points and the slippery `secret.txt` flag. 💅
 
 I wanted to solidify my internal pentesting skillz, since web hacking is more my comfort zone (check my [OSWE cert review](/passing-oswe)). So this was a great opportunity to push myself and learn in a challenging environment.
 
@@ -118,17 +118,19 @@ And my kali setup:
 
 ### exam
 
-I grabbed a monster[^6] and started the exam at 0100 AM. I promised myself I wouldn't go to sleep until I got comfortable with the progress.
+As you may already know, OffSec advanced exams give you 48 hours to break into two machines and 24 hours to write the report.
+
+I grabbed a monster[^6] and started it at 0100 AM. I promised myself I wouldn't go to sleep until I got comfortable with the progress.
 
 After 5 hours I had 30 points. I was feeling confident about the next steps, so I took a nap.
 
 I woke up at 0930 AM. Then I made a lot of progress. Not everything is linear, and effort doesn't always translate into flags. People always stress that if you're stuck, don't force it: take a walk. But I think the opposite is also true: if you're on a roll, **don't stop digging**. 🪏
 
-Then I hit a wall after the 6th flag. So I took a walk to lower my cortisol levels. My strategy was to tryhard until day two, and if no luck, move to the second path and grab more flags.
+Then I hit a wall after the 6th flag, so I took a walk to lower my cortisol levels. My plan: keep tryharding until day two, and if I still had no luck by then, switch to the second path and grab more flags there.
 
 It was quite frustrating since I had a clear idea of what I wanted to do, but somehow it didn't work. Finally, I caught it: I had missed a little syntax detail. 🤦‍♂️
 
-So after 23h I went to sleep with 9 flags in my pocket: I just needed one more. On day two, I woke up at 0800 AM. Then I pulled `secret.txt` at 1000 AM, which meant I met both independent criteria to pass: 100+ points and the `secret.txt`. 
+So after ~23h I went to sleep with 9 flags in my pocket: I just needed one more. On day two, I woke up at 0800 AM. Then I pulled `secret.txt` at 1000 AM, which meant I met both independent criteria to pass: >=100 points and the `secret.txt`. 
 
 Finally, I crafted the report with sysreptor and sent it for review that same evening.
 
