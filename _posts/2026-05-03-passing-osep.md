@@ -2,7 +2,7 @@
 layout: post
 slug: passing-osep
 title: my experience passing the osep cert
-tags: [certs, osep, pentesting]
+tags: [certs, pentesting]
 ---
 
 I recently passed the OSEP exam on the first attempt, achieving both independent requirements to pass: >=100 points and the slippery `secret.txt` flag. 💅
