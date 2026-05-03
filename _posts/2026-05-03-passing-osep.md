@@ -379,7 +379,7 @@ Two days after the exam I received the beloved email from OffSec. I passed! Yay!
 
 Was it worth the sweat? Absolutely. Most of the content actually transfers to real engagements, which is what I really cared about.
 
-Already deep into OSED prep. Will share that story here too whenever I make it through. Wish me luck! 🤞
+Already deep into [OSED](https://www.offsec.com/courses/exp-301/) prep. Will share that story here too whenever I make it through. Wish me luck! 🤞
 
 [^1]: well, generalizing here: there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: evasion, c2, etc.
 [^2]: Wasted hours because of this, kek.
