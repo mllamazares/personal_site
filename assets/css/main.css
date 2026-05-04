@@ -607,7 +607,7 @@ hr::before,
     transition: opacity 0.2s, background-color 0.2s;
     padding: 5px 10px;
     border-radius: 4px;
-    opacity: 0.6;
+    opacity: 0.9;
     display: flex;
 }
 
