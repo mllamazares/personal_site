@@ -37,7 +37,7 @@ Below are some highlights of my profile, but if you want the boring details, you
 
 ## certs
 Some of the cybersecurity certifications I've earned over time[^3]:
-  - _Offensive Security Experienced Pentester (OSEP)_ - Offensive Security
+  - _Offensive Security Experienced Pentester (OSEP)_ - Offensive Security ([review](/passing-osep))
   - _Offensive Security Web Expert (OSWE)_ - Offensive Security ([review](/passing-oswe))
   - _GIAC Certified Forensic Analyst (GCFA)_ - SANS Institute
   - _Practical Network Penetration Tester (PNPT)_ - TCM Security
