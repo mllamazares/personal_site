@@ -19,24 +19,29 @@
 */
 
 :root {
-    /* Palette */
+    /* Palette — Flexoki (https://stephango.com/flexoki) */
     --color-white: #ffffff;
     --color-black: #100F0F;
+    /* flexoki: black */
     --color-accent: var(--color-black);
-    --color-gray-0: #242424cc;
-    --color-gray-1: #979692;
-    /* Replacement for #666, #757575 */
-    --color-gray-2: #b2bec3;
-    /* Replacement for #999, #95a5a6 */
-    --color-gray-3: #dfe6e9;
-    /* Light bg / border / tick mark */
+    --color-gray-0: #282726cc;
+    /* flexoki: base-900 + alpha (body text) */
+    --color-gray-1: #9F9D96;
+    /* flexoki: base-400 (muted/faint) */
+    --color-gray-2: #B7B5AC;
+    /* flexoki: base-300 */
+    --color-gray-3: #E6E4D9;
+    /* flexoki: base-100 (light bg / border / tick) */
 
     /* Semantic Variables */
     --bg-body: #FFFCF0;
-    --bg-selection: rgba(187, 220, 206, 0.3);
+    /* flexoki: paper */
+    --bg-selection: rgba(221, 226, 178, 0.3);
+    /* flexoki: green-100 + alpha */
     --fg-body: var(--color-black);
     --fg-link: var(--color-accent);
-    --fg-link-hover: rgb(32, 94, 166);
+    --fg-link-hover: #205EA6;
+    /* flexoki: blue-600 */
 
     --fg-code: var(--color-black);
     --bg-code: var(--bg-hover);
@@ -209,8 +214,13 @@ a[href^="http"]:not([href*="mll.sh"])::after {
 
 blockquote {
     font-style: italic;
-    border: thin solid var(--color-black);
-    padding: 1rem;
+    background: #F2F0E5;
+    /* flexoki: base-50 */
+    border-left: 4px solid var(--color-black);
+    padding: 1rem 1.25rem;
+    padding-left: 2rem;
+    margin: 0;
+    border-radius: 0 .3em .3em 0;
 }
 
 blockquote p {
@@ -343,7 +353,7 @@ hr::before,
     content: "# # #";
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, var(--color-black) 0%, var(--color-black) 33%, var(--color-black) 33%, var(--color-black) 66%, var(--color-black) 66%, var(--color-black) 100%);
+    background: linear-gradient(to right, var(--color-gray-1) 0%, var(--color-gray-1) 33%, var(--color-gray-1) 33%, var(--color-gray-1) 66%, var(--color-gray-1) 66%, var(--color-gray-1) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;

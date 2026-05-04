@@ -6,7 +6,7 @@ tags: [pentesting, iis, recon, waf]
 ---
 
 A friend of mine once told me: 
-> If you see an IIS blue screen, don't stop there; there must be something.
+> If you ever spot an IIS blue screen, don't stop there; there must be something.
 
 Yep, he was right. That IIS splash page is not a dead end. Behind that blue window sits one of the most consistently misconfigured web servers on the www, and it's begging you to look deeper.
 
