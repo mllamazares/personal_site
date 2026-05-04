@@ -238,7 +238,7 @@ p>code {
     background: var(--bg-code);
     font-size: var(--code-font-size);
     font-family: var(--font-code);
-    padding: 0.1em 0.6em;
+    padding: 0.1em 0.4em;
     overflow: auto;
     border-radius: .3em;
 }
