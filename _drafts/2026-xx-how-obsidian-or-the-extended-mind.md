@@ -16,19 +16,21 @@ performance.
 ### plugins
 
 - git sync
+- obsidian web clipper
 - flexoki theme
 - bases
 - omnisearch 
 - autolink title
-- obsidian web clipper
+- editing toolbar
+
 
 #### note on syncing in iOS.
 
-Obsidian Git Sync in iOS is done via 3rd apps like GitSync. It does not do great because iOS does not let working on background other apps. My question is if using plugins like RemotelySave do you face this kinds of problems or not.
+I'm a weird guy that for some reason uses debian as daily driver but it has folded onto the system and also uses an iphone. The thing is that Obsidian sync in iOS is supported by a 3rd party app. And iOS deliberately restricts background processing for third-party apps to preserve battery life. When you switch away from Obsidian or lock your screen, the operating system freezes the app entirely.  
+
+AFAIK, this affects to all non official obsidian sync methods. The one that I use is GitSync. And they promise something like "You can setup scheduled sync, which will sync as often as iOS allows (can be as often as 15 minutes after some time)". The bottleneck is not your Git setup or the specific plugin you choose. The bottleneck is Apple.
 
 Follow this guy's tutorial: https://viscouspotenti.al/posts/gitsync-all-devices-tutorial
-
-The bottleneck is not your Git setup or the specific plugin you choose. The bottleneck is Apple. iOS deliberately restricts background processing for third-party apps to preserve battery life. When you switch away from Obsidian or lock your screen, the operating system freezes the app entirely.
 
 TL;DR, if you use iOS:
 - pay Obsidian Sync
