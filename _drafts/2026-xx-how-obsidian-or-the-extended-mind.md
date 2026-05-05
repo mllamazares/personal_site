@@ -37,7 +37,7 @@ TL;DR, if you use iOS:
 - use GitSync and sync manually.
 - don't sync iOS.
 
-### how to not suck at it.
+### how to structure the notes
 
 First lesson, f*ck folders. Yes. You hear it right: fuck. folders.
 
@@ -54,3 +54,7 @@ https://www.reddit.com/r/Zettelkasten/top/?t=all
 Fun fact: I studied philosophy while working while freelancing. 
 
 I guess if you are still reading this you are really interested.
+
+### how to llm your notes
+
+https://medium.com/@martk/obsidian-claude-code-the-claude-code-skills-that-make-your-vault-feel-alive-4ec05a1ec1e6
