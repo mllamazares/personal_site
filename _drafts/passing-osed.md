@@ -2,7 +2,7 @@
 layout: post
 slug: passing-osed
 title: My Experience Passing the OSED Cert
-tags: [cert, osed, pentesting]
+tags: [cert, pentesting]
 ---
 
 preprep:

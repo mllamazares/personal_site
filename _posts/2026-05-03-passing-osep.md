@@ -371,8 +371,6 @@ I asked Claude to create this fun timeline of my exam progress:
   });
 </script>
 
-
-
 ### wh00t wh00t
 
 Two days after the exam I received the beloved email from OffSec. I passed! Yay!
