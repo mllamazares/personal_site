@@ -2,21 +2,11 @@
 
 @font-face {
     font-family: 'Agave';
-    src: url('../fonts/Agave-Regular.ttf') format('truetype');
+    src: url('../fonts/AgaveCode.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
-
-/*
-@font-face {
-    font-family: 'Agave';
-    src: url('../fonts/Agave-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-*/
 
 :root {
     /* Palette — Flexoki (https://stephango.com/flexoki) */
@@ -40,7 +30,7 @@
     /* flexoki: green-100 + alpha */
     --fg-body: var(--color-black);
     --fg-link: var(--color-accent);
-    --fg-link-hover: #205EA6;
+    --fg-link-hover: rgb(94, 64, 157);
     /* flexoki: blue-600 */
 
     --fg-code: var(--color-black);
@@ -112,7 +102,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb);
-    border-radius: 4px;
+    border-radius: 2px;
     border: 2px solid transparent;
     background-clip: content-box;
 }

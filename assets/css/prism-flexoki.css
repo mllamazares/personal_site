@@ -1,0 +1,130 @@
+/* =========================================
+   PrismJS — Flexoki Dark theme
+   palette: https://stephango.com/flexoki
+   ========================================= */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #CECDC3;
+    /* base-200 */
+    background: none;
+    text-shadow: none;
+    font-family: var(--font-code);
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: .3em;
+    background: #100F0F;
+    /* black */
+}
+
+:not(pre)>code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+    background: #1C1B1A;
+    /* base-950 */
+}
+
+/* ------- tokens ------- */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #878580;
+    /* base-500 */
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #9F9D96;
+    /* base-400 */
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #D14D41;
+    /* red-400 */
+}
+
+.token.boolean,
+.token.number {
+    color: #DA702C;
+    /* orange-400 */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #879A39;
+    /* green-400 */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #CE5D97;
+    /* magenta-400 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+    color: #4385BE;
+    /* blue-400 */
+}
+
+.token.keyword {
+    color: #8B7EC8;
+    /* purple-400 */
+}
+
+.token.regex,
+.token.important {
+    color: #3AA99F;
+    /* cyan-400 */
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
