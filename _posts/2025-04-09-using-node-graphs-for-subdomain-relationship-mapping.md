@@ -17,7 +17,8 @@ This feature is already integrated in [aquatone](https://github.com/michenriksen
 
 Honestly, it’s probably cooler than it is useful, but it could make for a neat addition to a report.
 
-**edit**: I stumbled upon [flowsint](https://www.flowsint.io/), which does something similar and much cooler. 
+> [!NOTE] edit
+> Later on, I stumbled upon [flowsint](https://www.flowsint.io/), which does something similar and much cooler.
 
 ![flowsint dashboard](/assets/img/hero-dark.webp)
 

@@ -11,7 +11,8 @@ I wanted to solidify my internal pentesting skillz, since web hacking is more my
 
 Here I'll share my personal experience preparing for this exam.
 
-**Spoiler**: there will be no *spoilers* here. It's just my personal experience, without anything that isn't already public.
+> [!NOTE] spoiler
+> There will be no *spoilers* here. It's just my personal experience, without anything that isn't already public.
 
 ### os-what?
 The [Offensive Security Experienced Pentester (OSEP)](https://www.offsec.com/courses/pen-300/) from OffSec is probably the most advanced active directory penetration testing cert, along with the [Certified Active Directory Pentesting Expert (CAPE)](https://academy.hackthebox.com/preview/certifications/htb-certified-active-directory-pentesting-expert) from HackTheBox[^1].
@@ -83,7 +84,8 @@ OSEP-specific resources sorted by subjective usefulness:
 - [https://github.com/darkness215/osep-tools/](https://github.com/darkness215/osep-tools/)
 - [https://github.com/beauknowstech/OSEP-Everything](https://github.com/beauknowstech/OSEP-Everything)
 
-**Important**: be aware that some of these commands and scripts are now flagged, since the osep environment gets updated over time, so don't be cocky and test everything before trying your luck on the exam.
+> [!IMPORTANT]
+> Be aware that some of these commands and scripts are now flagged, since the osep environment gets updated over time, so don't be cocky and test everything before trying your luck on the exam.
 
 Related off-topic resources:
 - [ippsec writeups](https://ippsec.rocks)

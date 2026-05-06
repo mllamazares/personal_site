@@ -330,7 +330,8 @@ Some IIS-specific wordlists that I like:
 - [Assetnote wordlists](https://wordlists.assetnote.io/): auto-generated from real-world crawl data, updated monthly. Grab the ASP and ASPX wordlists. These are derived from actual production applications, so the hit rate is significantly better than generic lists.
 - [OneListForAll](https://github.com/six2dez/OneListForAll): the "rockyou of web fuzzing." Use `onelistforallshort.txt` for targeted runs and leave the full list running overnight.
 
-Pro tip: IIS is case-insensitive. If your wordlist is mixed-case, you're wasting requests on duplicates. Use a lowercased wordlist like SecLists' `raft-medium-words-lowercase.txt` or pipe your custom list through `tr '[:upper:]' '[:lower:]' | sort -u` before feeding it to ffuf.
+> [!TIP] pro tip
+> IIS is case-insensitive. If your wordlist is mixed-case, you're wasting requests on duplicates. Use a lowercased wordlist like SecLists' `raft-medium-words-lowercase.txt` or pipe your custom list through `tr '[:upper:]' '[:lower:]' | sort -u` before feeding it to ffuf.
 
 ### web.config: the keys to the kingdom
 

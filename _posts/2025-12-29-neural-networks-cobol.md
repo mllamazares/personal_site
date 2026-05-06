@@ -5,7 +5,8 @@ title: neural nets in cobol & other creative ways to k*ll yourself
 tags: [ai, humor, cobol]
 ---
 
-_**Disclaimer**: this is a tribute to the [Cruelty Squad](https://www.youtube.com/watch?v=CHm2d3wf8EU) video game. Just to showcase how COBOL can still be used in bizarre ways to maximize shareholder value._ ✨
+> [!NOTE] disclaimer
+> This is a tribute to the [Cruelty Squad](https://www.youtube.com/watch?v=CHm2d3wf8EU) video game. Just to showcase how COBOL can still be used in bizarre ways to maximize shareholder value. ✨
 
 ---
 
