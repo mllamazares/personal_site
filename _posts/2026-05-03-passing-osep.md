@@ -84,7 +84,7 @@ OSEP-specific resources sorted by subjective usefulness:
 - [https://github.com/darkness215/osep-tools/](https://github.com/darkness215/osep-tools/)
 - [https://github.com/beauknowstech/OSEP-Everything](https://github.com/beauknowstech/OSEP-Everything)
 
-> [!IMPORTANT]
+> [!WARNING]
 > Be aware that some of these commands and scripts are now flagged, since the osep environment gets updated over time, so don't be cocky and test everything before trying your luck on the exam.
 
 Related off-topic resources:
