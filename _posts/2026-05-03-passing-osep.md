@@ -43,8 +43,8 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 
 #### stuff I didn't \*love\*
 - **post-exploitation is sometimes too permissive**: once you're local admin, you can do basically anything, like disabling defender and/or firewall rules.
-- **few OPSEC refs/considerations**, e.g. psexec usage, `net user`, etc.
-- **some AV bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
+- **few opsec refs/considerations**, e.g. `psexec` usage, `net user`, etc.
+- **some av bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
 - **phishing is mostly vba macros and hta**: both are a bit outdated (macros are disabled by default now) and easy to detect.
 
 ### reqs

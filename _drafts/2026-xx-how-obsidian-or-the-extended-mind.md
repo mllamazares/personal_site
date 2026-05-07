@@ -58,3 +58,29 @@ I guess if you are still reading this you are really interested.
 ### how to llm your notes
 
 https://medium.com/@martk/obsidian-claude-code-the-claude-code-skills-that-make-your-vault-feel-alive-4ec05a1ec1e6
+
+
+
+
+
+
+## Debian.
+
+1. Create a PAT in Github here: [Sign in to GitHub · GitHub](https://github.com/settings/tokens)
+2. Install `obsidian-git` community plugin inside the vault.  
+    `Settings > Community Plugins > Search`
+3. Create a github account or skip if you have one.
+4. Create new `repository` **with README** . _(ex. you/notes)_
+5. Create a fine-granted access token to access the repo. [here](https://github.com/settings/tokens?type=beta)
+6. Change to vault directory and clone using the access token.  
+    `git clone https://<token>@github.com/you/notes.git`
+7. Copy the vault folder to your mobile device.
+8. Finally restart Obsidian and you are good to go!
+
+[The Easiest Way to Setup Obsidian Git (to backup notes) - Share & showcase - Obsidian Forum](https://forum.obsidian.md/t/the-easiest-way-to-setup-obsidian-git-to-backup-notes/51429/6)
+
+## iPhone
+
+Install the 
+
+[How to Sync Obsidian Across All Devices Using Git, Automatically and for Free](https://viscouspotenti.al/posts/gitsync-all-devices-tutorial)
