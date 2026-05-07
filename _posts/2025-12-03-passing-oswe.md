@@ -28,10 +28,10 @@ Let me stress that it is a *white-box* penetration testing course, meaning you ~
 
 From my experience, these skills matter:
 
-* *dynamic black-box testing*: web pentesting, bug bounty, or CTF background.
-* *secure code reviews*: knowing what a vulnerability looks like from the code perspective. In my case, having worked on tuning SAST tools helped a lot.
-* *scripting*: you ultimately need to create working exploits in your language of choice.
-* *development*: not required to know how to build full apps in every language, but it definitely helps.
+* **dynamic black-box testing**: web pentesting, bug bounty, or CTF background.
+* **secure code reviews**: knowing what a vulnerability looks like from the code perspective. In my case, having worked on tuning SAST tools helped a lot.
+* **scripting**: you ultimately need to create working exploits in your language of choice.
+* **development**: not required to know how to build full apps in every language, but it definitely helps.
 
 ### pre-prep
 
@@ -41,13 +41,13 @@ It’s also a nice excuse to polish my osint skillz, lol. And to make it more ch
 
 I split my research into two buckets:
 
-* *general vibe*
+* **general vibe**
   * official OffSec docs
   * Medium articles and personal blogs to get a sense of how people approached it
   * Reddit boards like [r/oswe](https://www.reddit.com/r/OSWE/) or [r/codereview](https://www.reddit.com/r/codereview/)
   * books related to the topic
 
-* *topic specific*: I go through the course content and for each topic I search for:
+* **topic specific**: I go through the course content and for each topic I search for:
   * articles explaining the concepts
   * relevant tools
   * YouTube videos
@@ -62,7 +62,7 @@ Once I felt comfortable with the topics, I bought the AWAE course. My strategy:
 1. read the huge course PDF[^1]. Thoroughly, underlining the important stuff.
 2. do the course labs and some of the extra miles
 3. complement the course with extra research and CTFs
-4. create my *own* notes and exploits
+4. create my \*own\* notes and exploits
 
 Overall, I liked how the AWAE course was structured. You *learn by pwning* throught specific case studies. It doesn’t dump the solution on you but shows the thought process step by step. Something doesn't work, then it explains why and how to break it. 
 
