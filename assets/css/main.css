@@ -26,7 +26,7 @@
     /* Semantic Variables */
     --bg-body: #FFFCF0;
     /* flexoki: paper */
-    --bg-selection: rgba(221, 226, 178, 0.3);
+    --bg-selection: rgba(187, 220, 206, 0.3);
     /* flexoki: green-100 + alpha */
     --fg-body: var(--color-black);
     --fg-link: var(--color-accent);
