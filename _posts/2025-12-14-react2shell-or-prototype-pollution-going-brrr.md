@@ -9,7 +9,7 @@ I guess we can call this JARP, *Just Another React2Shell Post*, because everyone
 
 Today we will unpack how this thing ticks, why it's dangerous, how to exploit it, and a few ways researchers slipped past WAF protections that were supposed to stop it.
 
-### react2-what?
+## react2-what?
 
 [CVE-2025-55182](https://nvd.nist.gov/vuln/detail/CVE-2025-55182), affectionately known as React2Shell, dropped in December 2025 with a flawless CVSS score of 10.0. It gives you unauthenticated RCE through a single crafted HTTP request. No session. No warm up. Just straight into the server.
 
@@ -29,7 +29,7 @@ npm ls react-server-dom-webpack \
 
 If the versions match the cursed ones above, patch to 19.0.1, 19.1.2, 19.2.1.
  
-### context
+## context
 
 This thing hits [React Server Components (RSC)](https://react.dev/reference/rsc/server-components) Flight protocol, which is quite bad because this is not some random plugin, but it's used in millions of modern React apps and frameworks like Next.js.
 
@@ -62,7 +62,7 @@ Final reconstructed value:
 
 Server side rendering means Node figures out the HTML and ships it. Client side rendering means the browser does the heavy lifting. Server components mix the two. The server renders what it can and the browser hydrates what remains.
 
-### smelly code
+## smelly code
 
 The heart of the issue is an unsafe deserialization bug in how RSC handles Flight payloads. The weak spot is inside `requireModule` in `react-server-dom-webpack`.
 
@@ -83,7 +83,7 @@ React Flight's colon-separated paths let attackers deliberately walk the prototy
 
 Reaching the `Function` constructor lets you compile and run arbitrary strings. Note that a single `:constructor` isn't enough, it only returns `Object`'s constructor. The double reference is what unlocks the exploit.
 
-### exploit
+## exploit
 
 Here is how to exploit this vuln to execute the `id` command:
 
@@ -123,7 +123,7 @@ After sending it, if you see something similar to this in the response header, c
 X-Action-Redirect: /login?a=uid=0(root) gid=0(root) groups=0(root);push
 ```
 
-### dissecting the payload
+## dissecting the payload
 
 Let's analyze the exploit step by step:
 
@@ -203,7 +203,7 @@ Why this works:
 Stack those and you get RCE. 💅🏻
 
 
-### how to test
+## how to test
 
 Please, do \*not\* use some random public online tester. You have no idea if the site owner is logging the payloads to build a target list ([it happens](/dont-blindly-trust-public-exploits)). Or if they just vibecoded it and are leaking your data to Uranus. Test locally.
 
@@ -215,7 +215,7 @@ nuclei -t cves/2025/CVE-2025-55182.yaml -t https://yourwebsite.com
 
 That Assetnote template is well designed to avoid FPs.
 
-### where to test
+## where to test
 
 If you have no environment, just run a lab instance [using VulHub image](https://github.com/vulhub/vulhub/tree/master/react/CVE-2025-55182):
 
@@ -225,7 +225,7 @@ docker run --name web -p 3000:3000 vulhub/nextjs:15.5.6
 
 Fire payloads at it to your heart's content.
 
-### waf bypass
+## waf bypass
 
 Since this blew up across half the internet, WAF vendors scrambled to patch the holes. They're a decent mitigation to block the obvious cases, but they're no silver bullet.
 
@@ -289,7 +289,7 @@ You can also use base64 or Unicode escaping. [Another example by @pyn3rd](https:
 
 Some WAFs fail to normalize these properly.
 
-### wrap up
+## wrap up
 
 React2shell is primarily a prototype pollution vulnerability, but it involves deserialization as part of the attack chain. The patch is (in most cases) trivial, the exploitation is dead simple[^1], and the blast radius was huge.
 

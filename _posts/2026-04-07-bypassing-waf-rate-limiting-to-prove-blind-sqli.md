@@ -9,7 +9,7 @@ This is the story of how [abfe](https://www.linkedin.com/in/kareem-abfe-b2745434
 
 Let's get to it.
 
-### sniff, sniff... that smells like a sqli
+## sniff, sniff... that smells like a sqli
 
 The endpoint was a coupon listing page with a `keyword` search parameter. Classic stuff. We started poking at it:
 
@@ -29,7 +29,7 @@ To avoid the risk of a duplicate, we submitted the report quickly. It was closed
 
 Fair enough. A syntax-level differential alone isn't proof of exploitable injection. You need to show you can actually interact with the database.
 
-### hitting the (fire)wall
+## hitting the (fire)wall
 
 So basically we needed to escalate from _"this probably breaks SQL"_ to _"dude, we can query your database"_. The standard playbook for blind SQLi is:
 
@@ -44,7 +44,7 @@ Time-based payloads like `SLEEP()` or `BENCHMARK()` were getting caught by the W
 
 The injection was almost certainly there, but we couldn't *prove* it.
 
-### the hack: column names as a boolean oracle
+## the hack: column names as a boolean oracle
 
 After banging our heads for a while, we had an idea: what if we stopped trying to extract data and instead used the database's *own schema* as our oracle?
 
@@ -69,7 +69,7 @@ That's it. Just a plain `AND column_name='1'` that looks completely benign from 
 
 We had our boolean oracle. Let's escalate it. 🤓
 
-### dodging cloudflare with IP rotation
+## dodging cloudflare with IP rotation
 
 Now we needed to fuzz, baby. We had to throw a wordlist of common column names at this endpoint and see which ones came back 200. Problem: any competent WAF would denylist our IP after a handful of suspicious-looking requests.
 
@@ -83,7 +83,7 @@ As you can see, existing columns returned 200:
 
 ![full chain](/assets/img/waf-ratelimit-fuzz2.png)
 
-#### bonus trick
+### bonus trick
 
 You can combine IP Rotate with other tools by proxying traffic through burp. Here is a practical example using `--proxy http://127.0.0.1:8080` in sqlmap:
 
@@ -93,13 +93,13 @@ python sqlmap.py -u http://target.com/coupons/coupon_list\?keyword\=as --batch -
 
 I recommend increasing `--time-sec 15` or higher because requests tend to be slower when using this setup[^4].
 
-### going the extra mile
+## going the extra mile
 
 The generic wordlist gave us a few hits, but we wanted more. We went through the entire application and built a custom wordlist with column names that were specific to this app's domain. Coupons, users, transactions, whatever terminology the app used in its frontend, we turned it into candidate column names (`column_name`, `columnname`, `col_name`, etc.).
 
 We ran the fuzz again with the custom wordlist. More hits.
 
-### the final veredict
+## the final veredict
 
 We submitted a new report with a full enumeration of every column name we'd confirmed and the triagers reached out to the dev team, who confirmed the columns were indeed real.
 
@@ -114,4 +114,4 @@ Don't try *harder*, try *smarter*. 🧠
 [^1]: we probably didn't have enough permissions to generate data that would have been filtered by this endpoint. And/or it might have just been a logging field. Who knows.
 [^2]: I bet it was not *impossible*, but at least not *straightforward*.
 [^3]: because half the internet’s legitimate traffic comes from AWS anyway, kek.
-[^4]: duh
+[^4]: duh.

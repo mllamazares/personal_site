@@ -12,7 +12,7 @@ Every now and then I get DMed on linkedin asking about this exam. Hopefully this
 > [!NOTE] spoiler
 > There will be no *spoilers* here. It's just my personal experience without anything that isn’t already public.
 
-### os-what?
+## os-what?
 
 The [Offensive Security Web Expert (OSWE)](https://www.offsec.com/courses/web-300/) from OffSec is probably the most advanced web penetration testing cert along with the [Certified Web Exploitation Expert (CWEE)](https://academy.hackthebox.com/preview/certifications/htb-certified-web-exploitation-expert) from HackTheBox.
 
@@ -24,7 +24,7 @@ The [Offensive Security Web Expert (OSWE)](https://www.offsec.com/courses/web-30
 
 Let me stress that it is a *white-box* penetration testing course, meaning you ~~should~~ must review the source code to find vulnerabilities, but also to a dynamic instance so you can validate them. You need to excel at both. Plus, you have to write an exploit that automates the whole process. 
 
-### reqs
+## reqs
 
 From my experience, these skills matter:
 
@@ -33,7 +33,7 @@ From my experience, these skills matter:
 * **scripting**: you ultimately need to create working exploits in your language of choice.
 * **development**: not required to know how to build full apps in every language, but it definitely helps.
 
-### pre-prep
+## pre-prep
 
 Before buying any course I like to do my own research and prepare notes based on the [official syllabus](https://www.offsec.com/courses/web-300/download/syllabus) and real people's experiences.
 
@@ -55,7 +55,7 @@ I split my research into two buckets:
   * sample exploits from [Exploit-DB](https://www.exploit-db.com/)
   * instances of that vuln in different languages (java, C#, python, js, etc.)
 
-### prep
+## prep
 
 Once I felt comfortable with the topics, I bought the AWAE course. My strategy:
 
@@ -68,7 +68,7 @@ Overall, I liked how the AWAE course was structured. You *learn by pwning* throu
 
 This approach works because you see everything in context, and that helps you to develop a good intuition. 
 
-### notes
+## notes
 
 I used Notion for notetaking[^2] and started categorizing vulns like below, but it ended up quite messy[^3]:
 ![Failed first structure](/assets/img/failed_exploit_zoo.png)
@@ -83,7 +83,7 @@ I also organized the writeups of each lab with the working code like this:
 
 Sure, I know you can code everything from scratch during the exam, but having a solid starting point saves you precious minutes when the clock is ticking.
 
-### exam
+## exam
 
 After almost three months in the course, I decided to take the exam. You get 48 hours to break into two machines and 24 hours to write the report.
 
@@ -99,7 +99,7 @@ TBH, the whole thing was tougher than I expected. Slept three hours, skipped lun
 
 Next day I cleaned up the notes, sorted the screenshots, and wrote the report following the required format. Used the default OffSec DOCX template this time, but I'll probably switch to [SysReptor](https://docs.sysreptor.com/offsec-reporting-with-sysreptor/) in the future. 
 
-### tips
+## r4nd0m tips
 
 1. pwn all labs including extra miles
 2. prepare exploits for each vuln type *beforehand*
@@ -108,7 +108,7 @@ Next day I cleaned up the notes, sorted the screenshots, and wrote the report fo
 5. read the exam instructions carefully
 6. seriously, read the freaking exam instructions
 
-### resources
+## resources
 
 Here is a non-exhaustive list of resources I found useful throughout the journey:
 
@@ -149,7 +149,7 @@ additional tools:
 Not strictly required, but the book "Web Application Hackers Handbook 2nd Edition" has an in-depth overview of most types of web vulns:
 ![Evading EDR book](/assets/img/webapp-hackers.jpeg)
 
-### wh00t wh00t
+## wh00t wh00t
 
 Fast forward two days, I got the email from OffSec telling me I passed. 🎉
 

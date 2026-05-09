@@ -60,11 +60,11 @@ There is no intelligence here. No understanding. The network does not know what 
 
 We'll use the simplest non-trivial setup: a feedforward network with one hidden layer. 
 
-### data as numbers, not vibes
+### data as numbers
 
 The model never sees _penguins_. It sees _vectors_.
 
-A vector is just a list of numbers arranged in a specific order. Think of it as coordinates in space, except instead of _(x, y, z)_ you might have _(bill_length, bill_depth, flipper_length, body_mass)_.
+A vector is just a list of numbers arranged in a specific order. Think of it as coordinates in space, except instead of `(x, y, z)` you might have `(bill_length, bill_depth, flipper_length, body_mass)`.
 
 Your input is a fixed-length vector of measurements:
 
@@ -200,7 +200,7 @@ If the model assigns low probability to the correct class, the loss is large. If
 
 Loss is the only feedback signal the network ever gets.
 
-### learning equals nudging numbers
+### learning = nudging numbers
 
 Training means changing parameters to reduce loss.
 
@@ -219,7 +219,7 @@ Too large: loss oscillates or explodes.
 
 There is no universal value. You pick it empirically.
 
-### backpropagation, no mysticism
+### backpropagation
 
 Backpropagation is the chain rule applied to the network graph.
 
@@ -245,7 +245,7 @@ Nothing flows backward except these derivatives. They tell you which direction t
   </div>
 </div>
 
-Essentially yes.
+Essentially yep.
 
 For softmax combined with cross entropy, the gradient simplifies beautifully:
 
@@ -836,6 +836,7 @@ a:hover {
     font-family: 'Barriecito', monospace;
     font-size: 1.2em;
     box-shadow: 0 8px 6px -6px black;
+    min-height: 110px;
 }
 
 .handler-avatar {
@@ -920,61 +921,87 @@ a:hover {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+.handler-play {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Barriecito', monospace;
+    font-size: 2em;
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+
+.handler-play:hover {
+    background: #00ff00;
+    color: black;
+    transform: scale(1.15);
+    cursor: url('/assets/img/cruelty-hand1.webp'), auto;
+    animation: cursor 250ms linear infinite;
+}
+
+.handler-chat.unplayed {
+    align-items: center;
+    justify-content: center;
+}
+
+.handler-chat.unplayed .handler-avatar {
+    display: none;
+}
+
+.handler-chat.unplayed .handler-message {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target;
-                if (!target.dataset.typed) {
-                    target.dataset.typed = "true";
-                    const nodesToType = target._nodesToType;
-                    target.innerHTML = '';
-                    
-                    const cursor = document.createElement('span');
-                    cursor.className = 'cursor';
-                    cursor.textContent = '█';
-                    
-                    typeNodes(target, nodesToType, cursor).then(() => {
-                         cursor.remove();
-                    });
-                }
-            }
-        });
-    }, { threshold: 0.1 });
-
     document.querySelectorAll('.handler-message').forEach(msg => {
-        // Prevent layout shift by setting min-height
+        // Lock height before clearing to prevent layout shift
         msg.style.minHeight = msg.offsetHeight + 'px';
-        
-        // Clone child nodes to an array to preserve structure
-        msg._nodesToType = Array.from(msg.childNodes).map(n => n.cloneNode(true));
-        
-        // Clear content initially
-        msg.innerHTML = ''; 
-        
-        observer.observe(msg);
+
+        const chat = msg.closest('.handler-chat');
+        if (chat) chat.classList.add('unplayed');
+
+        const nodesToType = Array.from(msg.childNodes).map(n => n.cloneNode(true));
+        msg.innerHTML = '';
+
+        const btn = document.createElement('button');
+        btn.className = 'handler-play';
+        btn.type = 'button';
+        btn.textContent = '▶ play';
+        btn.addEventListener('click', () => {
+            btn.remove();
+            if (chat) chat.classList.remove('unplayed');
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            cursor.textContent = '█';
+            typeNodes(msg, nodesToType, cursor).then(() => cursor.remove());
+        });
+        msg.appendChild(btn);
     });
 
     async function typeNodes(parent, nodes, cursor) {
         for (const node of nodes) {
             if (node.nodeType === Node.TEXT_NODE) {
                 const text = node.textContent;
+                // Skip whitespace-only text nodes (markup indentation between blocks)
+                if (text.trim() === '') continue;
                 const textNode = document.createTextNode('');
                 parent.appendChild(textNode);
                 parent.appendChild(cursor);
                 for (const char of text) {
                     textNode.textContent += char;
-                    // Random delay for human-like typing
-                    await new Promise(r => setTimeout(r, Math.random() * 30 + 20)); 
+                    await new Promise(r => setTimeout(r, Math.random() * 30 + 20));
                 }
             } else if (node.nodeType === Node.ELEMENT_NODE) {
-                const newEl = node.cloneNode(false); // Clone element without children
+                const newEl = node.cloneNode(false);
                 parent.appendChild(newEl);
                 parent.appendChild(cursor);
-                // Recursively type children
                 await typeNodes(newEl, Array.from(node.childNodes), cursor);
             }
         }
