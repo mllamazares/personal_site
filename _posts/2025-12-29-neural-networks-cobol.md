@@ -927,8 +927,8 @@ a:hover {
     border: 2px solid #00ff00;
     color: #00ff00;
     font-family: 'Barriecito', monospace;
-    font-size: 2em;
-    padding: 0.6rem 1.8rem;
+    font-size: 1.1em;
+    padding: 0.5rem 1.2rem;
     cursor: pointer;
     transition: transform 0.15s, background 0.15s, color 0.15s;
 }
