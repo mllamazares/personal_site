@@ -12,6 +12,7 @@ If you are oddly enough interested, [here's more about me](/about).
 <a href="mailto:mllamazares@proton.me">email</a>
 <a href="https://www.linkedin.com/in/mllamazares">linkedin</a>
 <a href="https://github.com/mllamazares">github</a>
+<a href="https://signal.me/#eu/_NMOGQeufeRr9pihJvkvAc162ztwHffMVnU2bdOf2YfJLaGkej5EObH92m6iaYm8">signal</a>
 <a href="https://tryhackme.com/p/mllamazares">tryhackme</a>
 <a href="https://stackoverflow.com/users/1709738/mllamazares">stackoverflow</a>
 <a href="/feed.xml">rss</a>
