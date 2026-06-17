@@ -9,7 +9,7 @@ Hacking manager by day, bug hunter by night. 🦉
 If you are oddly enough interested, [here's more about me](/about).
 
 <div class="social-links">
-<a href="mailto:mllamazares@protonmail.com">email</a>
+<a href="mailto:mllamazares@proton.me">email</a>
 <a href="https://www.linkedin.com/in/mllamazares">linkedin</a>
 <a href="https://github.com/mllamazares">github</a>
 <a href="https://tryhackme.com/p/mllamazares">tryhackme</a>

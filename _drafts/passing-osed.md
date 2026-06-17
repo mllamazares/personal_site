@@ -42,6 +42,7 @@ Thorought the course you will review IDA and Windbg, but they are *just tools*. 
 ## prep
 
 Studied for 3 months.
+- read experiences from people. https://www.youtube.com/watch?v=NAe6f1_XG6Q&t=3337s
 - review references to get a taste of what I'll face.
 - watched videos at 1.5x speed. I usually go 2x, but this stuff is *dense*.
 - reviewed the book. thoroughly. taking notes. It turns out the book has a great intro to x86 arch and exploitation concepts. Sure, we can complement with other resouces like corelan.be, but the book itself is super comprehensive.
@@ -77,8 +78,7 @@ It is tempting to ask claude how to whipe your a**, but don't. AI is super usefu
 - use offsec discord. linking your student account. they have an SLA of 15mins to answer your questions. And they are pretty good, IMO.
 - the book
 - corelan.be
-- Buffer Overflows Made Easy TCM series. Basic stuff. But decent script-kiddie introduction.
-https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G&index=1
+- Buffer Overflows Made Easy TCM series. Basic stuff. But decent script-kiddie introduction. https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G&index=1
 
 ## exam
 
