@@ -571,7 +571,10 @@ hr::before,
 #toc-sidebar {
     position: fixed;
     top: 0;
-    left: 20px;
+    /* Position the sidebar in the left margin, 3rem to the left of the
+       centered content column. Falls back to 20px from the viewport edge
+       when the viewport is too narrow for the sidebar to clear the content. */
+    left: max(20px, calc((100vw - var(--width-content)) / 2 - var(--width-sidebar-container) - 3rem));
     bottom: 0;
     width: var(--width-sidebar-container);
     padding: 2rem 0;
@@ -659,14 +662,9 @@ hr::before,
     background: var(--fg-body);
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1700px) {
     #toc-sidebar {
         display: block;
-    }
-
-    /* Shift main content right of the fixed TOC sidebar */
-    main:has(#toc-sidebar) {
-        padding-left: calc(20px + var(--width-sidebar-container) + 3rem);
     }
 }
 
@@ -682,14 +680,6 @@ hr::before,
     display: none;
     font-size: 0.85em;
     z-index: 100;
-}
-
-/* On pages with a TOC sidebar, the content is shifted right by the
-   left padding on main. Auto-centering means the content moves by
-   half the padding width: (20px + 400px + 3rem) / 2 ≈ 241.5px.
-   The footnote sidebar must shift by the same amount. */
-main:has(#toc-sidebar) #footnote-sidebar {
-    left: calc(50% + (var(--width-content) / 2) + 5em + (20px + var(--width-sidebar-container) + 3rem) / 2);
 }
 
 .footnote-item {
@@ -720,7 +710,7 @@ main:has(#toc-sidebar) #footnote-sidebar {
     color: var(--fg-body);
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1450px) {
     #footnote-sidebar {
         display: block;
     }
