@@ -9,7 +9,7 @@ Hey there. Welcome.
 
 My name's [Miguel](/about) and this is my little island on the Internet. 🏝️
 
-You'll notice there're already some posts here. I stole them from my own [linkedin account](https://www.linkedin.com/in/mllamazares/) because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
+You'll notice there're already some posts here. I stole them from my own [linkedin](https://www.linkedin.com/in/mllamazares/) because I want them somewhere that actually makes sense. Linkedin is fine for some things, but it's not for thinking out loud. 
 
 ## why
 
@@ -21,13 +21,13 @@ I also want to force myself to write about what I find interesting. Too often id
 
 Expect something short and straight to the point. I hate buzzwordy consulting nonsense, and you will not find it here.
 
-I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a malfunctioning churn machine, rambling forever with AI slop just to maximize screen time, only to spring some _surprise_ pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore.
+I consider myself _anti-SEO_. I hate posts stuffed with the same keywords like a malfunctioning churn machine, rambling forever with AI slop just to maximize screen time, only to spring some _surprise_ pitch at the end. No thanks. Then you hit paywalls, cookie walls, bloated layouts, and other mythological creatures. In my opinion, they've made the internet a worse place to explore[^1].
 
 Lastly, everything I write is my view. It doesn't represent my employer or anyone else.
 
 ## design
 
-I used the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme as a baseline, the iconic [agave](https://github.com/blobject/agave) font and the minimal [flexoki](https://github.com/kepano/flexoki) color palette. Ugly? Yep. But it _werks_. No CSS bloat, no distractions[^1].
+I used the [no-style-please](https://github.com/riggraz/no-style-please) Jekyll theme as a baseline, the iconic [agave](https://github.com/blobject/agave) font and the minimal [flexoki](https://github.com/kepano/flexoki) color palette. Ugly? Yep. But it \*werks\*. No CSS bloat, no distractions[^2].
 
 ## inspiration
 
@@ -45,10 +45,11 @@ Some people's sites that I like, both for content and aesthetics:
 
 ## privacy
 
-I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits _without_ cookies. No personal data. No GDPR headaches. Just to get a rough sense of the traffic; I'm not a stalker. 🤞
+I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits _without_ cookies. No personal data and no GDPR headaches. It's just to get a rough sense of the traffic, not to stalk you. 🤞
 
 ## see you around
 
 That's it for now. More posts to come. Or connect with me on [linkedin](https://www.linkedin.com/in/mllamazares/) if that's your vibe.
 
-[^1]: you can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're using a browser or a brain implant.
+[^1]: sometimes I do use llms to help me draft part of my content, but I always review and edit it by hand. The idea is to not sacrifice quality, and to keep it honest and human. It still sounds like me, just with better grammar. If you know me, you'll notice.
+[^2]: you can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're using a browser or a brain implant.
