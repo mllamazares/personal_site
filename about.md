@@ -73,6 +73,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
   - pre-llm[^7]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
+  - hardcore pragmatist
 
 [^1]: I know it’s challenging to pronounce for non-native spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
