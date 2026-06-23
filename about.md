@@ -60,7 +60,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 
 ## r4nd0m
  Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
-  - entp 
+  - entp-t
   - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
   - solarpunk fanboy
