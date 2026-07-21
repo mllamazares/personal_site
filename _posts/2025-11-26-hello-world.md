@@ -51,5 +51,5 @@ I just use [GoatCounter](https://goatcounter.com/). Open source. Tracks visits _
 
 That's it for now. More posts to come. Or connect with me on [linkedin](https://www.linkedin.com/in/mllamazares/) if that's your vibe.
 
-[^1]: sometimes I do use llms to help me draft part of my content, but I always review and edit it by hand. The idea is to not sacrifice quality, and to keep it honest and human. It still sounds like me, just with better grammar. If you know me, you'll notice.
+[^1]: that said, sometimes I do use llms to help me draft part of my content, but I always review and edit it by hand. The idea is to not sacrifice quality, and to keep it honest and human. It still sounds like me, just with better grammar. If you know me, you'll notice.
 [^2]: you can laugh all you want, but I bet this page will probably still render fine in 2074, whether you're using a browser or a brain implant.

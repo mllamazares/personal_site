@@ -18,7 +18,9 @@ Here I'll share my personal experience preparing for this exam.
 
 ## the course
 
+I used DeepSeek since Claude harness is a pain in the ass. 
 
+![alt text](image.png)
 
 ### stuff i liked
 - hands-on

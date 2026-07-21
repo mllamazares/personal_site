@@ -60,7 +60,8 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 
 ## r4nd0m
  Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
-  - entp-t
+  - entp-t[^6]
+  - my iq is in the top 2%[^7]
   - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
   - solarpunk fanboy
@@ -68,20 +69,23 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - jazz guitar player
   - aspiring professional kite flyer
   - my pug's name is _Lady Di_ 🐶👑
-  - strongly believe Vin Diesel is the best actor of all time[^6]
+  - strongly believe Vin Diesel is the best actor of all time[^8]
   - fluent in [COBOL](/neural-networks-cobol), JCL and PL/I
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
-  - pre-llm[^7]
+  - pre-llm[^9]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
   - hardcore pragmatist
+  - lego collection size: yes
 
 [^1]: I know it’s challenging to pronounce for non-native spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs
 [^3]: currently prepping for the OSED
 [^4]: featured in [tldr;sec #252](https://tldrsec.com/p/tldr-sec-252)
 [^5]: featured in [tldr;sec #145](https://tldrsec.com/p/tldr-sec-145)
-[^6]: I'm not going to argue about that
-[^7]: learned *to think* before *to prompt*
+[^6]: yeah, I know [mbti](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator) it's basically a business horoscope, lol
+[^7]: active member of [mensa](https://www.mensa.org/)
+[^8]: I'm not going to argue about that
+[^9]: learned *to think* before *to prompt*
 
 
 <script>
