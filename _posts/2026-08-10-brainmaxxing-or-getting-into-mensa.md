@@ -22,7 +22,8 @@ It started in the 40s in the UK and started in Spain around the 80s. Since then 
 
 ## my background
 
-Spoiler: I was not the typical gifted kid. At all.
+> [!NOTE] spoiler
+> I was not the typical gifted kid. At all.
 
 Ever since I was a kid, I've loved making plans about everything. I'd want to repair a bicycle and would spend more time planning, making budgets and drawing sketches than actually doing it. I'm an only child, so I spent a lot of time by myself and could stay focused for hours in my own world[^2]. However, I never considered myself an introvert. I'm a pretty social person.
 
