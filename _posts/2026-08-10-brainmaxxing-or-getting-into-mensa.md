@@ -255,7 +255,7 @@ In my case, that blue curve peaked a decade ago and there's nothing I can do abo
 
 But something has to turn the blue curve into the orange one, and in my case that mechanism has always been failed projects, and failing is just the build step nobody puts on their linkedin. 
 
-Keep grinding!
+Keep grinding! 💪
 
 [^1]: yep, this deserves the linkedin cringy cliché
 [^2]: still do, tbh
