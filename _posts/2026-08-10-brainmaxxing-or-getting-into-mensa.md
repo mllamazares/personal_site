@@ -64,7 +64,7 @@ I joined Mensa for the following reasons:
 - **bragging rights**: I have a super fragile ego; this is a way of being able to sleep at night, kek. 
 - **job opportunities**: also, high IQ often correlates with better job performance. So a potential employer (not currently looking for a change, HR guys) would value that. There is also a specific [job board handled by Mensa Spain](https://mensajobs.mensa.es/es/), btw. This is controversial but I don't care: I think the controversy is born from the misunderstanding that IQ is everything (more on that later).
 
-## iq is not everything
+## iq is \*not\* everything
 
 I'm not a big believer in IQ as the ultimate indicator of pure intelligence, but it's just another variable in the equation.
 
