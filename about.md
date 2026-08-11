@@ -61,7 +61,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 ## r4nd0m
  Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
   - entp-t[^6]
-  - my iq is in the top 2% of the population[^7]
+  - [my iq is in the top 2% of the population](/brainmaxxing-or-the-art-of-failing-better/)[^7]
   - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
   - solarpunk fanboy
@@ -74,7 +74,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
   - [low-poly](https://en.wikipedia.org/wiki/Low_poly) video games apologist
   - pre-llm[^9]
   - [mr tickle](https://en.wikipedia.org/wiki/Mr._Tickle) diehard
-  - poc||gtfo
+  - poc || gtfo
 
 [^1]: I know it’s challenging to pronounce for non-native spanish speakers, kek
 [^2]: apart from these, I also participate in a bunch of private programs

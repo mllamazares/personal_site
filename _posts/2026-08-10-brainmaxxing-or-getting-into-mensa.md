@@ -26,17 +26,17 @@ Spoiler: I was not the typical gifted kid. At all.
 
 Ever since I was a kid, I've loved making plans about everything. I'd want to repair a bicycle and would spend more time planning, making budgets and drawing sketches than actually doing it. I'm an only child, so I spent a lot of time by myself and could stay focused for hours in my own world[^2]. However, I never considered myself an introvert. I'm a pretty social person.
 
-I was also a terrible student. Not the kind who gets bored because the level is too low or the content isn't challenging, I simply didn't care about school. I never paid attention and failed an obscene number of subjects. Every year I ended up carrying a ton of subjects over to September, and then suddenly passed all of them[^3]. TBH, I'm not proud of that phase of my life. It felt like I was wasting a lot of time and energy. It was also quite frustrating for my parents (and now that I'm a dad, I can empathize with that much better, jeez).
+I was also a terrible student. Not the kind who gets bored because the level is too low or the content isn't challenging, I simply didn't care about school. I never paid attention and failed an obscene number of subjects. Every year I ended up carrying a ton of subjects over to September, and then suddenly passed all of them[^3]. TBH, I'm not proud of that phase of my life. It felt like I was wasting a lot of time and energy. It was also quite frustrating for my parents[^4].
 
-Then my father taught me programming when I was 13. That clicked! I became obsessed[^4] with it, and I spent all day in underground forums taking part in performance contests to see who could implement the fastest algorithm in VB6.
+Then my father taught me programming when I was 13. That clicked! I became obsessed[^5] with it, and I spent all day in underground forums taking part in performance contests to see who could implement the fastest algorithm in VB6.
 
 After high school, I decided to first study an HNC in web development, with the plan of starting uni afterwards (perhaps software engineering). However, I got hired at my internship, so I decided to keep working and put the uni plans on hold.
 
 Fast-forward some years, I did start studying at [UNED](https://www.uned.es/universidad/inicio/en/), but for a BSc in philosophy (plot twist!). There I managed to get several honors while working full-time, plus doing some freelance collabs on the side. I was particularly fascinated by the analytical stream: logic, philosophy of science, etc. I was living in the UK at the time. That was an \*intense\* period of my life, but somehow I look back on it with nostalgia.
 
-In order to prioritize my career, I put the degree on hold[^5]. I hadn't taken it up with a career focus, plus having kids and whatnot, for obvious reasons. However, I think it had an indirect positive impact on my career in terms of structured reasoning, writing, creativity, etc.
+In order to prioritize my career, I put the degree on hold[^6]. I hadn't taken it up with a career focus, plus having kids and whatnot, for obvious reasons. However, I think it had an indirect positive impact on my career in terms of structured reasoning, writing, creativity, etc.
 
-Then I pivoted from development to cybersec, then to offsec specifically, and [my linkedin](https://www.linkedin.com/in/mllamazares/) tells the rest of the story. Along the way I failed miserably (still do, but with style 😎) at tons of projects, but they somehow contributed to who I am today. For instance, years ago I built an algotrading setup that didn't translate into anything useful, but it was a great excuse to learn statistics and probability, as well as how to design and implement high-frequency, data-intensive systems[^6].
+Then I pivoted from development to cybersec, then to offsec specifically, and [my linkedin](https://www.linkedin.com/in/mllamazares/) tells the rest of the story. Along the way I failed miserably (still do, but with style 😎) at tons of projects, but they somehow contributed to who I am today. For instance, years ago I built an algotrading setup that didn't translate into anything useful, but it was a great excuse to learn statistics and probability, as well as how to design and implement high-frequency, data-intensive systems[^7].
 
 To wrap up, I've never considered myself a particularly gifted individual. More like someone with decent processing power who's willing to spend an unreasonable amount of energy on the stuff he enjoys.
 
@@ -46,7 +46,7 @@ There were two main factors that motivated me to take the Mensa test.
 
 First, my older son. He is currently ~4 years old, and I think he is showing early signs of giftedness: extraordinary memory, a complex sense of humor, musicality, the ability to focus for long periods of time, etc. But well, I’m his father, so I’m probably super-biased. I believe t_here are more parents of gifted kids than actual gifted kids_, kek. At least it was enough to make me question it, since there is a decent heritability factor.
 
-Second, I discovered [Javier Recuenco](https://www.linkedin.com/in/javier-g-recuenco-70a708/). He was a Mensa Spain ex-president. I discovered him thanks to [Heavy Mental](https://heavymental.es/) podcast, where he talks about a wide range of topics. I love his communication style because he is not the typical nerd, but actually exposes complex stuff in a very aproachable way (a la Feynman, but with more sideburns)[^7].
+Second, I discovered [Javier Recuenco](https://www.linkedin.com/in/javier-g-recuenco-70a708/). He was a Mensa Spain ex-president. I discovered him thanks to [Heavy Mental](https://heavymental.es/) podcast, where he talks about a wide range of topics. I love his communication style because he is not the typical nerd, but actually exposes complex stuff in a very aproachable way (a la Feynman, but with more sideburns)[^8].
 
 ## the access test
 
@@ -68,7 +68,7 @@ I joined Mensa for the following reasons:
 
 I'm not a big believer in IQ as the ultimate indicator of pure intelligence, but it's just another variable in the equation.
 
-Having a nice set of tools is the equivalent of IQ for a carpenter. But if he doesn't put in the effort, take risks, make mistakes, and so on, he won't become a good carpenter. On the other hand, someone with only a spoon and grit might still end up creating awesome pieces of woodcraft[^8]. 🪑
+Having a nice set of tools is the equivalent of IQ for a carpenter. But if he doesn't put in the effort, take risks, make mistakes, and so on, he won't become a good carpenter. On the other hand, someone with only a spoon and grit might still end up creating awesome pieces of woodcraft[^9]. 🪑
 
 The same applies to effort in isolation; it's also not a good KPI. People who tried to build a perpetual motion machine spent a lot of effort, and some of them were pretty smart. It was still a waste of time.
 
@@ -288,8 +288,9 @@ Keep grinding! 💪
 [^1]: yep, this deserves the linkedin cringy cliché
 [^2]: still do, tbh
 [^3]: sacrifycing the summer, ofc
-[^4]: I can get quite obsessive sometimes
-[^5]: which I will resume when I retire or something
-[^6]: this was pre-llm without claude code, can you even imagine?
-[^7]: He is also an expert in complex systems, a topic that fascinates me and I've talked about earlier [in this very blog](/how-to-not-be-a-llm-kiddie).
-[^8]: I think this analogy is pretty visual, huh?
+[^4]: and now that I'm a dad, I can empathize with that much better, jeez
+[^5]: I can get quite obsessive sometimes
+[^6]: which I will resume when I retire or something
+[^7]: this was pre-llm without claude code, can you even imagine?
+[^8]: he's also an expert in complex systems, a topic that fascinates me and I've talked about earlier [in this very blog](/how-to-not-be-a-llm-kiddie).
+[^9]: hey, I think this analogy was pretty visual, huh?
