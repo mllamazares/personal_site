@@ -7,7 +7,7 @@ tags: [misc]
 
 Well, I don't usually post about personal stuff, but hey, hoomanity (and me) deserves something different every now and then.
 
-Turns out I'm honored (and slightly amused) to share[^1] that I recently joined [Mensa](https://www.mensa.es/). *\*play doom_eternal_theme_music.mp3* 💀
+Turns out I'm honored (and slightly amused) to share[^1] that I recently joined [Mensa](https://www.mensa.es/). *\*play doom_eternal_theme.mp3* 💀
 
 Here, I wanted to describe my experience and expectations, as well as some related personal background.
 
