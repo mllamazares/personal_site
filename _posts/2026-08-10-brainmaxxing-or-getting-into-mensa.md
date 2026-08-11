@@ -50,7 +50,7 @@ Second, I discovered [Javier Recuenco](https://www.linkedin.com/in/javier-g-recu
 
 ## the access test
 
-I took the Mensa online test, then the paid online version called T2, which is supposed to be more accurate. Since I got decent results in both, I decided to give the in-person test a try. They arranged a session at a public library. The very same day, they corrected the test and I got accepted! 🎉
+I took the Mensa online test, then the paid online version called T2, which is supposed to be more accurate. Since I got decent results in both, I decided to give the in-person test a try. They arranged a session at a public library. The very same day, they corrected the test and told me I got accepted! 🎉
 
 Something to highlight is that the exams are _culture fair_. Mensa is not politically, sexually, or culturally biased. The exam aims to capture your raw fluency in identifying patterns across different contexts and forming abstractions that relate ideas. Due to time constraints, you essentially have only a few seconds to connect the dots and mark your answer. I confess it made me sweat. 
 
