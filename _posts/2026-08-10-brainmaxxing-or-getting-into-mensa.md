@@ -70,7 +70,7 @@ I'm not a big believer in IQ as the ultimate indicator of pure intelligence, but
 
 Having a nice set of tools is the equivalent of IQ for a carpenter. But if he doesn't put in the effort, take risks, make mistakes, and so on, he won't become a good carpenter. On the other hand, someone with only a spoon and grit might still end up creating awesome pieces of woodcraft[^9]. 🪑
 
-The same applies to effort in isolation; it's also not a good KPI. People who tried to build a perpetual motion machine spent a lot of effort, and some of them were pretty smart. It was still a waste of time.
+The same applies to effort in isolation; it's also not a good KPI. People who tried to build a [perpetual motion](https://en.wikipedia.org/wiki/Perpetual_motion) machine spent a lot of effort, and some of them were pretty smart. It was still a waste of time since it violates the fundamental laws of physics.
 
 So effort and intelligence are _necessary_ but not _sufficient_ conditions for success. Then, we need to focus on the outputs, that is, the objective achievements (what you've done that sets you apart). We don't remember Einstein because he was a smart guy, but because of his specific contributions to science—and for sticking his tongue out in those funny pictures.
 
