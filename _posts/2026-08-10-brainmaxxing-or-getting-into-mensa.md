@@ -89,7 +89,6 @@ Here's a cool chart made by my mate claude to illustrate both concepts over a li
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
-  html, body { background: transparent; margin: 0; }
   .chart-wrap {
     background: transparent;
     max-width: 800px;
