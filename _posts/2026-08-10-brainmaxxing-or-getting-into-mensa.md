@@ -24,7 +24,7 @@ It started in the 40s in the UK and in Spain around the 80s. Since then there ha
 
 Spoiler: I was not the typical gifted kid. At all.
 
-Ever since I was a kid, I've loved making plans about everything. I'd want to repair a bicycle and would spend more time planning, making budgets and drawing sketches than actually doing it. I'm an only child, so I spent a lot of time by myself and could stay focused for hours in my own world[^2]. However, I never considered myself an introvert. I'm a pretty social person.
+Ever since I was a kid, I've loved making plans about everything. I'd want to repair a bicycle and would spend more time planning, making budgets and drawing sketches than actually doing it. I'm an only child, so I spent a lot of time by myself and could stay focused for hours in my own world[^2].
 
 I was also a terrible student. Not the kind who gets bored because the level is too low or the content isn't challenging, I simply didn't care about school. I never paid attention and failed an obscene number of subjects. Every year I ended up carrying a ton of subjects over to September, and then suddenly passed all of them[^3]. TBH, I'm not proud of that phase of my life. It felt like I was wasting a lot of time and energy. It was also quite frustrating for my parents[^4].
 
@@ -46,7 +46,7 @@ There were two main factors that motivated me to take the Mensa test.
 
 First, my older son. He is currently ~4 years old, and I think he is showing early signs of giftedness: extraordinary memory, a complex sense of humor, musicality, the ability to focus for long periods of time, etc. But well, I’m his father, so I’m probably super-biased. I believe t_here are more parents of gifted kids than actual gifted kids_, kek. At least it was enough to make me question it, since there is a decent heritability factor.
 
-Second, I discovered [Javier Recuenco](https://www.linkedin.com/in/javier-g-recuenco-70a708/). He was a Mensa Spain ex-president. I discovered him thanks to [Heavy Mental](https://heavymental.es/) podcast, where he talks about a wide range of topics. I love his communication style because he is not the typical nerd, but actually exposes complex stuff in a very aproachable way (a la Feynman, but with more sideburns)[^8].
+Second, I stumbled upon [Javier Recuenco](https://www.linkedin.com/in/javier-g-recuenco-70a708/). He was a Mensa Spain ex-president. I discovered him thanks to [Heavy Mental](https://heavymental.es/) podcast, where he talks about a wide range of topics. I love his communication style because he is not the typical nerd, but actually exposes complex stuff in a very aproachable way (a la Feynman, but with more sideburns)[^8].
 
 ## the access test
 
@@ -285,7 +285,7 @@ But something has to turn the blue curve into the orange one, and in my case tha
 Keep grinding! 💪
 
 [^1]: yep, this deserves the linkedin cringy cliché
-[^2]: still do, tbh
+[^2]: still do, tbh. However, I never considered myself an introvert. I'm a pretty social person.
 [^3]: sacrifycing the summer, ofc
 [^4]: and now that I'm a dad, I can empathize with that much better, jeez
 [^5]: I can get quite obsessive sometimes
