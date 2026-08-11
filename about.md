@@ -61,7 +61,7 @@ Some of the cybersecurity certifications I've earned over time[^3]:
 ## r4nd0m
  Here's some random stuff about me so you can create the \*ultimate wordlist\* and crack all my passwords:
   - entp-t[^6]
-  - [my iq is in the top 2% of the population](/brainmaxxing-or-the-art-of-failing-better/)[^7]
+  - [my IQ is in the top 2%](/brainmaxxing-or-the-art-of-failing-better/)[^7]
   - debian zealot
   - [spaces > tabs](https://www.youtube.com/watch?v=oRva7UxGQDw)  
   - solarpunk fanboy
