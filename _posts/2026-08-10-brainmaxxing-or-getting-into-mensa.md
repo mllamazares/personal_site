@@ -72,7 +72,7 @@ Having a nice set of tools is the equivalent of IQ for a carpenter. But if he do
 
 The same applies to effort in isolation; it's also not a good KPI. People who tried to build a [perpetual motion](https://en.wikipedia.org/wiki/Perpetual_motion) machine spent a lot of effort, and some of them were pretty smart. It was still a waste of time since it violates the fundamental laws of physics.
 
-So effort and intelligence are _necessary_ but not _sufficient_ conditions for success. Then, we need to focus on the outputs, that is, the objective achievements (what you've done that sets you apart). We don't remember Einstein because he was a smart guy, but because of his specific contributions to science—and for sticking his tongue out in those funny pictures.
+So effort and intelligence are _necessary_ but not _sufficient_ conditions for success. Then, we need to focus on the outputs, that is, the objective achievements (what you've done that sets you apart). We don't remember Einstein because he was a smart guy, but because of his specific contributions to science (and for sticking his tongue out in those funny pictures).
 
 When I interview a candidate for a tech role, I put more weight on verifiable stuff you've done (conferences, github repos, bug bounties, certs, blogs, etc.) than on years of experience or standard education. I want proof of work and leading indicators that reflect passion and show you can actually solve problems.
 
@@ -106,31 +106,31 @@ Here's a cool chart made by my mate claude to illustrate both concepts over a li
 
 <script>
 /* ---------------------------------------------------------------------------
-   FLUID (Gf) — one source, unmodified.
+   FLUID (Gf)  ( one source, unmodified.
    Dual-exponential latent growth model from McArdle, Ferrer-Caja, Hamagami &
    Woodcock (2002), Developmental Psychology 38(1), 115-142, Table 8.
    Woodcock-Johnson-R, N ~ 1,200, ages 2-95.
        W(t) = mu0 + mu1 * [ exp(-Bb*t) - exp(-Ba*t) ]
    Evaluating it reproduces their published peak age of 22.8.
 
-   CRYSTALLIZED (Gc) — two sources spliced, because no single study covers both
+   CRYSTALLIZED (Gc)  ( two sources spliced, because no single study covers both
    ends well. McArdle's Gc is a single test (Oral Vocabulary) and peaks at ~35,
    which is earlier than the adult literature converges on.
      • Childhood rise: McArdle's Gc dual-exponential (fast vocabulary growth).
      • Adulthood: Salthouse's cross-sectional slopes for the vocabulary
-       composite — +0.02 SD/yr to the peak, -0.011 SD/yr after (Salthouse 2019,
+       composite  ( +0.02 SD/yr to the peak, -0.011 SD/yr after (Salthouse 2019,
        Psychology and Aging 34(1), Table 2; Salthouse studies, n > 3,000).
        Converted to W units using SD = 18.5, the latent between-person SD at
        the Gc peak from McArdle's Table 9.
      • Peak set at 65. Salthouse (2019) finds vocabulary rising into the 60s;
        Hartshorne & Germine (2015), n = 48,537, put it in the late 60s to early
-       70s. (Wechsler normative data suggests the late 40s — the low end.)
+       70s. (Wechsler normative data suggests the late 40s  ( the low end.)
      • The two segments are joined with a smoothstep blend over ages 15-35 so
        there is no kink where the sources meet.
 
    Y axis: percent of each ability's own lifetime peak, 0 = the model's value at
    birth. A valid affine transform of the Rasch W scale. Note this means the two
-   lines are NOT comparable to each other in absolute terms — each is measured
+   lines are NOT comparable to each other in absolute terms  ( each is measured
    against its own trajectory.
 --------------------------------------------------------------------------- */
 
@@ -163,7 +163,7 @@ Here's a cool chart made by my mate claude to illustrate both concepts over a li
     return out;
   }
 
-  // Flexoki — stephango.com/flexoki
+  // Flexoki  ( stephango.com/flexoki
   const BLUE   = '#4385BE';  // blue-400
   const ORANGE = '#DA702C';  // orange-400
   const TX     = '#878580';  // base-500
