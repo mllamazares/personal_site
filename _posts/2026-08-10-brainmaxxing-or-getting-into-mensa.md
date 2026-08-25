@@ -44,7 +44,7 @@ To wrap up, I've never considered myself a particularly gifted individual. More 
 
 There were two main factors that motivated me to take the Mensa test.
 
-First, my older son. He is currently ~4 years old, and I think he is showing early signs of giftedness: extraordinary memory, a complex sense of humor, musicality, the ability to focus for long periods of time, etc. But well, I’m his father, so I’m probably super-biased. I believe t_here are more parents of gifted kids than actual gifted kids_, kek. At least it was enough to make me question it, since there is a decent heritability factor.
+First, my older son. He is currently ~4 years old, and I think he is showing early signs of giftedness: extraordinary memory, a complex sense of humor, musicality, the ability to focus for long periods of time, etc. But well, I’m his father, so I’m probably super-biased. I believe _there are more parents of gifted kids than actual gifted kids_, kek. At least it was enough to make me question it, since there is a decent heritability factor.
 
 Second, I stumbled upon [Javier Recuenco](https://www.linkedin.com/in/javier-g-recuenco-70a708/). He was a Mensa Spain ex-president. I discovered him thanks to [Heavy Mental](https://heavymental.es/) podcast, where he talks about a wide range of topics. I love his communication style because he is not the typical nerd, but actually exposes complex stuff in a very aproachable way (a la Feynman, but with more sideburns)[^8].
 
