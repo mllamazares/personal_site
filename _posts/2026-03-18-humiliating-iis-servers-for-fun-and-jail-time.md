@@ -452,7 +452,9 @@ There are some cool references I've collected thorought preparing this post:
 - [NahamCon2021 - Hacking IIS](https://youtu.be/cqM-MdPkaWo)
 - [THE POWER OF RECON by Orwa Atyat](https://youtu.be/yyD8Z5Qar5I)
 - [Hacking IIS](https://docs.google.com/presentation/d/1AA0gX2-SI_9ErTkBhtW0b-5BH70-1B1X)
-- [IIS Internet Information Services](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services)
+- [Hacktricks: IIS Internet Information Services](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services)[^1]
 - [Extensions Overview](https://mike-n1.github.io/ExtensionsOverview)
 - [IIS Shortname Discovery](https://x.com/infosec_au/status/1340785029899698181)
 - [Assetnote's BigQuery research for resolving IIS shortnames](https://www.assetnote.io/resources/research/finding-hidden-files-and-folders-on-iis-using-bigquery)
+
+[^1]: this post has been added to the official HackTricks Wiki page for IIS!
