@@ -125,7 +125,7 @@ Yay! This confirms the SQL Server service account is singing for us. 💅🏻
 
 ## why this worked
 
-Before we wrap, let's give a round of applause to all the misconfigs that made this possible:
+Before we wrap, let's give a 👏 round of applause 👏 to all the misconfigs that made this possible:
 
 1. **preauth SQL injection** in a search parameter. No input validation, no parameterized queries.
 2. **stacked queries supported.** MSSQL supports them natively, and the app didn't strip semicolons.
