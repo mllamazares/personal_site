@@ -5,10 +5,15 @@ title: humiliating iis servers for fun and jail time
 tags: [pentesting, iis, recon, waf]
 ---
 
+![IIS Retro Game](/assets/img/iis-retro-game.png)
+
 A friend of mine once told me: 
 > If you ever spot an IIS blue screen, don't stop there; there must be something.
 
 Yep, he was right. That IIS splash page is not a dead end. Behind that blue window sits one of the most consistently misconfigured web servers on the www, and it's begging you to look deeper.
+
+> [!NOTE] fun fact
+> This post has been added to the official [HackTricks Wiki](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services) page for IIS!
 
 So let me walk you through how I approach IIS targets during bug bounty:
 
@@ -452,9 +457,8 @@ There are some cool references I've collected thorought preparing this post:
 - [NahamCon2021 - Hacking IIS](https://youtu.be/cqM-MdPkaWo)
 - [THE POWER OF RECON by Orwa Atyat](https://youtu.be/yyD8Z5Qar5I)
 - [Hacking IIS](https://docs.google.com/presentation/d/1AA0gX2-SI_9ErTkBhtW0b-5BH70-1B1X)
-- [Hacktricks: IIS Internet Information Services](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services)[^1]
+- [Hacktricks: IIS Internet Information Services](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/iis-internet-information-services)
 - [Extensions Overview](https://mike-n1.github.io/ExtensionsOverview)
 - [IIS Shortname Discovery](https://x.com/infosec_au/status/1340785029899698181)
 - [Assetnote's BigQuery research for resolving IIS shortnames](https://www.assetnote.io/resources/research/finding-hidden-files-and-folders-on-iis-using-bigquery)
 
-[^1]: This post has been added to the official HackTricks Wiki page for IIS!
