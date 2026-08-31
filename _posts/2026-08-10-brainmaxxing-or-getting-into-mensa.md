@@ -67,7 +67,7 @@ I joined Mensa for the following reasons:
 
 ## iq is \*not\* everything
 
-I'm not a big believer in IQ as the ultimate indicator of pure intelligence, but it's just another variable in the equation.
+I'm not a big believer in IQ as the *ultimate indicator* of success, but it's just another variable in the equation.
 
 Having a nice set of tools is the equivalent of IQ for a carpenter. But if he doesn't put in the effort, take risks, make mistakes, and so on, he won't become a good carpenter. On the other hand, someone with only a spoon and grit might still end up creating awesome pieces of woodcraft[^9]. 🪑
 
