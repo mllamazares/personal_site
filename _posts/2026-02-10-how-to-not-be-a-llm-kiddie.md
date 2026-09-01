@@ -348,7 +348,7 @@ Here's what the llm kiddies doesn't get: **knowing the limitations of llms is it
 
 My take is that the tool isn't the problem, but the lack of a mental model for *when* and *how* to use it.
 
-Ultimately, every idiot can prompt. Not everyone can *think*. The llm doesn't replace the second part. It amplifies whichever one you bring to it. 🧠
+Ultimately, every idiot can prompt. Not everyone can *think*. The llm doesn't replace the second part. It amplifies whichever one you bring to the table. 🧠
 
 [^1]: curl is used in virtually every internet-connected device and operating system. It's one of the most critical and widely-deployed pieces of open source infrastructure in existence.
 
