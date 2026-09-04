@@ -19,3 +19,5 @@ https://learnhowtolearn.org/a-habit-to-make-learning-much-more-fun-and-effective
 https://zettelkasten.de/posts/zettelkasten-improves-thinking-writing/
 
 ### the role of AI
+
+do not delegate your understanding. kepano.
