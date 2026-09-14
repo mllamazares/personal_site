@@ -13,7 +13,7 @@ Come on! It'll be _painfully_ fun! 🥲
 > I will heavily rely[^1] on the [shellcoder.py](https://github.com/epi052/osed-scripts/blob/main/shellcoder.py#L289) script by [epi052](https://epi052.gitlab.io/)[^2].
 
 > [!WARNING] heads up!  
-> I'm a 1337 when it comes to binary exploitation. The thing is, I'm prepping for the OSED cert, and this article is a way of holding myself accountable to actually understand the concepts. 
+> I'm a 1337 when it comes to binary exploitation. The thing is, I'm prepping for the [OSED](https://www.offsec.com/courses/exp-301/) cert, and this article is a way of holding myself accountable to actually understand the concepts. 
 > This is the [Feynman technique](https://en.wikipedia.org/wiki/Learning_by_teaching) of studying: trying to teach somebody else[^3].
 
 Enough yapping. Let's dive in! 🤿
