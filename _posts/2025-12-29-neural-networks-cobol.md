@@ -2,7 +2,7 @@
 layout: post
 slug: neural-networks-cobol
 title: neural nets in cobol & other creative ways to k*ll yourself
-tags: [ai, humor, cobol]
+tags: [ai, humor, cobol, python]
 ---
 
 > [!NOTE] disclaimer
