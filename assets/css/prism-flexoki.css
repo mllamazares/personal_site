@@ -31,8 +31,8 @@ pre[class*="language-"] {
     margin: .5em 0;
     overflow: auto;
     border-radius: .3em;
-    background: #100F0F;
-    /* black */
+    background: var(--bg-code-block, #100F0F);
+    /* black in light theme, base-950 in dark */
 }
 
 :not(pre)>code[class*="language-"] {

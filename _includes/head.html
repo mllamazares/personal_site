@@ -3,6 +3,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <script>
+    // Apply saved theme before first paint to avoid a flash
+    (function () {
+      var appearance = document.documentElement.getAttribute('data-appearance') || 'auto';
+      if (appearance !== 'auto') {
+        document.documentElement.setAttribute('data-theme', appearance);
+        return;
+      }
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <title>
     {%- if page.title -%}
     {{ page.title }}

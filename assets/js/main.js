@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle (light/dark)
+    var themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            var root = document.documentElement;
+            var current = root.getAttribute('data-theme')
+                || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            var next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+    }
+
     document.querySelectorAll('a[href^="http"]').forEach(a => a.setAttribute('target', '_blank'));
 
     // Heading anchor links (copy URL with #section-slug to clipboard)
