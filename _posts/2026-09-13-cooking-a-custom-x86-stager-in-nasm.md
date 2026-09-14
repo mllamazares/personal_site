@@ -190,7 +190,7 @@ OK, I think you (we) get it now.
 
 But:
 
-> _"could we then just precompute and hardcode the values of the functions we want to call, rather than calculating the hashes dynamically?"_
+> _"Could we then just precompute and hardcode the values of the functions we want to call, rather than calculating the hashes dynamically?"_
 
 Yep, you can. But it doesn't hurt to understand what's under the hood, right? Don't be lazy.
 
@@ -465,8 +465,6 @@ OK, see the examples below to verify you (me) finally get it:
 | `"ab"`    | `mov ax, 0x6261; push eax;`                                         | `66 b8 61 62 50`                         | len % 8 == 4 → two leftover bytes, swapped |
 | `"cmd"`   | `mov al, 0x64; push eax; mov ax, 0x6d63; push ax;`                  | `b0 64 50 66 b8 63 6d 66 50`             | len % 8 == 6 → three leftover bytes (else branch) |
 | `"abcde"` | `mov al, 0x65; push eax; push dword 0x64636261;`                    | `b0 65 50 68 61 62 63 64`                | remainder 2 + full dword (hits both the %8==0 if and the ==2 case) |
-
-(These are the raw chunks the helper emits; in the full shellcode they're preceded by the `xor eax, eax; push eax` that zeroes the upper bytes and plants the terminator.)
 
 ## step 6: clean exit
 
