@@ -744,7 +744,7 @@ OMG! It's alive! 🧟‍♂️
 
 That's pretty much it. We built a full position-independent stager from scratch. In some contexts, knowing what's under the hood is helpful, because your friend msfvenom won't work in every situation. Running shellcode vs. understanding it can make the difference.
 
-What if you want a full revshell custom shellcode, not a stager? Well, you'd reach for `WSAConnect()`, `CreateProcessA()`, and friends. My priority in this article was to explore how to do the basic stuff. With this baseline, you can adapt it to other contexts[^5]: you now know how to load dlls, find functions, load their addresses, push args, call them dynamically, etc.
+What if you want a full revshell custom shellcode, not a stager? Well, you'd reach for `WSAConnect()`, `CreateProcessA()`, and friends. My priority in this article was to explore how to do the basic stuff. With this baseline, you can adapt it to other contexts[^6]: you now know how to load dlls, find functions, load their addresses, push args, call them dynamically, etc.
 
 Now go forth and pop those shells. And if you're also on the OSED journey, see you on the other side. 🐚
 
