@@ -270,7 +270,7 @@ find_function:
 
 `[ebx+0x3c]` is the `e_lfanew` field: how far into the file the PE header starts. So `ebx+eax` is the PE header, `+0x78` lands on the export directory RVA, and then the usual dance; add `ebx`, get the VMA. `edi` now points straight at the phonebook. `ecx` is our counter, and `[ebp-4]` is a free scratch slot under our stack frame where we park the names list.
 
-#### the loop
+### the loop
 
 ```nasm
 find_function_loop:                   
@@ -289,7 +289,7 @@ We walk it *backwards*; `ecx*4` because every entry is a 4-byte pointer. `jecxz`
 
 That `mov eax, [ebp-4]` reload is not decoration. The hash routine below trashes `eax` (`lodsb` writes into `al`, and `add edx, eax` reads the whole 32-bit register), so without reloading the pointer on every iteration, the second trip around the loop would dereference garbage and faceplant. That's exactly why we parked `AddressOfNames` in `[ebp-4]` before the loop.
 
-#### hashing the name
+### hashing the name
 
 Now we calc the famous **ror13 hash** like before, but in asm this time:
 
@@ -305,7 +305,7 @@ compute_hash_again:
 
 Rotate, add, repeat until the string ends. Every name boiled down to 4 bytes.
 
-#### comparing
+### comparing
 
 ```nasm
     cmp edx, [esp+0x24]             ; our hash vs the requested one
