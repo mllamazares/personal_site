@@ -753,5 +753,5 @@ Now go forth and pop those shells. And if you're also on the OSED journey, see y
 [^2]: I highly recommend checking out the rest of the scripts in his [osed-scripts](https://github.com/epi052/osed-scripts) repo. Pure gold.
 [^3]: so basically, here I'm explaining it to myself at a level of detail I'm comfortable with. I hope it matches yours as well.
 [^4]: remember that the stack grows **down**, so whatever you push **last** sits at the **lowest** address.
-[^5]: yeah, sure, I know it doesn't make much sense to execute nasm from python by this way. This is just for debugging purposed and **aligned with the OSED course content**. Bear with me!
+[^5]: yeah, sure, I know it doesn't make much sense to execute nasm from python by this way. This is just for debugging purposes and **aligned with the OSED course content**. Bear with me!
 [^6]: you could also use it as a custom revshell or inject the shellcode bytes in the context of a buffer overflow, for instance.
