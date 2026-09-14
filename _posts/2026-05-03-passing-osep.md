@@ -33,7 +33,7 @@ Overall, the course is pretty well put together. The content is easy to follow a
 
 Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-rce) in a real engagement thanks to studying this cert. So just for that, I guess it was worth it, kek.
 
-#### stuff I liked
+### stuff I liked
 - the network section was accurate and aligned with what I've seen in real enterprise setups.
 - the demo of _why_ and _how_ the default meterpreter obfuscation gets flagged is 🔥.
 - the challenges' attack paths cover the course material quite organically.
@@ -41,7 +41,7 @@ Fun fact: I managed to [escalate a sqli to an rce](/escalating-preauth-sqli-to-r
 - phishing via ics calendar invites was very interesting and up to date.
 - pwning ci/cd pipelines open a ton of possibilities for latmov. Learned a lot here!
 
-#### stuff I didn't \*love\*
+### stuff I didn't \*love\*
 - **post-exploitation is sometimes too permissive**: once you're local admin, you can do basically anything, like disabling defender and/or firewall rules.
 - **few opsec refs/considerations**, e.g. `psexec` usage, `net user`, etc.
 - **some av bypasses are too naïve**, e.g. vanilla process hollowing would get caught by Crowdstrike or any other competent EDR. That said, EDR evasion is a demanding field that requires constant updates, and this course does provide a solid baseline.
@@ -136,7 +136,7 @@ So after ~23h I went to sleep with 9 flags in my pocket: I just needed one more.
 
 Finally, I crafted the report with sysreptor and sent it for review that same evening.
 
-#### timeline
+### timeline
 
 I asked Claude to create this fun timeline of my exam progress:
 

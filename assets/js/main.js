@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tocSidebar) {
         const tocWrapper = tocSidebar.querySelector('.toc-wrapper');
         const article = document.querySelector('article');
-        const headers = document.querySelectorAll('article h2, article h3');
+        const headers = document.querySelectorAll('article h2');
 
         if (headers.length > 0 && tocWrapper && article) {
             const list = document.createElement('ul');
