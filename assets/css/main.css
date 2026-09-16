@@ -642,7 +642,11 @@ hr::before,
 
 @media (max-width: 768px) {
     body {
-        font-size: 18px;
+        font-size: 17px;
+    }
+
+    .w {
+        padding: 4rem 1.25rem;
     }
 
     .postlist li {
